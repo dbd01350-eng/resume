@@ -1,7 +1,7 @@
 import React from 'react';
 import portfolioData from '../data/portfolioData.js';
 
-export default function Footer() {
+export default function Footer({ onOpenContact }) {
   const { profile } = portfolioData;
 
   return (
@@ -29,7 +29,20 @@ export default function Footer() {
               <li><a href="#home" className="hover:text-[#9F8BE7] transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-[#9F8BE7] transition-colors">About me</a></li>
               <li><a href="#works" className="hover:text-[#9F8BE7] transition-colors">Works</a></li>
-              <li><a href="#contact" className="hover:text-[#9F8BE7] transition-colors">Contact</a></li>
+              <li>
+                <a 
+                  href="#contact" 
+                  onClick={(e) => {
+                    if (onOpenContact) {
+                      e.preventDefault();
+                      onOpenContact();
+                    }
+                  }}
+                  className="hover:text-[#9F8BE7] transition-colors cursor-pointer"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 

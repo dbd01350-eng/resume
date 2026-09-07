@@ -8,9 +8,9 @@
   --color-accent-lime: #DDF160;
   --color-text-main: #161616;
   --color-text-sub: #303030;
-  --color-text-[#404040]: #404040;
-  --color-text-[#585858]: #585858;
-  --color-text-[#737373]: #737373;
+  --color-text-dark-gray: #404040;
+  --color-text-mid-gray: #585858;
+  --color-text-light-gray: #737373;
   --color-text-muted: #B2AEAD;
 
   --font-funnel: 'Funnel Display', sans-serif;

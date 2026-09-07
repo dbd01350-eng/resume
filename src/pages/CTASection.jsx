@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CTASection() {
+export default function CTASection({ onOpenContact }) {
   return (
     <section id="contact" className="py-[40px] md:py-[80px] px-4 sm:px-10 lg:px-12 xl:px-[80px] max-w-[1920px] mx-auto">
       {/* Dark Block: cta-block (Figma Node #7006:2079, bg #161616, borderRadius 200px, padding 80px) */}
@@ -45,8 +45,14 @@ export default function CTASection() {
           {/* cta-button-wrap (Figma Node #7006:2089, AnimatedCTAButton #7006:2090) */}
           <div>
             <a 
-              href="mailto:dbd01350@gmail.com" 
-              className="inline-flex items-center space-x-3 sm:space-x-[20px] bg-[#DDF160] text-[#161616] px-6 py-3 sm:px-8 sm:py-4 xl:px-[36px] xl:py-[22px] rounded-[200px] font-['Funnel_Display'] font-semibold text-[18px] sm:text-[22px] md:text-[28px] xl:text-[34px] leading-tight hover:bg-[#cbe046] transition-colors"
+              href="#contact"
+              onClick={(e) => {
+                if (onOpenContact) {
+                  e.preventDefault();
+                  onOpenContact();
+                }
+              }}
+              className="inline-flex items-center space-x-3 sm:space-x-[20px] bg-[#DDF160] text-[#161616] px-6 py-3 sm:px-8 sm:py-4 xl:px-[36px] xl:py-[22px] rounded-[200px] font-['Funnel_Display'] font-semibold text-[18px] sm:text-[22px] md:text-[28px] xl:text-[34px] leading-tight hover:bg-[#cbe046] transition-colors cursor-pointer"
             >
               <span>Contact me</span>
               <span className="text-[22px] sm:text-[26px] md:text-[30px] xl:text-[36px]">→</span>

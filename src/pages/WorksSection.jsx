@@ -22,13 +22,13 @@ export default function WorksSection() {
       {/* Section Header & Subtitle */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200">
         <div className="space-y-4">
-          <span className="text-sm font-semibold font-[var(--font-funnel)] text-[#9F8BE7] uppercase tracking-wider block">
+          <span className="text-sm font-semibold font-funnel text-accent-purple uppercase tracking-wider block">
             Works
           </span>
-          <h2 className="figma-title-44 text-4xl md:text-5xl font-semibold text-[#161616]">
+          <h2 className="figma-title-44 text-4xl md:text-5xl font-semibold text-text-main">
             Featured projects
           </h2>
-          <p className="text-base text-[#585858] font-[var(--font-pretendard)] max-w-xl">
+          <p className="text-base text-text-mid-gray font-pretendard max-w-xl">
             Explore a selection of projects blending creativity with practical design
           </p>
         </div>
@@ -41,8 +41,8 @@ export default function WorksSection() {
               onClick={() => setFilter(cat)}
               className={`figma-tag-badge font-semibold transition-all cursor-pointer ${
                 filter === cat
-                  ? 'bg-[#161616] text-white shadow-xs'
-                  : 'bg-white text-[#585858] hover:bg-gray-100 border border-gray-200'
+                  ? 'bg-bg-dark text-white shadow-xs'
+                  : 'bg-white text-text-mid-gray hover:bg-gray-100 border border-gray-200'
               }`}
             >
               {cat}
@@ -68,12 +68,12 @@ export default function WorksSection() {
               />
               {project.type === 'VIDEO' && (
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <span className="w-12 h-12 rounded-full bg-[#DDF160] text-black flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
+                  <span className="w-12 h-12 rounded-full bg-accent-lime text-black flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
                     ▶
                   </span>
                 </div>
               )}
-              <span className="absolute top-4 left-4 text-xs font-bold tracking-wider uppercase px-3.5 py-1 bg-white/90 backdrop-blur-md text-[#9F8BE7] rounded-full font-[var(--font-funnel)] border border-purple-100 shadow-xs">
+              <span className="absolute top-4 left-4 text-xs font-bold tracking-wider uppercase px-3.5 py-1 bg-white/90 backdrop-blur-md text-accent-purple rounded-full font-funnel border border-purple-100 shadow-xs">
                 {project.type}
               </span>
             </div>
@@ -81,7 +81,7 @@ export default function WorksSection() {
             {/* Card Content */}
             <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <h3 className="figma-title-30 text-xl md:text-2xl font-bold text-[#161616] leading-snug group-hover:text-[#9F8BE7] transition-colors">
+                <h3 className="figma-title-30 text-xl md:text-2xl font-bold text-text-main leading-snug group-hover:text-accent-purple transition-colors">
                   {project.title}
                 </h3>
 
@@ -93,7 +93,7 @@ export default function WorksSection() {
                       href={link.url}
                       target={link.url.startsWith('http') ? '_blank' : '_self'}
                       rel="noreferrer"
-                      className="inline-flex items-center text-sm font-bold font-[var(--font-funnel)] underline text-[#161616] hover:text-[#9F8BE7] transition-colors"
+                      className="inline-flex items-center text-sm font-bold font-funnel underline text-text-main hover:text-accent-purple transition-colors"
                     >
                       {link.label}
                       <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default function WorksSection() {
               {/* Tech Tag Badges */}
               <div className="flex flex-wrap gap-2 pt-6 border-t border-gray-100">
                 {project.tags.map((tag, idx) => (
-                  <span key={idx} className="figma-tag-badge bg-[#FAF7F6] text-[#585858] text-xs border border-gray-100">
+                  <span key={idx} className="figma-tag-badge bg-bg-secondary text-text-mid-gray text-xs border border-gray-100">
                     {tag}
                   </span>
                 ))}

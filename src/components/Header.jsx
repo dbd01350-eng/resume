@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Header() {
+export default function Header({ onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -50,7 +50,13 @@ export default function Header() {
           {/* TextIconButton "Contact me" (Hidden on Mobile) */}
           <a 
             href="#contact" 
-            className="hidden sm:flex h-[56px] px-[22px] rounded-[200px] border border-[#161616] items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-[22px] leading-[33px] text-[#161616] backdrop-blur-[3px] hover:bg-[#161616] hover:text-white transition-colors"
+            onClick={(e) => {
+              if (onOpenContact) {
+                e.preventDefault();
+                onOpenContact();
+              }
+            }}
+            className="hidden sm:flex h-[56px] px-[22px] rounded-[200px] border border-[#161616] items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-[22px] leading-[33px] text-[#161616] backdrop-blur-[3px] hover:bg-[#161616] hover:text-white transition-colors cursor-pointer"
           >
             <span>Contact me</span>
             <img 
