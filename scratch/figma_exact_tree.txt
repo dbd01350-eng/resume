@@ -1,0 +1,505 @@
+1338:   [FRAME] "body" #7006:1285 layout={"mode":"column","overflowScroll":["y"],"alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":100,"y":100},"dimensions":{"width":1920}} fills=fill_c5e99173
+1339:     [FRAME] "header" #7123:510 layout={"mode":"row","alignSelf":"stretch","padding":"0px 60px","alignItems":"center","gap":"10px","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":120}}
+1340:       [FRAME] "nav" #7006:2100 layout={"mode":"row","alignSelf":"stretch","justifyContent":"space-between","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fill"},"dimensions":{"width":1664}}
+1341:         [FRAME] "nav-logo" #7006:2101 layout={"mode":"row","alignItems":"center","gap":"15px","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":56}}
+1342:           [IMAGE-SVG] "logo-icon" #7006:2102 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":56,"height":56}} componentId=7006:543
+1343:           [FRAME] "nav-logo-text" #7006:2103 template=EL-2f9fe287
+1344:             [TEXT] #7006:2104 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"SemiBold","fontWeight":600,"fontSize":22,"lineHeight":"26px","textAlignHorizontal":"LEFT","textAlignVertical":"CENTER"} text="Daeun Sim\\nPortfolio"
+1345:         [FRAME] "nav-actions" #7006:2105 layout={"mode":"row","gap":"20px","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":56}}
+1346:           [INSTANCE] "ArrowButton" #7006:2106 layout={"mode":"row","padding":"8px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":56,"height":56}} effects=effect_65bd93fe borderRadius=200px componentId=7006:1273
+1347:             [FRAME] "i.ph-bold" #I7006:2106;7006:1274 template=EL-21a18932
+1348:               [FRAME] "span.__h2d-remove-before" #I7006:2106;7006:1275 layout={"mode":"column","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":30,"height":30}}
+1349:                 [IMAGE-SVG] #I7006:2106;7006:1276 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":30,"height":30}} componentId=7006:625
+1350:           [INSTANCE] "TextIconButton" #7006:2107 layout=layout_8a16b2ac strokes=fill_12a009d5 strokeWeight=1px effects=effect_65bd93fe borderRadius=200px componentId=7006:815
+1351:             [FRAME] "span.btn-caption" #I7006:2107;7006:816 template=EL-fa614242
+1352:               [FRAME] "div.btn-anim__block" #I7006:2107;7006:817 template=EL-dfdf56f9
+1353:                 [TEXT] #I7006:2107;7006:818 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_9b3c4a56 text="Contact me"
+1354:             [FRAME] "i.ph-bold" #I7006:2107;7006:819 template=EL-21a18932
+1355:               [FRAME] "span.__h2d-remove-before" #I7006:2107;7006:820 template=EL-202ab99e
+1356:                 [IMAGE-SVG] #I7006:2107;7006:821 layout=layout_2812f6d4 componentId=7006:591
+1357:       [FRAME] "nav-hamburger" #7006:2096 layout={"mode":"column","justifyContent":"center","alignItems":"center","gap":"8px","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":56,"height":56}}
+1358:         [RECTANGLE] "nav-hamburger-bg" #7006:2097 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":0,"y":0},"dimensions":{"width":56,"height":56}} fills=fill_12a009d5 borderRadius=50px
+1359:         [IMAGE-SVG] "HamburgerLine" #7067:1341 template=EL-ff2b4412
+1360:         [IMAGE-SVG] "HamburgerLine" #7067:1343 template=EL-ff2b4412
+1361:     [FRAME] "main" #7006:1367 template=EL-e9077466
+1362:       [FRAME] "section-hero" #7006:1368 layout={"mode":"column","alignSelf":"stretch","padding":"0px 80px 80px","justifyContent":"center","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":840}}
+1363:         [FRAME] "hero-content" #7006:1369 template=EL-dea70495
+1364:           [FRAME] "hero-top" #7006:1370 layout={"mode":"row","alignSelf":"stretch","padding":"0px 80px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fill","vertical":"fill"}}
+1365:             [FRAME] "hero-title-wrap" #7006:1371 layout={"mode":"column","padding":"0px 80px","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"hug"}}
+1366:               [FRAME] "hero-title-images" #7006:1372 layout={"mode":"row","padding":"10px","alignItems":"stretch","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":101,"y":-4}}
+1367:                 [INSTANCE] "HeroTitleImage-1" #7067:1304 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":-34,"y":-135},"dimensions":{"width":300}} componentId=7067:1303
+1368:                   [FRAME] "Hero Image" #I7067:1304;7006:1374 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":294.42}} fills=[{"type":"IMAGE","imageRef":"a90ff28fca7137843790a9f9a13c89d189a52d50","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.9999709129333496,0.000014556040696334094]],"filenameSuffix":"52d308"}}]
+1369:                 [INSTANCE] "HeroTitleImage-2" #7067:1307 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":1307,"y":-147},"dimensions":{"width":180}} componentId=7067:1306
+1370:                   [FRAME] "Hero Image" #I7067:1307;7006:1376 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":205.19}} fills=[{"type":"IMAGE","imageRef":"40a26bbc9588825842222678e718c85c695a62c4","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.9999512434005737,0.00002436647264403291]],"filenameSuffix":"53ea17"}}]
+1371:                 [INSTANCE] "HeroTitleImage-3" #7067:1310 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":884.5,"y":289},"dimensions":{"width":180,"height":181.02}} componentId=7067:1309
+1372:                   [FRAME] "Hero Image" #I7067:1310;7006:1378 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":181.02}} fills=fill_340d68f6
+1373:               [FRAME] "hero-title-text" #7006:1379 layout={"mode":"column","alignSelf":"stretch","padding":"0px 40px","justifyContent":"center","alignItems":"stretch","gap":"20px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1374:                 [FRAME] "hero-title-row-1" #7155:462 layout={"mode":"column","alignSelf":"stretch","alignItems":"flex-end","gap":"10px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1375:                   [INSTANCE] "HeroTitleRow-1" #7067:1317 layout={"mode":"row","alignItems":"center","gap":"26px","sizing":{"horizontal":"hug","vertical":"hug"}} componentId=7067:1316
+1376:                     [FRAME] "em.hero-01-title__item" #I7067:1317;7006:1381 template=EL-f4fbd9de
+1377:                       [TEXT] #I7067:1317;7006:1382 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_4ca5d4ca text="예쁘게,"
+1378:                     [FRAME] "em.hero-01-title__item" #I7067:1317;7006:1383 layout=layout_0c6427dc borderRadius=200px
+1379:                       [FRAME] "title marquee" #I7067:1317;7006:1384 layout={"mode":"row","padding":"0px 40px","alignItems":"center","gap":"20px","sizing":{"horizontal":"hug","vertical":"hug"}} fills=fill_96a59cfe strokes=fill_c5e99173 strokeWeight=1px borderRadius=66px
+1380:                         [TEXT] #I7067:1317;7006:1385 layout=layout_177c5efc fills=fill_658ab2fa textStyle=style_4ca5d4ca text="될 때 까지"
+1381:                         [IMAGE-SVG] "Vector" #I7067:1317;7006:1386 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":92.23,"height":92}} fills=fill_658ab2fa
+1382:                 [FRAME] "hero-title-row-2" #7155:463 layout={"mode":"column","alignSelf":"stretch","justifyContent":"flex-end","gap":"10px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1383:                   [INSTANCE] "HeroTitleRow-2" #7067:1325 layout={"mode":"row","justifyContent":"center","alignItems":"center","gap":"36px","sizing":{"horizontal":"hug","vertical":"hug"}} componentId=7067:1324
+1384:                     [FRAME] "em.hero-01-title__item" #I7067:1325;7006:1388 layout={"mode":"row","padding":"10px 0px 0px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1385:                       [IMAGE-SVG] #I7067:1325;7006:1389 layout=layout_ac330679 componentId=7006:491
+1386:                     [FRAME] "em.hero-01-title__item" #I7067:1325;7006:1390 template=EL-f4fbd9de
+1387:                       [TEXT] #I7067:1325;7006:1391 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_4ca5d4ca text="Design and Coding"
+1388:           [FRAME] "hero-bottom" #7006:1392 template=EL-bb582553
+1389:             [FRAME] "hero-data" #7006:1393 layout={"mode":"row","padding":"0px 40px 0px 0px","alignItems":"center","gap":"60px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1390:               [INSTANCE] "hero-circular-badge" #7006:1395 layout={"mode":"row","padding":"50px","alignItems":"center","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"}} componentId=7006:579
+1391:                 [FRAME] "Object" #I7006:1395;7006:580 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":60,"height":60}} fills=[{"type":"IMAGE","imageRef":"225ce6787c37c610dca98dd2853a00f6def14eb6","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1392:                 [INSTANCE] "CircularText" #I7006:1395;7006:581 layout={"mode":"row","justifyContent":"center","alignItems":"center","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":-16.25,"y":-15.82}} componentId=7006:572
+1394:               [FRAME] "hero-description" #7006:1396 template=EL-e22a006e
+1395:                 [FRAME] "hero-description-text" #7006:1397 template=EL-dfdf56f9
+1396:                   [TEXT] #7006:1398 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="디자인 하고, 코드로 만듭니다. 가끔은 둘 다 하다가 새벽을 만납니다.\\n결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요."
+1397:               [FRAME] "hero-stats" #7006:1399 layout={"mode":"row","gap":"20px","sizing":{"horizontal":"fixed","vertical":"hug"},"dimensions":{"width":624}}
+1398:                 [INSTANCE] "HeroStudyColumn" #7067:1178 template=EL-d6c7bb0e
+1399:                   [INSTANCE] "HeroStudyItem" #I7067:1178;7067:1108 template=EL-30cac301
+1400:                     [IMAGE-SVG] #I7067:1178;7067:1108;7006:1402 template=EL-df597dda
+1401:                     [INSTANCE] "TextLine" #I7067:1178;7067:1108;7006:1403 template=EL-e40f48af
+1402:                       [TEXT] #I7067:1178;7067:1108;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Git"
+1403:                   [INSTANCE] "HeroStudyItem" #I7067:1178;7067:1113 template=EL-30cac301
+1404:                     [IMAGE-SVG] #I7067:1178;7067:1113;7006:1402 template=EL-df597dda
+1405:                     [INSTANCE] "TextLine" #I7067:1178;7067:1113;7006:1403 template=EL-e40f48af
+1406:                       [TEXT] #I7067:1178;7067:1113;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="VS code"
+1407:                   [INSTANCE] "HeroStudyItem" #I7067:1178;7067:1119 template=EL-30cac301
+1408:                     [IMAGE-SVG] #I7067:1178;7067:1119;7006:1402 template=EL-df597dda
+1409:                     [INSTANCE] "TextLine" #I7067:1178;7067:1119;7006:1403 template=EL-e40f48af
+1410:                       [TEXT] #I7067:1178;7067:1119;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="HTML"
+1411:                 [INSTANCE] "HeroStudyColumn" #7067:1194 template=EL-d6c7bb0e
+1412:                   [INSTANCE] "HeroStudyItem" #I7067:1194;7067:1108 template=EL-30cac301
+1413:                     [IMAGE-SVG] #I7067:1194;7067:1108;7006:1402 template=EL-df597dda
+1414:                     [INSTANCE] "TextLine" #I7067:1194;7067:1108;7006:1403 template=EL-e40f48af
+1415:                       [TEXT] #I7067:1194;7067:1108;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="CSS"
+1416:                   [INSTANCE] "HeroStudyItem" #I7067:1194;7067:1113 template=EL-30cac301
+1417:                     [IMAGE-SVG] #I7067:1194;7067:1113;7006:1402 template=EL-df597dda
+1418:                     [INSTANCE] "TextLine" #I7067:1194;7067:1113;7006:1403 template=EL-e40f48af
+1419:                       [TEXT] #I7067:1194;7067:1113;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Javascript"
+1420:                   [INSTANCE] "HeroStudyItem" #I7067:1194;7067:1119 template=EL-30cac301
+1421:                     [IMAGE-SVG] #I7067:1194;7067:1119;7006:1402 template=EL-df597dda
+1422:                     [INSTANCE] "TextLine" #I7067:1194;7067:1119;7006:1403 template=EL-e40f48af
+1423:                       [TEXT] #I7067:1194;7067:1119;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="React"
+1424:                 [INSTANCE] "HeroStudyColumn" #7067:1210 template=EL-d6c7bb0e
+1425:                   [INSTANCE] "HeroStudyItem" #I7067:1210;7067:1108 template=EL-30cac301
+1426:                     [IMAGE-SVG] #I7067:1210;7067:1108;7006:1402 template=EL-df597dda
+1427:                     [INSTANCE] "TextLine" #I7067:1210;7067:1108;7006:1403 template=EL-e40f48af
+1428:                       [TEXT] #I7067:1210;7067:1108;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Python"
+1429:                   [INSTANCE] "HeroStudyItem" #I7067:1210;7067:1113 template=EL-30cac301
+1430:                     [IMAGE-SVG] #I7067:1210;7067:1113;7006:1402 template=EL-df597dda
+1431:                     [INSTANCE] "TextLine" #I7067:1210;7067:1113;7006:1403 template=EL-e40f48af
+1432:                       [TEXT] #I7067:1210;7067:1113;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Figma"
+1433:                   [INSTANCE] "HeroStudyItem" #I7067:1210;7067:1119 template=EL-30cac301
+1434:                     [IMAGE-SVG] #I7067:1210;7067:1119;7006:1402 template=EL-df597dda
+1435:                     [INSTANCE] "TextLine" #I7067:1210;7067:1119;7006:1403 template=EL-e40f48af
+1436:                       [TEXT] #I7067:1210;7067:1119;7006:1403;7006:923 template=EL-aacf162d
+1437:                 [INSTANCE] "HeroStudyColumn" #7067:1226 template=EL-d6c7bb0e
+1438:                   [INSTANCE] "HeroStudyItem" #I7067:1226;7067:1108 template=EL-30cac301
+1439:                     [IMAGE-SVG] #I7067:1226;7067:1108;7006:1402 template=EL-df597dda
+1440:                     [INSTANCE] "TextLine" #I7067:1226;7067:1108;7006:1403 template=EL-ec7a4bde
+1441:                       [TEXT] #I7067:1226;7067:1108;7006:1403;7006:925 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="illustrator"
+1442:                   [INSTANCE] "HeroStudyItem" #I7067:1226;7067:1113 template=EL-30cac301
+1443:                     [IMAGE-SVG] #I7067:1226;7067:1113;7006:1402 template=EL-df597dda
+1444:                     [INSTANCE] "TextLine" #I7067:1226;7067:1113;7006:1403 template=EL-e40f48af
+1445:                       [TEXT] #I7067:1226;7067:1113;7006:1403;7006:923 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="after effect"
+1446:                   [INSTANCE] "HeroStudyItem" #I7067:1226;7067:1119 template=EL-30cac301
+1447:                     [IMAGE-SVG] #I7067:1226;7067:1119;7006:1402 template=EL-df597dda
+1448:                     [INSTANCE] "TextLine" #I7067:1226;7067:1119;7006:1403 template=EL-ec7a4bde
+1449:                       [TEXT] #I7067:1226;7067:1119;7006:1403;7006:925 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="primiere pro"
+1450:             [FRAME] "hero-video-wrap" #7006:1440 layout={"mode":"column","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":205,"height":160}} fills=fill_96a59cfe borderRadius=26px
+1451:               [RECTANGLE] "hero-video-thumbnail" #7006:1442 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":171,"height":228}} fills=[{"type":"IMAGE","imageRef":"bb286482d88bfa392d5b4b362e78ab4d3004319c","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1452:       [FRAME] "section-parallax" #7006:1443 layout={"mode":"column","alignSelf":"stretch","padding":"80px","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":960}}
+1453:         [FRAME] "parallax-wrapper" #7155:468 layout={"mode":"column","alignSelf":"stretch","padding":"0px 80px","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fill"}}
+1454:           [FRAME] "parallax-container" #7006:1444 layout={"mode":"column","alignSelf":"stretch","alignItems":"stretch","gap":"10px","sizing":{"horizontal":"fill","vertical":"fill"}} borderRadius=50px
+1455:             [RECTANGLE] "parallax-image" #7006:1446 layout=layout_617da2ef fills=[{"type":"IMAGE","imageRef":"5681b522a35a5f6d9922a6886a6034027b5bc0e5","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,-0.00011304064537398517],[0,0.8888888955116272,0.07367602735757828]],"filenameSuffix":"468ff1"}}]
+1456:       [FRAME] "section-about" #7006:1447 layout={"mode":"row","alignSelf":"stretch","padding":"80px","justifyContent":"center","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":400}}
+1457:         [FRAME] "about-heading-col" #7006:1448 layout={"mode":"row","alignSelf":"stretch","padding":"0px 80px","justifyContent":"space-between","alignItems":"center","sizing":{"horizontal":"fill","vertical":"fill"}}
+1458:           [FRAME] "about-subtitle-badge" #7006:1450 layout={"mode":"row","alignSelf":"stretch","padding":"8px 80px","justifyContent":"center","gap":"10px","sizing":{"horizontal":"hug","vertical":"fill"}}
+1459:             [FRAME] "about-badge-label" #7155:479 layout=layout_8675bdf3
+1460:               [IMAGE-SVG] "about-badge-icon" #7006:1451 template=EL-059cba57
+1461:               [FRAME] "about-label-text" #7006:1452 template=EL-2f9fe287
+1462:                 [TEXT] #7006:1453 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_57a378b3 text="About me"
+1463:           [FRAME] "about-intro" #7006:1456 layout={"mode":"row","padding":"0px 80px","justifyContent":"flex-end","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"hug"}}
+1464:             [INSTANCE] "ManifestParagraph-Intro" #7067:989 layout=layout_9e617cac componentId=7067:988
+1465:               [TEXT] #I7067:989;7006:1458 layout=layout_177c5efc fills=fill_12a009d5 textStyle="font/Pretendard/SemiBold 30" text="자기소개"
+1466:               [TEXT] #I7067:989;7006:1459 layout=layout_177c5efc fills=fill_5de097f7 textStyle={"fontFamily":"Pretendard","fontStyle":"Regular","fontWeight":400,"fontSize":18,"lineHeight":"1.8em","textAlignHorizontal":"LEFT","textAlignVertical":"TOP"} boldWeight=600 text="{ts1}**이름**{/ts1} : 심다은\\n{ts1}**생년월일**{/ts1} : 1994년 12월 15일 \\( 만 31세 \\)\\n{ts1}**휴대폰**{/ts1} : 010-7272-6639\\n{ts1}**주소**{/ts1} : 서울시 중구 동호로 173\\n{ts1}**email**{/ts1} : dbd01350@gmail.com"
+1467:             [INSTANCE] "ManifestParagraph-Career" #7067:993 layout=layout_9e617cac componentId=7067:992
+1468:               [TEXT] #I7067:993;7006:1461 layout=layout_177c5efc fills=fill_12a009d5 textStyle="font/Pretendard/SemiBold 30" text="경력"
+1469:               [FRAME] "Manifest" #I7067:993;7006:1462 layout={"mode":"row","alignSelf":"stretch","gap":"26px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1470:                 [TEXT] #I7067:993;7006:1463 layout=layout_177c5efc fills=["#737373"] textStyle=style_67266999 boldWeight=600 text="{ts2}**2013.03 \\~ 2021.02**{/ts2}  \\n{ts2}**2020.10 \\~ 2021.12**{/ts2}\\n{ts2}**2021.10 \\~ 2025.11**{/ts2}\\n{ts2}**2022.04 \\~ 2025.06**{/ts2}\\n{ts2}**2022.12 \\~ 2023.04**{/ts2}\\n{ts2}**2023.06 \\~ 2025.06**{/ts2}"
+1471:                 [TEXT] #I7067:993;7006:1464 layout=layout_177c5efc fills=fill_5de097f7 textStyle=style_67266999 text="서울시립대학교 토목공학과 졸업\\n온이앤지 \\(상하수도 설계회사\\)\\n브랜드 하루필름 이태원점 운영\\n브랜드 그믐달스튜디오 이태원점 운영\\n브랜드 하루필름 본사 근무\\n자개장롱 운영"
+1472:       [FRAME] "section-statistics" #7006:1467 layout={"mode":"column","alignSelf":"stretch","padding":"80px","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":1420}}
+1473:         [FRAME] "statistics-grid" #7006:1468 template=EL-e9077466
+1474:           [FRAME] "statistics-row-top" #7119:514 template=EL-b377c29b
+1475:             [INSTANCE] "StatisticsCard-CompletedProject" #7067:860 layout=layout_71ac61d6 componentId=7067:859
+1476:               [FRAME] "item" #I7067:860;7006:1470 template=EL-82ff13f5
+1477:                 [FRAME] "Stats Cards/Inner" #I7067:860;7006:1471 layout={"mode":"column","alignSelf":"stretch","padding":"40px","alignItems":"flex-end","gap":"284.4100036621094px","sizing":{"horizontal":"fill","vertical":"fill"}} fills=fill_96a59cfe borderRadius=26px
+1478:                   [FRAME] "Stats Cards/Image" #I7067:860;7006:1472 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":-60,"y":65},"dimensions":{"width":470}}
+1479:                     [FRAME] "Illustration" #I7067:860;7006:1473 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":470}} fills=[{"type":"IMAGE","imageRef":"1c61adcfae39690512cfbd2ba5739972b7f24b2b","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1480:                   [FRAME] "Counter" #I7067:860;7006:1474 layout={"mode":"column","alignItems":"flex-end","gap":"30px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1481:                     [TEXT] #I7067:860;7006:1475 layout=layout_177c5efc fills=fill_658ab2fa textStyle=style_d19d5b68 text="3+"
+1482:                     [FRAME] "Counter/Descr" #I7067:860;7006:1476 layout={"mode":"column","alignItems":"flex-end","sizing":{"horizontal":"hug","vertical":"hug"}}
+1483:                       [TEXT] #I7067:860;7006:1477 layout=layout_177c5efc fills=fill_658ab2fa textStyle=style_f9739e84 text="Completed Project"
+1484:                   [FRAME] "Stats Cards/Btngroup" #I7067:860;7006:1478 template=EL-2f9fe287
+1485:                     [INSTANCE] "TextIconButton" #I7067:860;7006:1479 layout={"mode":"row","padding":"10px 22px","justifyContent":"center","alignItems":"center","gap":"12px","sizing":{"horizontal":"hug","vertical":"hug"}} strokes=fill_658ab2fa strokeWeight=1px borderRadius=200px componentId=7006:717
+1486:                       [FRAME] "span.btn-caption" #I7067:860;7006:1479;7006:718 layout={"mode":"column","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":33}}
+1487:                         [TEXT] #I7067:860;7006:1479;7006:719 layout=layout_177c5efc fills=fill_658ab2fa textStyle=style_9b3c4a56 text="Project list"
+1488:                       [FRAME] "i.ph-bold" #I7067:860;7006:1479;7006:720 template=EL-21a18932
+1489:                         [FRAME] "span.__h2d-remove-before" #I7067:860;7006:1479;7006:721 template=EL-202ab99e
+1490:                           [IMAGE-SVG] #I7067:860;7006:1479;7006:722 layout=layout_2812f6d4 componentId=7006:593
+1491:             [INSTANCE] "StatisticsCard-IKEA" #7067:878 layout=layout_0c1257d0 componentId=7067:877
+1492:               [FRAME] "item" #I7067:878;7006:1481 template=EL-82ff13f5
+1493:                 [FRAME] "Stats Cards/Inner" #I7067:878;7006:1482 layout={"mode":"column","alignSelf":"stretch","padding":"40px","justifyContent":"space-between","alignItems":"flex-end","sizing":{"horizontal":"fill","vertical":"fill"}} fills=fill_658ab2fa borderRadius=26px
+1494:                   [FRAME] "Stats Cards/Image" #I7067:878;7006:1483 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":-27.5,"y":0},"dimensions":{"width":619,"height":600}}
+1495:                     [IMAGE-SVG] "Vector" #I7067:878;7006:1484 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":-205,"y":-300},"dimensions":{"width":1030.13,"height":1384.23}} fills=[{"type":"IMAGE","imageRef":"4a661c817f51d554e69d08c60cc3ce90dbd23559","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1.7274999618530273,-1.4576117503733364e-16,-0.9462500214576721],[0,3.0399999618530273,-2.0399999618530273]],"filenameSuffix":"1844eb"}}]
+1496:                   [FRAME] "Stats Cards/Btngroup" #I7067:878;7006:1485 template=EL-2f9fe287
+1497:                     [FRAME] "Avatars" #I7067:878;7006:1486 layout={"mode":"row","gap":"-22px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1498:                       [FRAME] "Avatars/Item" #I7067:878;7006:1487 template=EL-adffcad0
+1499:                         [FRAME] "Avatar" #I7067:878;7006:1488 layout=layout_5920d916 fills=[{"type":"IMAGE","imageRef":"a681acbe7938787e28ca7ee30b7b3880a2fd6288","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1500:                       [FRAME] "Avatars/Item" #I7067:878;7006:1489 template=EL-7d2339c0
+1501:                         [FRAME] "Avatars/Item" #I7067:878;7006:1490 template=EL-adffcad0
+1502:                           [FRAME] "Avatar" #I7067:878;7006:1491 layout=layout_5920d916 fills=[{"type":"IMAGE","imageRef":"1cecfdd75e0a94feebe91247594864c976181318","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1503:                       [FRAME] "Avatars/Item" #I7067:878;7006:1492 template=EL-7d2339c0
+1504:                         [FRAME] "Avatars/Item" #I7067:878;7006:1493 template=EL-adffcad0
+1505:                           [FRAME] "Avatar" #I7067:878;7006:1494 layout=layout_5920d916 fills=[{"type":"IMAGE","imageRef":"3e1a763198bfde1763545846a895c5e96217e6b0","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1506:                       [FRAME] "Avatars/Item" #I7067:878;7006:1495 template=EL-7d2339c0
+1507:                         [FRAME] "Avatars/Item" #I7067:878;7006:1496 template=EL-adffcad0
+1508:                           [FRAME] "Avatar" #I7067:878;7006:1497 layout=layout_5920d916 fills=[{"type":"IMAGE","imageRef":"75f8a670bef7fd33a70c6a13e8b5cc761d323b67","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1509:                       [FRAME] "Avatars/Item" #I7067:878;7006:1498 template=EL-7d2339c0
+1510:                         [FRAME] "Avatars/Item" #I7067:878;7006:1499 template=EL-adffcad0
+1511:                           [FRAME] "Avatar" #I7067:878;7006:1500 layout=layout_5920d916 fills=[{"type":"IMAGE","imageRef":"4010f7399486724380d734998985f632cb4feb21","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[0.5948531031608582,0,0.20073667168617249],[0,0.4441569745540619,0.028957655653357506]],"filenameSuffix":"62db58"}}]
+1512:                   [FRAME] "Counter" #I7067:878;7006:1501 layout={"mode":"column","alignItems":"flex-end","gap":"30px","sizing":{"horizontal":"hug","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":700,"y":330}}
+1513:                     [TEXT] #I7067:878;7006:1502 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_d19d5b68 text="20+"
+1514:                     [FRAME] "Counter/Descr" #I7067:878;7006:1503 layout=layout_3371d564
+1515:                       [TEXT] #I7067:878;7006:1504 layout=layout_56d3c81c fills=fill_12a009d5 textStyle=style_f9739e84 text="Pages built\\nTeam Project\\nIKEA website redesigned"
+1516:           [FRAME] "statistics-row-bottom" #7119:515 template=EL-b377c29b
+1517:             [INSTANCE] "StatisticsCard-Tools" #7067:904 layout=layout_0c1257d0 componentId=7067:903
+1518:               [FRAME] "item" #I7067:904;7006:1506 template=EL-82ff13f5
+1519:                 [FRAME] "Stats Cards/Inner" #I7067:904;7006:1507 template=EL-e15e1e93
+1520:                   [FRAME] "Stats Cards/Image" #I7067:904;7006:1508 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":409.5,"y":-20},"dimensions":{"width":620}}
+1521:                     [FRAME] "Illustration" #I7067:904;7006:1509 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":620}} fills=[{"type":"IMAGE","imageRef":"ad6173ca7882e00c169334daf598be6094b1047e","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1522:                   [FRAME] "Counter" #I7067:904;7006:1510 layout={"mode":"column","alignSelf":"stretch","gap":"30px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1523:                     [FRAME] "p#stats-counter-3" #I7067:904;7006:1511 template=EL-e9077466
+1524:                       [TEXT] #I7067:904;7006:1512 layout=layout_56d3c81c fills=fill_12a009d5 textStyle=style_013e249f text="12+"
+1525:                     [FRAME] "Counter/Descr" #I7067:904;7006:1513 template=EL-02ced46d
+1526:                       [TEXT] #I7067:904;7006:1514 layout=layout_56d3c81c fills=fill_12a009d5 textStyle=style_b76269c7 text="Creative & Development Tools\\nGIT / VS code / HTML / CSS \\nJavascript / React / Python / Figma \\nNotion / illustrator \\nafter effect / primiere pro"
+1527:             [INSTANCE] "StatisticsCard-AITools" #7067:915 layout=layout_71ac61d6 componentId=7067:914
+1528:               [FRAME] "item" #I7067:915;7006:1516 template=EL-82ff13f5
+1529:                 [FRAME] "Stats Cards/Inner" #I7067:915;7006:1517 template=EL-e15e1e93
+1530:                   [FRAME] "Stats Cards/Image" #I7067:915;7006:1518 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":377.5,"y":0},"dimensions":{"width":400}}
+1531:                     [FRAME] "Illustration" #I7067:915;7006:1519 layout={"mode":"none","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":400}} fills=[{"type":"IMAGE","imageRef":"1e4bfc343676d59fc3050af1f2b32acea6675565","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1532:                   [FRAME] "Counter" #I7067:915;7006:1520 layout={"mode":"column","alignSelf":"stretch","padding":"280px 0px 0px","justifyContent":"space-between","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":40,"y":40}}
+1533:                     [FRAME] "p#stats-counter-4" #I7067:915;7006:1521 template=EL-e9077466
+1534:                       [TEXT] #I7067:915;7006:1522 layout=layout_56d3c81c fills=fill_12a009d5 textStyle=style_013e249f text="7+"
+1535:                     [FRAME] "Counter/Descr" #I7067:915;7006:1523 template=EL-02ced46d
+1536:                       [TEXT] #I7067:915;7006:1524 layout=layout_56d3c81c fills=fill_12a009d5 textStyle=style_b76269c7 text="AI Tools\\nClaude / AGY / GPT\\nFigma agent / VS code chat\\nSUNO / FLOW"
+1537:       [FRAME] "section-marquee-text" #7006:1525 layout={"mode":"row","alignSelf":"stretch","gap":"10px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1538:         [FRAME] "marquee-text-track" #7006:1526 template=EL-21a18932
+1539:           [INSTANCE] "MarqueeTextItem" #7067:1071 layout=layout_93bf359d componentId=7067:1070
+1540:             [FRAME] "single item" #I7067:1071;7006:1528 template=EL-27407bad
+1541:               [FRAME] "p.marquee__text:margin" #I7067:1071;7006:1529 template=EL-d29dbdac
+1542:                 [TEXT] #I7067:1071;7006:1530 layout=layout_177c5efc fills=fill_f42777b1 textStyle=style_9bada7fa text="Desktop"
+1543:               [FRAME] "div.marquee__image" #I7067:1071;7006:1531 template=EL-0ea346f0
+1544:                 [IMAGE-SVG] #I7067:1071;7006:1532 template=EL-58a34fc5
+1545:           [INSTANCE] "MarqueeTextItem" #7067:1078 layout={"mode":"column","padding":"0px 30px 0px 0px","justifyContent":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":524,"height":144}} componentId=7067:1070
+1546:             [FRAME] "single item" #I7067:1078;7006:1528 template=EL-27407bad
+1547:               [FRAME] "p.marquee__text:margin" #I7067:1078;7006:1529 template=EL-d29dbdac
+1548:                 [TEXT] #I7067:1078;7006:1530 layout=layout_177c5efc fills=fill_f42777b1 textStyle=style_9bada7fa text="Mobile "
+1549:               [FRAME] "div.marquee__image" #I7067:1078;7006:1531 template=EL-0ea346f0
+1550:                 [IMAGE-SVG] #I7067:1078;7006:1532 template=EL-58a34fc5
+1551:           [INSTANCE] "MarqueeTextItem" #7067:1085 layout={"mode":"column","padding":"0px 30px 0px 0px","justifyContent":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":815,"height":144}} componentId=7067:1070
+1552:             [FRAME] "single item" #I7067:1085;7006:1528 template=EL-27407bad
+1553:               [FRAME] "p.marquee__text:margin" #I7067:1085;7006:1529 template=EL-d29dbdac
+1554:                 [TEXT] #I7067:1085;7006:1530 layout=layout_177c5efc fills=fill_f42777b1 textStyle=style_9bada7fa text="Vibe coding"
+1555:               [FRAME] "div.marquee__image" #I7067:1085;7006:1531 template=EL-0ea346f0
+1556:                 [IMAGE-SVG] #I7067:1085;7006:1532 template=EL-58a34fc5
+1557:           [INSTANCE] "MarqueeTextItem-Design" #7067:1093 layout=layout_93bf359d componentId=7067:1092
+1558:             [FRAME] "single item" #I7067:1093;7006:1546 template=EL-27407bad
+1559:               [FRAME] "p.marquee__text:margin" #I7067:1093;7006:1547 template=EL-d29dbdac
+1560:                 [TEXT] #I7067:1093;7006:1548 layout=layout_177c5efc fills=fill_f42777b1 textStyle=style_9bada7fa text="Design"
+1561:               [RECTANGLE] "div.marquee__image" #I7067:1093;7006:1549 layout=layout_106079f0
+1562:       [FRAME] "section-projects" #7006:1550 layout={"mode":"row","alignSelf":"stretch","padding":"0px 80px 80px","gap":"26px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1563:         [FRAME] "projects-sidebar" #7006:1551 template=EL-dea70495
+1564:           [FRAME] "projects-sidebar-content" #7006:1552 layout={"mode":"column","alignSelf":"stretch","padding":"80px 0px","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":880}}
+1565:             [FRAME] "projects-title-group" #7006:1553 layout={"mode":"column","alignSelf":"stretch","justifyContent":"space-between","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fill"}}
+1566:               [FRAME] "projects-heading" #7006:2950 template=EL-dfdf56f9
+1567:                 [INSTANCE] "ProjectSidebarCol-Title" #7067:1332 layout={"mode":"column","padding":"0px 15px","alignItems":"stretch","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":154}} componentId=7067:1331
+1568:                   [FRAME] "h2.reveal-type" #I7067:1332;7006:1555 template=EL-dfdf56f9
+1569:                     [TEXT] #I7067:1332;7006:1556 layout=layout_177c5efc fills=fill_12a009d5 opacity=0.20000000298023224 textStyle=style_f371a622 text="Featured"
+1570:                     [TEXT] #I7067:1332;7006:1557 layout=layout_177c5efc fills=fill_12a009d5 opacity=0.20000000298023224 textStyle=style_f371a622 text="projects"
+1571:                 [INSTANCE] "ProjectSidebarCol-Description" #7067:1337 layout={"mode":"column","padding":"22px 15px 0px","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":95.38}} componentId=7067:1336
+1572:                   [FRAME] "p" #I7067:1337;7006:1559 layout={"mode":"column","sizing":{"horizontal":"fixed","vertical":"hug"},"dimensions":{"width":560}}
+1573:                     [TEXT] #I7067:1337;7006:1560 layout=layout_177c5efc fills=fill_33a23a2d textStyle=style_ca90c373 text="Explore a selection of projects blending\\ncreativity with practical design"
+1574:               [FRAME] "projects-view-all" #7006:1561 layout={"mode":"column","alignSelf":"stretch","padding":"40px 15px 0px","justifyContent":"flex-end","alignItems":"flex-end","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":98}}
+1575:                 [INSTANCE] "Component 6/5/false" #7006:1562 layout=layout_8a16b2ac strokes=fill_12a009d5 strokeWeight=1px borderRadius=200px componentId=6920:810
+1576:                   [FRAME] "span.btn-caption" #I7006:1562;6920:811 template=EL-fa614242
+1577:                     [FRAME] "div.btn-anim__block" #I7006:1562;6920:812 template=EL-dfdf56f9
+1578:                       [TEXT] #I7006:1562;6920:813 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_9b3c4a56 text="Works"
+1579:                   [FRAME] "i.ph-bold" #I7006:1562;6920:814 template=EL-21a18932
+1580:                     [FRAME] "span.__h2d-remove-before" #I7006:1562;6920:815 template=EL-202ab99e
+1581:                       [IMAGE-SVG] #I7006:1562;6920:816 layout=layout_2812f6d4 componentId=6920:356
+1582:         [FRAME] "projects-article-list" #7006:1563 layout={"mode":"column","padding":"80px 0px 0px","alignItems":"stretch","sizing":{"horizontal":"hug","vertical":"hug"}}
+1583:           [FRAME] "projects-scroll-list" #7006:1564 layout={"mode":"column","alignSelf":"stretch","gap":"80px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1584:             [INSTANCE] "ProjectCard-IKEA" #7067:926 layout=layout_2a112c2b opacity=0.8999999761581421 componentId=7067:925
+1585:               [FRAME] "Project Item/Media" #I7067:926;7006:1566 template=EL-dea70495
+1586:                 [FRAME] "Project Item/Preview" #I7067:926;7006:1567 layout=layout_617da2ef fills=fill_96a59cfe borderRadius=50px
+1587:                   [FRAME] "div.hero-01-image" #I7067:926;7006:1568 layout={"mode":"column","sizing":{"horizontal":"hug","vertical":"hug"},"locationRelativeToParent":{"x":783,"y":158}}
+1588:                     [FRAME] "Hero Image" #I7067:926;7006:1569 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":165,"height":165.94}} fills=fill_340d68f6
+1589:                   [RECTANGLE] "Artboard 1laptop 1" #I7067:926;7006:1570 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":33,"y":46},"dimensions":{"width":632,"height":461}} fills=[{"type":"IMAGE","imageRef":"8bed76a42854e1b688b11115a4da58073ed1e9b5","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1590:                   [RECTANGLE] "ipad_iphone 1" #I7067:926;7006:1571 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":374,"y":190},"dimensions":{"width":633,"height":633}} fills=[{"type":"IMAGE","imageRef":"b49295aece76c9e46e613c8b76e6508a1124d6bc","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1591:                   [IMAGE-SVG] #I7067:926;7006:1572 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":148,"y":531},"dimensions":{"width":86,"height":86}} componentId=7006:497
+1592:                   [IMAGE-SVG] #I7067:926;7006:1573 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":715,"y":66},"dimensions":{"width":92,"height":92}} componentId=7006:489
+1593:                 [FRAME] "Project Item/Tags" #I7067:926;7006:1574 template=EL-58958f6e
+1594:                   [INSTANCE] "Tag" #I7067:926;7067:683 template=EL-196f6b36
+1595:                     [TEXT] #I7067:926;7067:683;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="UI/UX"
+1596:                   [INSTANCE] "Tag" #I7067:926;7067:685 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":119,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1597:                     [TEXT] #I7067:926;7067:685;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Web design"
+1598:                   [INSTANCE] "Tag" #I7067:926;7067:687 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":78,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1599:                     [TEXT] #I7067:926;7067:687;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Figma"
+1600:                   [INSTANCE] "Tag" #I7067:926;7067:689 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":115,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1601:                     [TEXT] #I7067:926;7067:689;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Figma mcp"
+1602:                   [INSTANCE] "Tag" #I7067:926;7067:691 template=EL-6e0920c6
+1603:                     [TEXT] #I7067:926;7067:691;7006:1576 template=EL-88f82c50
+1604:                   [INSTANCE] "Tag" #I7067:926;7067:693 template=EL-7a6ca861
+1605:                     [TEXT] #I7067:926;7067:693;7006:1576 template=EL-7f94caba
+1606:                   [INSTANCE] "Tag" #I7067:926;7067:695 template=EL-9abb115f
+1607:                     [TEXT] #I7067:926;7067:695;7006:1576 template=EL-115d911e
+1608:               [FRAME] "Project Item/Name" #I7067:926;7006:1589 template=EL-734152e5
+1609:                 [INSTANCE] "TextLine" #I7067:926;7006:1590 layout=layout_8675bdf3 componentId=7006:842
+1610:                   [TEXT] #I7067:926;7006:1590;7006:843 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"SemiBold","fontWeight":600,"fontSize":30,"lineHeight":"36px","textAlignHorizontal":"LEFT","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://heebon00.github.io/Team_Synergos_esg/index.html"}} text="{ts3}IKEA Website{/ts3}{ts4} {/ts4}{ts5}반응형 웹페이지 리디자인{/ts5}"
+1611:                 [FRAME] "Services Cards/Tags" #I7067:926;7006:1655 template=EL-e8f69d67
+1612:                   [FRAME] "span.tag" #I7067:926;7006:1656 template=EL-5eb60ffe
+1613:                     [TEXT] #I7067:926;7006:1657 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://heebon00.github.io/Team_Synergos_esg/"}} text="WEBSITE"
+1614:                   [FRAME] "span.tag" #I7067:926;7006:1658 template=EL-5eb60ffe
+1615:                     [TEXT] #I7067:926;7006:1659 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://github.com/heebon00/Team_Synergos_esg.git"}} text="GITHUB"
+1616:                   [FRAME] "span.tag" #I7067:926;7006:1660 template=EL-5eb60ffe
+1617:                     [TEXT] #I7067:926;7006:1661 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="리디자인 기획안"
+1618:             [INSTANCE] "ProjectCard-Campaign" #7067:956 layout=layout_2a112c2b componentId=7067:955
+1619:               [FRAME] "Project Item/Media" #I7067:956;7006:1592 template=EL-dea70495
+1620:                 [FRAME] "Project Item/Preview" #I7067:956;7006:1593 layout=layout_617da2ef borderRadius=50px
+1621:                   [RECTANGLE] "보건복지부 금연캠페인 세로 1" #I7067:956;7006:1594 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":-38.5,"y":-367.5},"dimensions":{"width":1080,"height":1920}} fills=[{"type":"IMAGE","imageRef":"4b660c105a4d91183da6e58b7cfe4b42bc2ee473","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1622:                 [FRAME] "Project Item/Tags" #I7067:956;7006:1595 template=EL-58958f6e
+1623:                   [INSTANCE] "Tag" #I7067:956;7067:697 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":66,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1624:                     [TEXT] #I7067:956;7067:697;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Flow"
+1625:                   [INSTANCE] "Tag" #I7067:956;7067:699 template=EL-7a6ca861
+1626:                     [TEXT] #I7067:956;7067:699;7006:1576 template=EL-7f94caba
+1627:                   [INSTANCE] "Tag" #I7067:956;7067:701 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":182,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1628:                     [TEXT] #I7067:956;7067:701;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Adobe premiere pro"
+1629:                   [INSTANCE] "Tag" #I7067:956;7067:703 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":168,"height":38}} fills=fill_658ab2fa strokes=fill_658ab2fa strokeWeight=1px borderRadius=16px componentId=7067:682
+1630:                     [TEXT] #I7067:956;7067:703;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="Adobe after effect"
+1631:               [FRAME] "Project Item/Name" #I7067:956;7006:1604 template=EL-734152e5
+1632:                 [INSTANCE] "TextLine" #I7067:956;7006:1605 layout=layout_8675bdf3 componentId=7006:846
+1633:                   [TEXT] #I7067:956;7006:1605;7006:847 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_aaaaa6bb text="{ts3}[보건복지부 금연캠페인 영상](https://drive.google.com/file/d/10d6UEqNIgxSS0ldjxd8_MTxDG_yDMS_Y/view?usp=sharing){/ts3}{ts6} AI-powered{/ts6}"
+1634:                 [FRAME] "Services Cards/Tags" #I7067:956;7006:1677 layout={"mode":"row","padding":"0px 15px","justifyContent":"center","alignItems":"center","gap":"22px","sizing":{"horizontal":"hug","vertical":"fixed"},"dimensions":{"height":38}} borderRadius=16px
+1635:                   [FRAME] "span.tag" #I7067:956;7006:1678 template=EL-5eb60ffe
+1636:                     [TEXT] #I7067:956;7006:1679 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://drive.google.com/file/d/10d6UEqNIgxSS0ldjxd8_MTxDG_yDMS_Y/view"}} text="VIDEO"
+1637:                   [FRAME] "span.tag" #I7067:956;7006:1680 template=EL-5eb60ffe
+1638:                     [TEXT] #I7067:956;7006:1681 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="영상기획서"
+1639:                   [FRAME] "span.tag" #I7067:956;7006:1682 template=EL-5eb60ffe
+1640:                     [TEXT] #I7067:956;7006:1683 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://drive.google.com/file/d/1DW5wDzza5ict6v7N9Sv253TQWXQzohEg/view?usp=sharing"}} text="스토리보드"
+1641:             [INSTANCE] "ProjectCard-Archive" #7067:973 layout=layout_2a112c2b componentId=7067:972
+1642:               [FRAME] "Project Item/Media" #I7067:973;7006:1607 template=EL-dea70495
+1643:                 [FRAME] "Project Item/Preview" #I7067:973;7006:1609 layout={"mode":"row","alignSelf":"stretch","padding":"10px","gap":"10px","sizing":{"horizontal":"fill","vertical":"fill"}} fills=[{"type":"IMAGE","imageRef":"bcd0c6b6c167d87afa9aaab02661935122139b35","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[0.8803537487983704,0,0.00792650692164898],[0,0.7660662531852722,0.018243350088596344]],"filenameSuffix":"3f3d97"}}] effects={"boxShadow":"inset 0px -64px 40.099998474121094px 1px rgba(0, 0, 0, 0.13)"} borderRadius=50px
+1644:                 [FRAME] "Project Item/Tags" #I7067:973;7006:1610 layout={"mode":"row","padding":"40px","wrap":true,"gap":"0px 15px","sizing":{"horizontal":"fixed","vertical":"hug"},"position":"absolute","locationRelativeToParent":{"x":0,"y":606},"dimensions":{"width":1019.5}}
+1645:                   [INSTANCE] "Tag" #I7067:973;7067:705 template=EL-196f6b36
+1646:                     [TEXT] #I7067:973;7067:705;7006:1576 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_2ca76e56 text="React"
+1647:                   [INSTANCE] "Tag" #I7067:973;7067:707 template=EL-7a6ca861
+1648:                     [TEXT] #I7067:973;7067:707;7006:1576 template=EL-7f94caba
+1649:                   [INSTANCE] "Tag" #I7067:973;7067:709 template=EL-6e0920c6
+1650:                     [TEXT] #I7067:973;7067:709;7006:1576 template=EL-88f82c50
+1651:                   [INSTANCE] "Tag" #I7067:973;7067:711 template=EL-9abb115f
+1652:                     [TEXT] #I7067:973;7067:711;7006:1576 template=EL-115d911e
+1653:               [FRAME] "Project Item/Name" #I7067:973;7006:1617 template=EL-734152e5
+1654:                 [INSTANCE] "TextLine" #I7067:973;7006:1618 layout=layout_8675bdf3 componentId=7006:850
+1655:                   [TEXT] #I7067:973;7006:1618;7006:851 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"SemiBold","fontWeight":600,"fontSize":30,"lineHeight":"36px","textAlignHorizontal":"LEFT","textAlignVertical":"CENTER","textDecoration":"UNDERLINE","hyperlink":{"type":"URL","url":"https://dbd01350-eng.github.io/VScode_study/archive/"}} boldWeight=700 text="{ts7}**웹 개발 아카이브**{/ts7}{ts8} ****{/ts8}{ts9}프론트엔드 도구 학습 아카이브{/ts9}"
+1656:                 [FRAME] "Services Cards/Tags" #I7067:973;7006:1697 template=EL-e8f69d67
+1657:                   [FRAME] "span.tag" #I7067:973;7006:1698 template=EL-5eb60ffe
+1658:                     [TEXT] #I7067:973;7006:1699 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://dbd01350-eng.github.io/VScode_study/archive/"}} text="WEBSITE"
+1659:                   [FRAME] "span.tag" #I7067:973;7006:1700 template=EL-5eb60ffe
+1660:                     [TEXT] #I7067:973;7006:1701 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"Regular","fontWeight":400,"fontSize":16,"lineHeight":"36px","textAlignHorizontal":"CENTER","textAlignVertical":"CENTER","hyperlink":{"type":"URL","url":"https://github.com/dbd01350-eng/VScode_study.git"}} text="GITHUB"
+1661:       [FRAME] "section-approach" #7006:1730 layout={"mode":"column","alignSelf":"stretch","padding":"80px","justifyContent":"space-between","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":960}}
+1662:         [FRAME] "approach-header" #7006:1731 layout={"mode":"row","alignSelf":"stretch","alignItems":"center","sizing":{"horizontal":"fill","vertical":"hug"}}
+1663:           [FRAME] "approach-title" #7006:1732 layout={"mode":"column","padding":"0px 15px","justifyContent":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":875,"height":154}}
+1664:             [TEXT] #7006:1736 layout=layout_177c5efc fills=fill_12a009d5 opacity=0.20000000298023224 textStyle=style_f371a622 text="How I work"
+1665:           [FRAME] "approach-categories" #7006:1737 layout={"mode":"column","padding":"0px 15px","justifyContent":"center","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":154}}
+1666:             [FRAME] "approach-category-list" #7006:1738 layout={"mode":"column","alignSelf":"stretch","padding":"8px 60px 0px 0px","gap":"-1px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1667:               [INSTANCE] "ApproachCategory" #7067:1099 template=EL-b75bf671
+1668:                 [TEXT] #I7067:1099;7006:1740 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="Design"
+1669:               [INSTANCE] "ApproachCategory" #7067:1101 template=EL-b75bf671
+1670:                 [TEXT] #I7067:1101;7006:1740 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="Development"
+1671:               [INSTANCE] "ApproachCategory" #7067:1103 template=EL-b75bf671
+1672:                 [TEXT] #I7067:1103;7006:1740 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="Branding"
+1673:               [INSTANCE] "ApproachCategory" #7067:1105 template=EL-b75bf671
+1674:                 [TEXT] #I7067:1105;7006:1740 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="Vibe coding"
+1675:         [FRAME] "approach-list" #7006:1748 layout={"mode":"column","alignSelf":"stretch","justifyContent":"center","alignItems":"center","gap":"-2px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1676:           [INSTANCE] "ApproachListItem-DetailOriented" #7067:1245 layout={"mode":"column","alignItems":"stretch","gap":"40px","sizing":{"horizontal":"hug","vertical":"hug"}} componentId=7067:1244
+1677:             [FRAME] "item" #I7067:1245;7155:654 layout={"mode":"column","alignSelf":"stretch","gap":"40px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1678:               [RECTANGLE] "Approach List/Border" #I7067:1245;7006:1750 template=EL-d1a916de
+1679:               [FRAME] "div.row" #I7067:1245;7006:1751 template=EL-c845aa77
+1680:                 [FRAME] "div.col-12" #I7067:1245;7006:1752 template=EL-56acdba5
+1681:                   [FRAME] "Approach List/Image" #I7067:1245;7006:1753 template=EL-6e62fe34
+1682:                     [FRAME] "Icon" #I7067:1245;7006:1754 layout=layout_2fb3405a fills=[{"type":"IMAGE","imageRef":"5db676df69ff68475e337cc4530e5aa093429b4c","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1683:                 [FRAME] "div.col-12" #I7067:1245;7006:1755 template=EL-cc311ce9
+1684:                   [FRAME] "p" #I7067:1245;7006:1756 template=EL-8432426e
+1685:                     [TEXT] #I7067:1245;7006:1757 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ce62f0a1 text="Detail-Oriented"
+1686:                 [FRAME] "div.col-12" #I7067:1245;7006:1758 template=EL-0060610b
+1687:                   [FRAME] "p" #I7067:1245;7006:1759 template=EL-e9077466
+1688:                     [TEXT] #I7067:1245;7006:1760 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="디테일에 집착합니다.\\n픽셀 하나, 코드 한 줄까지 타협 없이 완성도 높은 결과물을 만들어냅니다."
+1689:               [RECTANGLE] "Approach List/Border" #I7067:1245;7006:1761 template=EL-d1a916de
+1690:           [INSTANCE] "ApproachListItem-TrendDriven" #7067:1259 layout=layout_3371d564 componentId=7067:1258
+1691:             [FRAME] "item" #I7067:1259;7006:1763 template=EL-caa2da14
+1692:               [RECTANGLE] "Approach List/Border" #I7067:1259;7006:1764 template=EL-d1a916de
+1693:               [FRAME] "div.row" #I7067:1259;7006:1765 template=EL-c845aa77
+1694:                 [FRAME] "div.col-12" #I7067:1259;7006:1766 template=EL-56acdba5
+1695:                   [FRAME] "Approach List/Image" #I7067:1259;7006:1767 template=EL-6e62fe34
+1696:                     [FRAME] "Icon" #I7067:1259;7006:1768 layout=layout_2fb3405a fills=[{"type":"IMAGE","imageRef":"32d127cc965f3f0ecdec576ed2b64d6af97f0df6","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1697:                 [FRAME] "div.col-12" #I7067:1259;7006:1769 template=EL-cc311ce9
+1698:                   [FRAME] "p" #I7067:1259;7006:1770 template=EL-8432426e
+1699:                     [TEXT] #I7067:1259;7006:1771 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ce62f0a1 text="Trend-Driven"
+1700:                 [FRAME] "div.col-12" #I7067:1259;7006:1772 template=EL-0060610b
+1701:                   [FRAME] "p" #I7067:1259;7006:1773 template=EL-e9077466
+1702:                     [TEXT] #I7067:1259;7006:1774 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="트렌드를 읽고, 새로운 시각적 언어를 프로젝트에 녹여냅니다. \\n늘 한 발 앞선 디자인을 지향합니다."
+1703:               [RECTANGLE] "Approach List/Border" #I7067:1259;7006:1775 template=EL-d1a916de
+1704:           [INSTANCE] "ApproachListItem-TechSavvy" #7067:1274 layout=layout_3371d564 componentId=7067:1273
+1705:             [FRAME] "item" #I7067:1274;7006:1777 template=EL-caa2da14
+1706:               [RECTANGLE] "Approach List/Border" #I7067:1274;7006:1778 template=EL-d1a916de
+1707:               [FRAME] "div.row" #I7067:1274;7006:1779 template=EL-c845aa77
+1708:                 [FRAME] "div.col-12" #I7067:1274;7006:1780 template=EL-56acdba5
+1709:                   [FRAME] "Approach List/Image" #I7067:1274;7006:1781 template=EL-6e62fe34
+1710:                     [FRAME] "Icon" #I7067:1274;7006:1782 layout=layout_2fb3405a fills=[{"type":"IMAGE","imageRef":"55bcda3127e71a1078bb47d54f4e220f3a3ffb3c","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1711:                 [FRAME] "div.col-12" #I7067:1274;7006:1783 template=EL-cc311ce9
+1712:                   [FRAME] "p" #I7067:1274;7006:1784 template=EL-8432426e
+1713:                     [TEXT] #I7067:1274;7006:1785 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ce62f0a1 text="Tech-Savvy"
+1714:                 [FRAME] "div.col-12" #I7067:1274;7006:1786 layout={"mode":"column","padding":"0px 15px","justifyContent":"center","gap":"10px","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":70}}
+1715:                   [FRAME] "p" #I7067:1274;7006:1787 layout={"mode":"column","justifyContent":"flex-end","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":855.04,"height":36}}
+1716:                     [TEXT] #I7067:1274;7006:1788 layout=layout_617da2ef fills=fill_33a23a2d textStyle=style_ca90c373 text="인터랙션, 모션 디자인, 반응형 설계 등 기술적 깊이로 차별화된 사용자 경험을 설계합니다."
+1717:               [RECTANGLE] "Approach List/Border" #I7067:1274;7006:1789 template=EL-d1a916de
+1718:           [INSTANCE] "ApproachListItem-EndToEnd" #7067:1289 layout={"mode":"column","alignItems":"stretch","sizing":{"horizontal":"fixed","vertical":"hug"},"dimensions":{"width":1740}} componentId=7067:1288
+1719:             [FRAME] "item" #I7067:1289;7006:1791 template=EL-caa2da14
+1720:               [RECTANGLE] "Approach List/Border" #I7067:1289;7006:1792 template=EL-d1a916de
+1721:               [FRAME] "div.row" #I7067:1289;7006:1793 template=EL-c845aa77
+1722:                 [FRAME] "div.col-12" #I7067:1289;7006:1794 template=EL-56acdba5
+1723:                   [FRAME] "Approach List/Image" #I7067:1289;7006:1795 template=EL-6e62fe34
+1724:                     [FRAME] "Icon" #I7067:1289;7006:1796 layout=layout_2fb3405a fills=[{"type":"IMAGE","imageRef":"243867764f3026c42323c395e936acf770e65207","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,1,0]],"filenameSuffix":"56586a"}}]
+1725:                 [FRAME] "div.col-12" #I7067:1289;7006:1797 template=EL-cc311ce9
+1726:                   [FRAME] "p" #I7067:1289;7006:1798 template=EL-8432426e
+1727:                     [TEXT] #I7067:1289;7006:1799 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ce62f0a1 text="End-to-End"
+1728:                 [FRAME] "div.col-12" #I7067:1289;7006:1800 template=EL-0060610b
+1729:                   [FRAME] "p" #I7067:1289;7006:1801 template=EL-e9077466
+1730:                     [TEXT] #I7067:1289;7006:1802 layout=layout_56d3c81c fills=fill_33a23a2d textStyle=style_ca90c373 text="기획부터 UX/UI 디자인, 프론트엔드 개발, 브랜딩까지 \\n프로젝트를 처음부터 끝까지 책임집니다."
+1731:               [RECTANGLE] "Approach List/Border" #I7067:1289;7006:1803 template=EL-d1a916de
+1732:       [FRAME] "section-marquee-images" #7006:1818 layout={"mode":"column","alignSelf":"stretch","padding":"80px 0px","alignItems":"center","gap":"30px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1733:         [FRAME] "marquee-images-track-top" #7006:1819 template=EL-fd5614c3
+1734:           [INSTANCE] "MarqueeFigure-PhoneMockup" #7065:460 layout=layout_86f67a5c componentId=7065:459
+1735:             [FRAME] "item" #I7065:460;7006:1821 template=EL-55bfdd89
+1736:               [FRAME] "Image" #I7065:460;7006:1822 layout=layout_617da2ef fills=[{"type":"IMAGE","imageRef":"160ee5b87f1dbe36e92ecc79f7d4a76573b9fccd","scaleMode":"STRETCH","backgroundSize":"100% 100%","backgroundRepeat":"no-repeat","isBackground":true,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.8876712322235107,0.05616438388824463]],"filenameSuffix":"abdb9b"}}]
+1737:                 [RECTANGLE] "Artboard 6@4x 1" #I7065:460;7026:2959 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":184.17,"y":21.5},"dimensions":{"width":331.62,"height":519.52}} fills=[{"type":"IMAGE","imageRef":"22f5bbb131f46de9fc1cca47aac5453d4a7cb201","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[0.5625,0,0.2185237556695938],[0,1,4.440892098500626e-16]],"filenameSuffix":"4fad37"}}]
+1738:           [INSTANCE] "MarqueeFigure-TextPurple" #7065:465 template=EL-c0a0feae
+1739:             [FRAME] "item" #I7065:465;7006:1824 template=EL-b687cca4
+1740:               [FRAME] "p" #I7065:465;7006:1825 template=EL-2f9fe287
+1741:                 [TEXT] #I7065:465;7006:1826 template=EL-e1ff710a
+1742:           [INSTANCE] "MarqueeFigure-Image" #7065:478 template=EL-7ae26c79
+1743:             [FRAME] "item" #I7065:478;7006:1828 template=EL-55bfdd89
+1744:               [FRAME] "Image" #I7065:478;7006:1829 layout=layout_617da2ef fills=[{"type":"IMAGE","imageRef":"7bbb1cabe5106f186eba43635b7cffe0cb35dc00","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.8876712322235107,0.05616438388824463]],"filenameSuffix":"abdb9b"}}]
+1745:         [FRAME] "marquee-images-track-bottom" #7006:1830 template=EL-fd5614c3
+1746:           [INSTANCE] "MarqueeFigure-TextPurple" #7065:469 template=EL-c0a0feae
+1747:             [FRAME] "item" #I7065:469;7006:1824 template=EL-b687cca4
+1748:               [FRAME] "p" #I7065:469;7006:1825 template=EL-2f9fe287
+1749:                 [TEXT] #I7065:469;7006:1826 template=EL-e1ff710a
+1750:           [INSTANCE] "MarqueeFigure-Image" #7065:481 template=EL-7ae26c79
+1751:             [FRAME] "item" #I7065:481;7006:1828 template=EL-55bfdd89
+1752:               [FRAME] "Image" #I7065:481;7006:1829 layout=layout_617da2ef fills=[{"type":"IMAGE","imageRef":"a73166ad8c95916ebcf8d87c23596163e38e57e0","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1753:           [INSTANCE] "MarqueeFigure-Image" #7065:484 template=EL-7ae26c79
+1754:             [FRAME] "item" #I7065:484;7006:1828 template=EL-55bfdd89
+1755:               [FRAME] "Image" #I7065:484;7006:1829 layout=layout_617da2ef fills=[{"type":"IMAGE","imageRef":"4cbd0d173220d53ca696358f6cc055bd41a71d04","scaleMode":"FILL","objectFit":"cover","isBackground":false,"imageDownloadArguments":{"needsCropping":false,"requiresImageDimensions":false}}]
+1756:           [INSTANCE] "MarqueeFigure-TextPurple" #7065:473 template=EL-c0a0feae
+1757:             [FRAME] "item" #I7065:473;7006:1824 template=EL-b687cca4
+1758:               [FRAME] "p" #I7065:473;7006:1825 template=EL-2f9fe287
+1759:                 [TEXT] #I7065:473;7006:1826 template=EL-e1ff710a
+1760:       [FRAME] "section-cta" #7006:2078 layout={"mode":"column","alignSelf":"stretch","padding":"80px","alignItems":"stretch","gap":"10px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1761:         [FRAME] "cta-block" #7006:2079 layout={"mode":"column","alignSelf":"stretch","padding":"80px","justifyContent":"center","alignItems":"stretch","sizing":{"horizontal":"fill","vertical":"hug"}} fills=fill_12a009d5 borderRadius=200px
+1762:           [RECTANGLE] "cta-background" #7006:2080 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":880,"y":0},"dimensions":{"width":880,"height":780}} fills=[{"type":"IMAGE","imageRef":"58d0ae8986926dc0a22f3df2190f7c1da113591a","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.49153053760528564,0.2542347311973572]],"filenameSuffix":"23ade4"}}]
+1763:           [FRAME] "cta-content" #7006:2081 layout={"mode":"column","alignSelf":"stretch","padding":"80px 0px","justifyContent":"center","gap":"60px","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":640}}
+1764:             [FRAME] "cta-heading" #7006:2082 layout={"mode":"row","alignItems":"center","gap":"7px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1765:               [FRAME] "cta-title-group" #7119:539 layout={"mode":"column","justifyContent":"center","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1766:                 [FRAME] "cta-title-row-1" #7119:688 layout=layout_c686e931
+1767:                   [FRAME] "cta-icon" #7006:2083 layout={"mode":"row","padding":"10px","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"}} fills=[{"type":"IMAGE","imageRef":"d4c367a2735395cff5dd6c786f789125ba15aa83","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1.1399999856948853,0,-0.07000000029802322],[0,1,0]],"filenameSuffix":"72ffa4"}}]
+1768:                   [TEXT] #7006:2084 layout=layout_177c5efc fills=fill_658ab2fa opacity=0.800000011920929 textStyle=style_25deb4ae text="Let's talk about"
+1769:                 [TEXT] #7119:686 layout=layout_177c5efc fills=fill_658ab2fa opacity=0.800000011920929 textStyle=style_25deb4ae text="your project"
+1770:             [FRAME] "cta-button-wrap" #7006:2089 template=EL-dfdf56f9
+1771:               [INSTANCE] "AnimatedCTAButton" #7006:2090 layout={"mode":"row","padding":"22px 36px","justifyContent":"center","alignItems":"center","gap":"20px","sizing":{"horizontal":"hug","vertical":"hug"}} fills=fill_5d6f8c8b strokes=fill_5d6f8c8b strokeWeight=1px borderRadius=200px componentId=7006:1142
+1772:                 [FRAME] "span.btn-caption" #I7006:2090;7006:1143 layout={"mode":"column","gap":"10px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1773:                   [FRAME] "div.btn-anim__block" #I7006:2090;7006:1144 template=EL-2f9fe287
+1774:                     [TEXT] #I7006:2090;7006:1145 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_aaaaa6bb text="{ts10}Contact me{/ts10}"
+1775:                 [FRAME] "i.ph-bold" #I7006:2090;7006:1148 template=EL-21a18932
+1776:                   [FRAME] "span.__h2d-remove-before" #I7006:2090;7006:1149 layout={"mode":"column","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":41.04,"height":36}}
+1777:                     [IMAGE-SVG] #I7006:2090;7006:1150 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":41.04,"height":36}} componentId=7006:607
+1778:           [FRAME] "cta-images" #7006:2091 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"position":"absolute","locationRelativeToParent":{"x":950,"y":-89},"dimensions":{"width":809.59,"height":800}}
+1779:             [INSTANCE] "CTAImage-Large" #7067:1313 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":246,"y":199},"dimensions":{"width":451.44,"height":451.44}} fills=[{"type":"IMAGE","imageRef":"ffd7f43c23f6bc0c4a9345b8feb567193fb3c286","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.8771929740905762,0.061403509229421616]],"filenameSuffix":"68dc36"}}] componentId=7067:1312
+1780:             [INSTANCE] "CTAImage-Small" #7067:1315 layout={"mode":"none","sizing":{},"locationRelativeToParent":{"x":68,"y":420},"dimensions":{"width":159.6,"height":140.22}} fills=[{"type":"IMAGE","imageRef":"9b50fe7b984675ab1355d7012abee555b9d51bd1","scaleMode":"STRETCH","objectFit":"fill","isBackground":false,"imageDownloadArguments":{"needsCropping":true,"requiresImageDimensions":false,"cropTransform":[[1,0,0],[0,0.8771095871925354,0.0614452101290226]],"filenameSuffix":"f97424"}}] componentId=7067:1314
+1781:     [FRAME] "footer" #7006:1286 layout={"mode":"column","alignSelf":"stretch","padding":"80px","justifyContent":"center","alignItems":"stretch","gap":"80px","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":960}} fills=fill_c5e99173
+1782:       [FRAME] "footer-brand" #7036:278 template=EL-bb582553
+1783:         [FRAME] "footer-logo" #7036:279 layout={"mode":"row","alignItems":"center","gap":"15px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1784:           [IMAGE-SVG] "logo-icon" #7036:280 layout=layout_ac330679 componentId=7006:489
+1785:           [TEXT] #7036:282 layout=layout_177c5efc fills=fill_12a009d5 textStyle="font/Funnel Display/SemiBold 28" text="심다은 포트폴리오"
+1786:       [FRAME] "footer-columns" #7036:284 layout={"mode":"row","alignSelf":"stretch","gap":"80px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1787:         [FRAME] "footer-nav" #7036:285 template=EL-43f6c7ca
+1788:           [TEXT] #7036:286 layout=layout_177c5efc fills=fill_5de097f7 textStyle="font/Funnel Display/Bold 14" text="Navigation"
+1789:           [FRAME] "footer-nav-list" #7036:287 template=EL-f70c16cd
+1790:             [INSTANCE] "nav-link-about" #7036:288 layout=layout_0c6427dc componentId=7006:1162
+1791:               [FRAME] "span.btn-caption" #I7036:288;7006:1163 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":126.72,"height":53}}
+1792:                 [FRAME] "div.btn-anim__block" #I7036:288;7006:1164 layout={"mode":"column","padding":"0px 0px 8px","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":0,"y":-1},"dimensions":{"width":126.72}}
+1793:                   [TEXT] #I7036:288;7006:1165 template=EL-0961e64e
+1794:                 [FRAME] "div.btn-anim__block" #I7036:288;7006:1166 layout={"mode":"column","padding":"0px 0px 8px","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":0,"y":51.8},"dimensions":{"width":126.72}}
+1795:                   [TEXT] #I7036:288;7006:1167 template=EL-0961e64e
+1796:             [INSTANCE] "AnimatedNavButton" #7036:294 layout=layout_0c6427dc componentId=7006:1174
+1797:               [FRAME] "span.btn-caption" #I7036:294;7006:1175 template=EL-e22a006e
+1798:                 [FRAME] "div.btn-anim__block" #I7036:294;7006:1176 layout={"mode":"column","alignSelf":"stretch","padding":"0px 0px 8px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1799:                   [TEXT] #I7036:294;7006:1177 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_909a3886 text="About me"
+1800:             [FRAME] "nav-link-works" #7036:305 layout={"mode":"row","alignItems":"center","gap":"12px","sizing":{"horizontal":"hug","vertical":"hug"}}
+1801:               [INSTANCE] "nav-link-works-text" #7036:306 layout=layout_0c6427dc componentId=7006:1186
+1802:                 [FRAME] "span.btn-caption" #I7036:306;7006:1187 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":136.34,"height":53}}
+1803:                   [FRAME] "div.btn-anim__block" #I7036:306;7006:1188 layout={"mode":"column","padding":"0px 0px 8px","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":0,"y":-1},"dimensions":{"width":136.34}}
+1804:                     [TEXT] #I7036:306;7006:1189 template=EL-038981b2
+1805:                   [FRAME] "div.btn-anim__block" #I7036:306;7006:1190 layout={"mode":"column","padding":"0px 0px 8px","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":0,"y":51.8},"dimensions":{"width":136.34}}
+1806:                     [TEXT] #I7036:306;7006:1191 template=EL-038981b2
+1807:               [FRAME] "footer-nav-works-counter" #7036:317 layout={"mode":"row","padding":"8px 12px","sizing":{"horizontal":"hug","vertical":"hug"}} fills=fill_96a59cfe borderRadius=200px
+1808:                 [TEXT] #7036:318 layout=layout_177c5efc fills=fill_658ab2fa textStyle="font/Funnel Display/Bold 12" text="3"
+1809:             [INSTANCE] "nav-link-contact" #7036:341 layout=layout_0c6427dc componentId=7006:1222
+1810:               [FRAME] "span.btn-caption" #I7036:341;7006:1223 layout={"mode":"none","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":167.86,"height":53}}
+1811:                 [FRAME] "div.btn-anim__block" #I7036:341;7006:1224 layout={"mode":"column","padding":"0px 0px 8px","sizing":{"horizontal":"fixed","vertical":"hug"},"locationRelativeToParent":{"x":0,"y":-1},"dimensions":{"width":167.86}}
+1812:                   [TEXT] #I7036:341;7006:1225 layout=layout_177c5efc fills=fill_12a009d5 textStyle={"fontFamily":"Funnel Display","fontStyle":"SemiBold","fontWeight":600,"fontSize":44,"lineHeight":"52px","textAlignHorizontal":"LEFT","textAlignVertical":"CENTER","textDecoration":"UNDERLINE"} text="Contact"
+1813:         [FRAME] "footer-contact" #7036:379 template=EL-43f6c7ca
+1814:           [TEXT] #7036:380 layout=layout_177c5efc fills=fill_5de097f7 textStyle="font/Funnel Display/Bold 14" text="Contact"
+1815:           [FRAME] "footer-contact-list" #7036:381 layout={"mode":"column","alignSelf":"stretch","alignItems":"stretch","gap":"22px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1816:             [INSTANCE] "ContactLink" #7036:382 layout=layout_9b13a45d componentId=7006:1243
+1817:               [IMAGE-SVG] #I7036:382;7006:1244 template=EL-059cba57
+1818:               [INSTANCE] "TextLine" #I7036:382;7006:1245 layout=layout_86f67a5c componentId=7006:888
+1819:                 [TEXT] #I7036:382;7006:1245;7006:889 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_57a378b3 text="dbd01350@gmail.com"
+1820:             [INSTANCE] "ContactLink" #7036:387 layout=layout_9b13a45d componentId=7006:1249
+1821:               [IMAGE-SVG] #I7036:387;7006:1250 template=EL-059cba57
+1822:               [INSTANCE] "TextLine" #I7036:387;7006:1251 layout=layout_86f67a5c componentId=7006:892
+1823:                 [TEXT] #I7036:387;7006:1251;7006:893 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_57a378b3 text="+82 010-7272-6639"
+1824:         [FRAME] "footer-newsletter" #7036:396 layout={"mode":"column","gap":"22px","sizing":{"horizontal":"fill","vertical":"hug"}}
+1825:           [TEXT] #7036:397 layout=layout_177c5efc fills=fill_5de097f7 textStyle="font/Funnel Display/Bold 14" text="Newsletter"
+1826:           [TEXT] #7036:398 layout=layout_56d3c81c fills=fill_12a009d5 textStyle="font/Funnel Display/Regular 18" text="Subscribe to our insights:"
+1827:           [FRAME] "footer-newsletter-form" #7036:399 layout={"mode":"row","alignSelf":"stretch","padding":"0px 20px","alignItems":"center","gap":"12px","sizing":{"horizontal":"fill","vertical":"fixed"},"dimensions":{"height":56}} strokes=["#838383"] strokeWeight=1px borderRadius=16px
+1828:             [TEXT] #7036:400 layout=layout_56d3c81c fills=fill_5de097f7 textStyle="font/Funnel Display/Regular 14" text="Your Email"
+1829:             [INSTANCE] "newsletter-submit-button" #7036:401 layout={"mode":"row","justifyContent":"flex-end","alignItems":"center","sizing":{"horizontal":"fixed","vertical":"fixed"},"dimensions":{"width":60,"height":60}} componentId=7006:1264
+1830:               [FRAME] "i.ph-arrow-up-right" #I7036:401;7006:1265 template=EL-21a18932
+1831:                 [FRAME] "span.__h2d-remove-before" #I7036:401;7006:1266 template=EL-202ab99e
+1832:                   [IMAGE-SVG] #I7036:401;7006:1267 layout=layout_2812f6d4 componentId=7006:615
+1833:         [FRAME] "footer-social" #7036:406 template=EL-43f6c7ca
+1834:           [TEXT] #7036:407 layout=layout_177c5efc fills=fill_5de097f7 textStyle="font/Funnel Display/Bold 14" text="Ecosystem"
+1835:           [FRAME] "footer-social-list" #7036:408 template=EL-f70c16cd
+1836:             [INSTANCE] "TextLine" #7036:415 layout=layout_0c6427dc componentId=7006:904
+1837:               [TEXT] #I7036:415;7006:905 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Instagram"
+1838:             [INSTANCE] "TextLine" #7036:418 layout=layout_0c6427dc componentId=7006:908
+1839:               [TEXT] #I7036:418;7006:909 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Github"
+1840:             [INSTANCE] "TextLine" #7036:421 layout=layout_0c6427dc componentId=7006:912
+1841:               [TEXT] #I7036:421;7006:913 template=EL-aacf162d
+1842:             [INSTANCE] "TextLine" #7036:424 layout=layout_0c6427dc componentId=7006:916
+1843:               [TEXT] #I7036:424;7006:917 layout=layout_177c5efc fills=fill_12a009d5 textStyle=style_ca90c373 text="Figma Community"

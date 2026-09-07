@@ -1,0 +1,117 @@
+const portfolioData = {
+  profile: {
+    name: '심다은',
+    nameEn: 'Daeun Sim',
+    birth: '1994년 12월 15일 ( 만 31세 )',
+    phone: '010-7272-6639',
+    address: '서울시 중구 동호로 173',
+    email: 'dbd01350@gmail.com',
+  },
+  hero: {
+    badge: '예쁘게, 될 때 까지',
+    title: 'Design and Coding',
+    subtext: '디자인 하고, 코드로 만듭니다.\n가끔은 둘 다 하다가 새벽을 만납니다.\n결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.',
+    tags: [
+      'Git', 'VS code', 'HTML', 'CSS', 'Javascript', 
+      'React', 'Python', 'Figma', 'illustrator', 
+      'after effect', 'primiere pro'
+    ],
+  },
+  stats: [
+    {
+      value: '3+',
+      label: 'Completed Project',
+      sublabel: 'Project list',
+      highlight: true
+    },
+    {
+      value: '20+',
+      label: 'Pages built',
+      sublabel: 'Team Project / IKEA website redesigned',
+      highlight: false
+    },
+    {
+      value: '12+',
+      label: 'Creative & Development Tools',
+      sublabel: 'GIT / VS code / HTML / CSS / Javascript / React / Python / Figma / Notion / illustrator / after effect / primiere pro',
+      highlight: false
+    },
+    {
+      value: '7+',
+      label: 'AI Tools',
+      sublabel: 'Claude / AGY / GPT / Figma agent / VS code chat / SUNO / FLOW',
+      highlight: false
+    },
+  ],
+  experience: [
+    { period: '2013.03 ~ 2021.02', title: '서울시립대학교 토목공학과 졸업' },
+    { period: '2020.10 ~ 2021.12', title: '온이앤지 (상하수도 설계회사)' },
+    { period: '2021.10 ~ 2025.11', title: '브랜드 하루필름 이태원점 운영' },
+    { period: '2022.04 ~ 2025.06', title: '브랜드 그믐달스튜디오 이태원점 운영' },
+    { period: '2022.12 ~ 2023.04', title: '브랜드 하루필름 본사 근무' },
+    { period: '2023.06 ~ 2025.06', title: '자개장롱 운영' },
+  ],
+  projects: [
+    {
+      id: 'ikea',
+      title: 'IKEA Website 반응형 웹페이지 리디자인',
+      type: 'WEBSITE',
+      links: [
+        { label: 'WEBSITE', url: '#' },
+        { label: 'GITHUB', url: '#' },
+        { label: '리디자인 기획안', url: '#' },
+      ],
+      tags: ['UI/UX', 'Web design', 'Figma', 'Figma mcp', 'Claude', 'AGY', 'Vibe coding'],
+    },
+    {
+      id: 'nosmoking',
+      title: '보건복지부 금연캠페인 영상 AI-powered',
+      type: 'VIDEO',
+      links: [
+        { label: 'VIDEO', url: 'https://drive.google.com/file/d/10d6UEqNIgxSS0ldjxd8_MTxDG_yDMS_Y/view?usp=sharing' },
+        { label: '영상기획서', url: '#' },
+        { label: '스토리보드', url: '#' },
+      ],
+      tags: ['Flow', 'AGY', 'Adobe premiere pro', 'Adobe after effect'],
+    },
+    {
+      id: 'webarchive',
+      title: '웹 개발 아카이브 프론트엔드 도구 학습 아카이브',
+      type: 'WEBSITE',
+      links: [
+        { label: 'WEBSITE', url: '#' },
+        { label: 'GITHUB', url: '#' },
+      ],
+      tags: ['React', 'AGY', 'Claude', 'Vibe coding'],
+    },
+  ],
+  values: [
+    {
+      id: 'detail',
+      title: 'Detail-Oriented',
+      description: '디테일에 집착합니다.\n픽셀 하나, 코드 한 줄까지 타협 없이 완성도 높은 결과물을 만들어냅니다.',
+      icon: '/assets/end_to_end_icon.png'
+    },
+    {
+      id: 'trend',
+      title: 'Trend-Driven',
+      description: '트렌드를 읽고, 새로운 시각적 언어를 프로젝트에 녹여냅니다.\n늘 한 발 앞선 디자인을 지향합니다.',
+      icon: '/assets/trend_driven_icon.png'
+    },
+    {
+      id: 'tech',
+      title: 'Tech-Savvy',
+      description: '인터랙션, 모션 디자인, 반응형 설계 등 기술적 깊이로 차별화된 사용자 경험을 설계합니다.',
+      icon: '/assets/tech_savvy_icon.png'
+    },
+    {
+      id: 'endtoend',
+      title: 'End-to-End',
+      description: '기획부터 UX/UI 디자인, 프론트엔드 개발, 브랜딩까지\n프로젝트를 처음부터 끝까지 책임집니다.',
+      icon: '/assets/end_to_end_icon.png'
+    },
+  ],
+  marqueeTexts: ['Desktop', 'Mobile', 'Vibe coding', 'Design'],
+};
+
+export default portfolioData;

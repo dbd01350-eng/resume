@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #FAF7F6;
+  --color-bg-dark: #161616;
+  --color-accent-purple: #9F8BE7;
+  --color-accent-lime: #DDF160;
+  --color-text-main: #161616;
+  --color-text-sub: #303030;
+  --color-text-[#404040]: #404040;
+  --color-text-[#585858]: #585858;
+  --color-text-[#737373]: #737373;
+  --color-text-muted: #B2AEAD;
+
+  --font-funnel: 'Funnel Display', sans-serif;
+  --font-pretendard: 'Pretendard', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-pretendard);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+  }
+}
+
+/* Exact Figma Pixel Utility Classes */
+.figma-container {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.figma-btn-pill {
+  height: 56px;
+  padding: 0 22px;
+  gap: 12px;
+  border-radius: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Funnel Display', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  transition: all 0.2s ease;
+}
+
+.figma-tag-badge {
+  height: 38px;
+  padding: 0 15px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.figma-display-120 {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 120px;
+  line-height: 144px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: 200%;
+  animation: marquee-reverse 26s linear infinite;
+}
+
+.animate-marquee:hover, .animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
