@@ -74,10 +74,10 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 overflow-hidden relative bg-neutral-950">
+        <div className="flex-1 min-h-0 relative bg-neutral-950 overflow-hidden">
           {viewMode === 'slide' ? (
             /* Slide View Mode */
-            <div className="w-full h-full relative flex items-center justify-center p-2 sm:p-6 select-none">
+            <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-6 select-none">
               {/* Previous Button */}
               <button
                 onClick={prevSlide}
@@ -89,7 +89,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
               </button>
 
               {/* Slide Image */}
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center overflow-hidden">
                 <img
                   src={images[currentIndex]}
                   alt={`${title} Slide ${currentIndex + 1}`}
@@ -113,17 +113,21 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
             </div>
           ) : (
             /* Scroll View Mode */
-            <div className="w-full h-full overflow-y-auto p-4 sm:p-8 space-y-6 flex flex-col items-center">
+            <div className="absolute inset-0 overflow-y-auto p-4 sm:p-8 space-y-6 flex flex-col items-center">
               {images.map((imgUrl, idx) => (
-                <div key={idx} className="w-full max-w-4xl bg-bg-dark rounded-xl overflow-hidden border border-neutral-800 shadow-md">
+                <div key={idx} className="w-full max-w-4xl bg-bg-dark rounded-xl overflow-hidden border border-neutral-800 shadow-md shrink-0">
                   <div className="px-3 py-1.5 bg-neutral-900 text-xs text-neutral-400 font-['Pretendard']"> {/* token-exempt: font style */}
                     Page {idx + 1}
                   </div>
                   <img
                     src={imgUrl}
                     alt={`${title} Page ${idx + 1}`}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain block"
                     loading="lazy"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/assets/figma_8bed76a4.png';
+                    }}
                   />
                 </div>
               ))}
@@ -148,6 +152,10 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
                   src={imgUrl}
                   alt={`Thumbnail ${idx + 1}`}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/assets/figma_8bed76a4.png';
+                  }}
                 />
               </button>
             ))}
