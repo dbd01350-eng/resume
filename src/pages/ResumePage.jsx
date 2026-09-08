@@ -88,7 +88,7 @@ export default function ResumePage({ onClose }) {
       </div>
 
       {/* Main A4 Resume Paper Container */}
-      <div className="bg-bg-primary text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-4 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
+      <div className="bg-bg-primary text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-10 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
         
         {/* Header & Personal Profile Card */}
         <div className="border-b border-gray-200 pb-6 print:pb-4 flex flex-col sm:flex-row gap-6 items-start justify-between">
