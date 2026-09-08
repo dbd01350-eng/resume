@@ -21,7 +21,7 @@ export default function ParallaxSection() {
         {/* Left Column: Video Showcase with expanded width */}
         <div 
           onClick={handleTogglePlay}
-          className="w-full lg:w-[72%] xl:w-[75%] h-[220px] sm:h-[400px] md:h-[500px] lg:h-[640px] rounded-[24px] sm:rounded-[44px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group flex-shrink-0" // token-exempt: parallax video container sizing
+          className="w-full lg:w-[72%] xl:w-[75%] h-[220px] sm:h-[400px] md:h-[500px] lg:h-[640px] rounded-[24px] sm:rounded-[40px] overflow-hidden relative shadow-2xl bg-transparent cursor-pointer group flex-shrink-0 isolate transform-gpu" // token-exempt: parallax video container sizing
         >
           {/* HTML5 Video element */}
           <video 
@@ -30,7 +30,7 @@ export default function ParallaxSection() {
             playsInline 
             poster="/assets/figma_5681b522.png" 
             onEnded={() => setIsPlaying(false)}
-            className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]" // token-exempt: video rounded corners
+            className="w-full h-full object-cover rounded-[24px] sm:rounded-[40px] block" // token-exempt: video rounded corners
           >
             <source src="/assets/showcase_video.mp4" type="video/mp4" />
             <source src="/assets/hero_video.mp4" type="video/mp4" />
