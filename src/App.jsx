@@ -9,6 +9,7 @@ import ProjectsSection from './pages/ProjectsSection.jsx';
 import CTASection from './pages/CTASection.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import SkeletonLoader from './components/SkeletonLoader.jsx';
+import ChatWidget from './components/ChatWidget.jsx';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -55,8 +56,8 @@ export default function App() {
       {/* Main Figma Node Hierarchy */}
       <main>
         <HeroSection />
-        <ParallaxSection />
         <AboutSection />
+        <ParallaxSection />
         <MarqueeTextSection />
         <ProjectsSection />
         <CTASection onOpenContact={handleOpenContact} />
@@ -67,6 +68,9 @@ export default function App() {
 
       {/* Contact Modal / Page */}
       {isContactOpen && <ContactPage onClose={handleCloseContact} />}
+
+      {/* Floating AI Chatbot */}
+      <ChatWidget />
     </div>
   );
 }

@@ -24,6 +24,8 @@ build/
 .env
 .env.local
 .env.*.local
+key.env
+*.env
 !.env.example
 
 # Editor directories and files
