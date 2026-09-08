@@ -130,7 +130,7 @@ export default function ResumePage({ onClose }) {
           </h2>
           
           <div className="p-4 bg-bg-secondary rounded-2xl border border-gray-100 space-y-2.5">
-            <blockquote className="text-sm font-semibold text-text-main italic border-l-2 border-accent-purple pl-3 py-0.5">
+            <blockquote className="text-sm sm:text-base font-bold text-text-main border-l-4 border-accent-purple pl-3 py-0.5">
               &quot;예쁘게, 될 때 까지 - 디자인 하고, 코드로 만듭니다. 결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.&quot;
             </blockquote>
             <p className="text-xs sm:text-sm text-text-sub leading-relaxed">
