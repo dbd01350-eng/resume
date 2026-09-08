@@ -111,7 +111,7 @@ export default function ChatWidget() {
   return (
     <>
       {/* Floating Toggle Button (Bottom Left) */}
-      <div className="fixed bottom-6 left-6 z-50"> {/* token-exempt: fixed layout positioning */}
+      <div className="fixed bottom-4 left-6 z-50 flex flex-col items-center gap-1.5"> {/* token-exempt: fixed layout positioning */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Chatbot"
@@ -126,13 +126,13 @@ export default function ChatWidget() {
               e.target.src = '/assets/logo_icon.svg';
             }}
           />
-          {!isOpen && (
-            <span className="absolute -bottom-1 -right-3 bg-bg-dark/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-neutral-700 shadow-xl flex items-center gap-1.5 whitespace-nowrap font-['Funnel_Display'] pointer-events-none"> {/* token-exempt: chatbot label badge */}
-              <span className="w-2 h-2 bg-accent-lime rounded-full animate-pulse inline-block" />
-              AI Chatbot
-            </span>
-          )}
         </button>
+        {!isOpen && (
+          <span className="bg-bg-dark/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-neutral-700 shadow-xl flex items-center gap-1.5 whitespace-nowrap font-['Funnel_Display'] pointer-events-none"> {/* token-exempt: chatbot label badge */}
+            <span className="w-2 h-2 bg-accent-lime rounded-full animate-pulse inline-block" />
+            AI Chatbot
+          </span>
+        )}
       </div>
 
       {/* Floating Chat Popup Window (Bottom Left) */}
