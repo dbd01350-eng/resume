@@ -3,12 +3,12 @@ import portfolioData from '../data/portfolioData.js';
 
 const API_URL = import.meta.env.VITE_CHAT_API_URL || 'https://resume-qrv3.onrender.com/chat'; // token-exempt: chatbot backend endpoint
 
-// Smart Client-side AI Responder for fallback when backend API is unreachable
+// Smart Client-side AI Responder for fallback when backend API is offline
 function generatePortfolioResponse(userText) {
   const text = userText.toLowerCase().trim();
 
   if (text.includes('안녕') || text.includes('hello') || text.includes('hi') || text.includes('반가')) {
-    return `안녕하세요! 디자이너 겸 개발자 심다은(Daeun Sim)의 포트폴리오 AI 챗봇입니다. 🌸 어떤 내용이 궁금하신가요?`;
+    return `안녕하세요! 디자이너 겸 개발자 심다은의 AI 챗봇입니다. 🌸 궁금한 점이 있으시면 편하게 물어보세요!`;
   }
 
   if (text.includes('연락') || text.includes('이메일') || text.includes('전화') || text.includes('문의') || text.includes('contact') || text.includes('email') || text.includes('메일')) {
@@ -16,7 +16,7 @@ function generatePortfolioResponse(userText) {
   }
 
   if (text.includes('기술') || text.includes('스택') || text.includes('툴') || text.includes('skill') || text.includes('tool') || text.includes('언어') || text.includes('개발') || text.includes('디자인')) {
-    return `💻 사용 가능한 주요 기술 & 툴:\n- 개발: ${portfolioData.hero.tags.slice(0, 6).join(', ')}\n- 디자인: Figma, Illustrator, Premiere Pro, After Effects\n- AI 툴: Claude, GPT, AGY, Flow, Suno 등\n\n디자인과 코딩을 모두 소화하며 "예쁘게, 될 때 까지" 완성도 높은 결과물을 만듭니다.`;
+    return `💻 사용 가능한 주요 기술 & 툴:\n- 개발: ${portfolioData.hero.tags.slice(0, 6).join(', ')}\n- 디자인: Figma, Illustrator, Premiere Pro, After Effects\n- AI 툴: Claude, GPT, AGY, Flow, Suno 등\n\n디자인과 코딩을 모두 소화하며 완성도 높은 결과물을 만듭니다.`;
   }
 
   if (text.includes('프로젝트') || text.includes('포트폴리오') || text.includes('작품') || text.includes('project') || text.includes('ikea') || text.includes('이케아') || text.includes('금연')) {
@@ -24,22 +24,22 @@ function generatePortfolioResponse(userText) {
     return `🚀 주요 프로젝트 목록:\n${list}\n\n사이트 내 Projects 섹션에서 상세 내용과 기획안/영상 링크를 확인하실 수 있습니다.`;
   }
 
-  if (text.includes('경력') || text.includes('이력') || text.includes('학교') || text.includes('전공') || text.includes('학력') || text.includes('자기소개') || text.includes('회사') || text.includes('운영')) {
+  if (text.includes('경력') || text.includes('이력') || text.includes('학교') || text.includes('전공') || text.includes('학력') || text.includes('자기소개') || text.includes('회사')) {
     const exp = portfolioData.experience.map(e => `• ${e.period}: ${e.title}`).join('\n');
-    return `👩‍💻 심다은 님의 주요 학력 및 경력:\n${exp}\n\n다양한 공간 운영 및 설계 경험을 바탕으로 사용자 경험을 입체적으로 설계합니다.`;
+    return `👩‍💻 심다은 님의 주요 학력 및 경력:\n${exp}\n\n다양한 경험을 바탕으로 입체적인 사용자 경험을 설계합니다.`;
   }
 
-  if (text.includes('누구') || text.includes('소개') || text.includes('심다은') || text.includes('about') || text.includes('포부')) {
-    return `✨ ${portfolioData.profile.nameEn} (${portfolioData.profile.name})\n"${portfolioData.hero.badge}"\n${portfolioData.hero.subtext}\n\n디자인 기획부터 UX/UI, 프론트엔드 개발까지 End-to-End로 구축합니다.`;
+  if (text.includes('누구') || text.includes('소개') || text.includes('심다은') || text.includes('about')) {
+    return `✨ ${portfolioData.profile.nameEn} (${portfolioData.profile.name})\n"${portfolioData.hero.badge}"\n${portfolioData.hero.subtext}`;
   }
 
-  return `'${userText}'에 대해 문의해 주셔서 감사합니다!\n심다은 님의 프로젝트, 기술 스택(React, Figma, AI 툴), 경력, 또는 연락처(dbd01350@gmail.com)에 대해 더 궁금한 점이 있으시면 편하게 물어보세요. 😊`;
+  return `질문하신 내용('${userText}')에 대해 더욱 자세한 대화를 나누고 싶으시다면 포트폴리오 상단의 Contact me 버튼이나 이메일(${portfolioData.profile.email})로 언제든 편하게 문의해 주세요! 😊`;
 }
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [msgs, setMsgs] = useState([
-    { role: 'bot', text: '안녕하세요! 심다은 포트폴리오 AI 챗봇입니다. 궁금한 점이 있으시면 무엇이든 물어보세요!' }
+    { role: 'bot', text: '안녕하세요! 심다은 포트폴리오 AI 챗봇입니다. 무엇이든 물어보세요!' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -66,7 +66,7 @@ export default function ChatWidget() {
 
     let botReply = '';
 
-    // Attempt to call API server with 30s timeout (Render free tier cold-start window)
+    // Attempt to call API server with 30s timeout
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000); // token-exempt: 30s timeout for Render cold start
@@ -89,12 +89,11 @@ export default function ChatWidget() {
         console.warn('Backend API returned non-OK status:', res.status);
       }
     } catch (err) {
-      console.warn('Backend API fetch error (falling back to portfolio responder):', err);
+      console.warn('Backend API fetch error:', err);
     }
 
     if (!botReply) {
-      // Intelligent fallback response if API server fails or is not connected
-      await new Promise((r) => setTimeout(r, 400));
+      await new Promise((r) => setTimeout(r, 300));
       botReply = generatePortfolioResponse(userText);
     }
 
@@ -195,7 +194,7 @@ export default function ChatWidget() {
                   className="w-7 h-7 object-contain shrink-0 animate-spin"
                 />
                 <div className="bg-bg-primary border border-neutral-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 text-xs text-text-muted flex items-center gap-1.5">
-                  <span>AI가 답변을 생각하는 중... (Render 서버 응답 대기)</span>
+                  <span>AI가 답변을 생성하는 중입니다</span>
                   <span className="animate-pulse">...</span>
                 </div>
               </div>
