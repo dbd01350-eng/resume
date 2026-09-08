@@ -10,13 +10,13 @@ export default function ResumePage({ onClose }) {
 
   const getExperienceLink = (title) => {
     if (title.includes('하루필름') && !title.includes('본사')) {
-      return 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84+%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+      return 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
     }
     if (title.includes('그믐달스튜디오')) {
-      return 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%AC%EB%94%94%EC%98%A4+%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+      return 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%90%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
     }
     if (title.includes('자개장롱')) {
-      return 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1+%EC%95%BD%EC%88%98&tbm=isch'; // token-exempt: google image search link
+      return 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1%20%EC%95%BD%EC%88%98&tbm=isch'; // token-exempt: google image search link
     }
     return null;
   };
