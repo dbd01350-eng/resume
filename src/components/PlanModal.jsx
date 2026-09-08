@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from 'react';
 
-export default function PlanModal({ isOpen, onClose, title, images = [] }) {
+export default function PlanModal({ isOpen, onClose, title, images = [], isVideo = false, videoUrl = "" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState('slide'); // 'slide' or 'scroll'
 
   useEffect(() => {
     setCurrentIndex(0);
-  }, [images, isOpen]);
+  }, [images, isOpen, videoUrl]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight' && viewMode === 'slide') {
+      if (!isVideo && e.key === 'ArrowRight' && viewMode === 'slide') {
         setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
       }
-      if (e.key === 'ArrowLeft' && viewMode === 'slide') {
+      if (!isVideo && e.key === 'ArrowLeft' && viewMode === 'slide') {
         setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, images.length, viewMode, onClose]);
+  }, [isOpen, images.length, viewMode, isVideo, onClose]);
 
-  if (!isOpen || images.length === 0) return null;
+  if (!isOpen) return null;
+  if (!isVideo && images.length === 0) return null;
 
   const nextSlide = () => {
     if (currentIndex < images.length - 1) {
@@ -48,19 +49,23 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
             <h2 className="font-semibold text-base sm:text-lg font-['Funnel_Display'] leading-none"> {/* token-exempt: font style */}
               {title}
             </h2>
-            <span className="text-xs text-neutral-400 bg-white/10 px-2.5 py-1 rounded-full font-['Pretendard']"> {/* token-exempt: font style */}
-              {viewMode === 'slide' ? `${currentIndex + 1} / ${images.length}` : `전체 ${images.length}페이지`}
-            </span>
+            {!isVideo && (
+              <span className="text-xs text-neutral-400 bg-white/10 px-2.5 py-1 rounded-full font-['Pretendard']"> {/* token-exempt: font style */}
+                {viewMode === 'slide' ? `${currentIndex + 1} / ${images.length}` : `전체 ${images.length}페이지`}
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-2">
             {/* View Mode Toggle */}
-            <button
-              onClick={() => setViewMode(viewMode === 'slide' ? 'scroll' : 'slide')}
-              className="px-3 py-1.5 text-xs rounded-xl bg-white/10 hover:bg-white/20 text-neutral-200 transition-colors font-['Pretendard'] cursor-pointer" // token-exempt: font style
-            >
-              {viewMode === 'slide' ? '📜 전체 스크롤 보기' : '🖼️ 슬라이드 보기'}
-            </button>
+            {!isVideo && (
+              <button
+                onClick={() => setViewMode(viewMode === 'slide' ? 'scroll' : 'slide')}
+                className="px-3 py-1.5 text-xs rounded-xl bg-white/10 hover:bg-white/20 text-neutral-200 transition-colors font-['Pretendard'] cursor-pointer" // token-exempt: font style
+              >
+                {viewMode === 'slide' ? '📜 전체 스크롤 보기' : '🖼️ 슬라이드 보기'}
+              </button>
+            )}
 
             {/* Close Button */}
             <button
@@ -75,7 +80,19 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
 
         {/* Content Area */}
         <div className="flex-1 min-h-0 relative bg-neutral-950 overflow-hidden">
-          {viewMode === 'slide' ? (
+          {isVideo ? (
+            /* Video View Mode */
+            <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
+              <video
+                src={videoUrl}
+                controls
+                autoPlay
+                className="max-w-full max-h-full rounded-2xl shadow-2xl bg-black"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : viewMode === 'slide' ? (
             /* Slide View Mode */
             <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-6 select-none">
               {/* Previous Button */}
@@ -136,7 +153,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
         </div>
 
         {/* Footer Thumbnail Bar (Only in Slide Mode) */}
-        {viewMode === 'slide' && (
+        {!isVideo && viewMode === 'slide' && (
           <div className="h-20 bg-bg-dark border-t border-neutral-800 px-4 py-2 flex items-center gap-2 overflow-x-auto overflow-y-hidden shrink-0 select-none">
             {images.map((imgUrl, idx) => (
               <button

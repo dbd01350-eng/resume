@@ -11,11 +11,16 @@ const ikeaUiuxImages = [
   ...Array.from({ length: 22 }, (_, i) => `/assets/ikea_uiux/${i + 31}.png`),
 ];
 
+const noSmokingMakeplanImages = Array.from({ length: 9 }, (_, i) => `/assets/no_smoking_makeplan/${i + 1}.png`);
+const noSmokingStoryboardImages = Array.from({ length: 2 }, (_, i) => `/assets/no_smoking_storyboard/${i + 1}.png`);
+
 export default function ProjectsSection() {
   const [modalData, setModalData] = useState({
     isOpen: false,
     title: "",
     images: [],
+    isVideo: false,
+    videoUrl: "",
   });
 
   const projects = [
@@ -78,6 +83,8 @@ export default function ProjectsSection() {
         isOpen: true,
         title: "IKEA Website 리디자인 기획안",
         images: ikeaRedesignImages,
+        isVideo: false,
+        videoUrl: "",
       });
     } else if (link.label === "개발 기획안") {
       e.preventDefault();
@@ -85,6 +92,35 @@ export default function ProjectsSection() {
         isOpen: true,
         title: "IKEA Website UI/UX 개발 기획안",
         images: ikeaUiuxImages,
+        isVideo: false,
+        videoUrl: "",
+      });
+    } else if (link.label === "영상기획서") {
+      e.preventDefault();
+      setModalData({
+        isOpen: true,
+        title: "보건복지부 금연캠페인 영상기획서",
+        images: noSmokingMakeplanImages,
+        isVideo: false,
+        videoUrl: "",
+      });
+    } else if (link.label === "스토리보드") {
+      e.preventDefault();
+      setModalData({
+        isOpen: true,
+        title: "보건복지부 금연캠페인 스토리보드",
+        images: noSmokingStoryboardImages,
+        isVideo: false,
+        videoUrl: "",
+      });
+    } else if (link.label === "VIDEO") {
+      e.preventDefault();
+      setModalData({
+        isOpen: true,
+        title: "보건복지부 금연캠페인 VIDEO",
+        images: [],
+        isVideo: true,
+        videoUrl: "/assets/no_smoking_video.mp4",
       });
     }
   };
@@ -172,6 +208,8 @@ export default function ProjectsSection() {
         onClose={() => setModalData({ ...modalData, isOpen: false })}
         title={modalData.title}
         images={modalData.images}
+        isVideo={modalData.isVideo}
+        videoUrl={modalData.videoUrl}
       />
     </section>
   );
