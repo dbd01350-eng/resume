@@ -27,7 +27,6 @@ export default function ProjectsSection() {
     {
       id: "ikea-redesign",
       title: "IKEA Website 반응형 웹페이지 리디자인",
-      titleLink: "https://heebon00.github.io/Team_Synergos_esg/index.html", // token-exempt: external project link
       previewImage: "/assets/project_ikea_full_preview.png",
       fallbackImage: "/assets/figma_8bed76a4.png",
       links: [
@@ -39,7 +38,6 @@ export default function ProjectsSection() {
     {
       id: "ikea-dev",
       title: "IKEA Website UI/UX 개발",
-      titleLink: "https://heebon00.github.io/Team_Synergos_esg/index.html", // token-exempt: external project link
       previewImage: "/assets/project_ikea_full_preview.png",
       fallbackImage: "/assets/figma_8bed76a4.png",
       links: [
@@ -52,7 +50,6 @@ export default function ProjectsSection() {
     {
       id: "campaign",
       title: "보건복지부 금연캠페인 영상 AI-powered",
-      titleLink: "https://drive.google.com/file/d/10d6UEqNIgxSS0ldjxd8_MTxDG_yDMS_Y/view?usp=sharing", // token-exempt: external project link
       previewImage: "/assets/project_campaign_full_preview.jpeg",
       fallbackImage: "/assets/figma_4b660c10.png",
       links: [
@@ -65,7 +62,6 @@ export default function ProjectsSection() {
     {
       id: "archive",
       title: "웹 개발 아카이브 프론트엔드 도구 학습 아카이브",
-      titleLink: "https://dbd01350-eng.github.io/VScode_study/archive/", // token-exempt: external project link
       previewImage: "/assets/project_archive_full_preview.png",
       fallbackImage: "/assets/figma_bcd0c6b6.png",
       links: [
@@ -175,9 +171,7 @@ export default function ProjectsSection() {
               {/* Title & External Links Row */}
               <div className="space-y-3 sm:space-y-[16px] pt-1 sm:pt-[8px]"> {/* token-exempt: title spacing */}
                 <h3 className="font-['Pretendard'] font-semibold text-[20px] sm:text-[28px] md:text-[34px] leading-[1.3em] text-[#161616]"> {/* token-exempt: figma font typography */}
-                  <a href={project.titleLink} target="_blank" rel="noreferrer" className="hover:underline">
-                    {project.title}
-                  </a>
+                  {project.title}
                 </h3>
 
                 {/* External Link Badges */}
