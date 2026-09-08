@@ -48,7 +48,7 @@ export default function ResumePage({ onClose }) {
         @media print {
           @page {
             size: A4 portrait;
-            margin: 10mm 12mm;
+            margin: 0;
           }
           body {
             background-color: white !important;
