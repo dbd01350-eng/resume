@@ -9,7 +9,7 @@ export default function ResumePage({ onClose }) {
   };
 
   const getExperienceLink = (title) => {
-    if (title.includes('하루필름')) {
+    if (title.includes('하루필름') && !title.includes('본사')) {
       return 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84+%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
     }
     if (title.includes('그믐달스튜디오')) {
