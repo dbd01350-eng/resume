@@ -48,7 +48,7 @@ export default function ResumePage({ onClose }) {
         @media print {
           @page {
             size: A4 portrait;
-            margin: 0;
+            margin: 12mm 15mm;
           }
           body {
             background-color: white !important;
@@ -88,7 +88,7 @@ export default function ResumePage({ onClose }) {
       </div>
 
       {/* Main A4 Resume Paper Container */}
-      <div className="bg-bg-primary text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-10 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
+      <div className="bg-bg-primary text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-0 print:m-0 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
         
         {/* Header & Personal Profile Card */}
         <div className="border-b border-gray-200 pb-6 print:pb-4 flex flex-col sm:flex-row gap-6 items-start justify-between">
@@ -322,7 +322,7 @@ export default function ResumePage({ onClose }) {
 
           <div className="space-y-3">
             {projects.map((proj) => (
-              <div key={proj.id} className="p-4 bg-bg-secondary rounded-2xl border border-gray-100 flex flex-col sm:flex-row justify-between gap-3">
+              <div key={proj.id} className="p-4 bg-bg-secondary rounded-2xl border border-gray-100 flex flex-col sm:flex-row justify-between gap-3 break-inside-avoid print:break-inside-avoid">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold font-funnel px-2 py-0.5 bg-accent-purple text-bg-primary rounded-full uppercase"> {/* token-exempt: badge font size */}
@@ -360,7 +360,7 @@ export default function ResumePage({ onClose }) {
         </div>
 
         {/* Footer info in Resume */}
-        <div className="pt-4 border-t border-gray-200 text-center text-xs text-text-muted font-funnel">
+        <div className="pt-4 border-t border-gray-200 text-center text-xs text-text-muted font-funnel break-inside-avoid print:break-inside-avoid">
           Above resume information is created by Daeun Sim &bull; Powered by React &amp; Tailwind CSS
         </div>
 
