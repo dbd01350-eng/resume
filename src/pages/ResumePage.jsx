@@ -145,47 +145,13 @@ export default function ResumePage({ onClose }) {
             장점 및 단점 (Strengths &amp; Weaknesses)
           </h2>
           
-          <div className="p-4 sm:p-5 bg-bg-secondary rounded-2xl border border-gray-100 space-y-4">
-            {/* 1. Weakness */}
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 text-xs font-bold text-text-mid-gray font-funnel uppercase">
-                <span className="w-2 h-2 rounded-full bg-text-mid-gray inline-block"></span>
-                단점 (Weakness)
-              </div>
-              <p className="text-xs sm:text-sm text-text-sub leading-relaxed pl-4">
-                완성도와 디테일에 대한 높은 집착으로 인해, 초반 세부 요소를 다듬는 과정에서 필요 이상의 시간과 리소스가 소요될 가능성이 있습니다.
-              </p>
-            </div>
-
-            {/* 2. Countermeasure */}
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 text-xs font-bold text-accent-purple font-funnel uppercase">
-                <span className="w-2 h-2 rounded-full bg-accent-purple inline-block"></span>
-                보완법 (Countermeasures)
-              </div>
-              <p className="text-xs sm:text-sm text-text-sub leading-relaxed pl-4">
-                이를 극복하기 위해 프로젝트 시작 단계에서 컴포넌트 단위 디자인 시스템 토큰을 정립하고, AI 에이전트 페어 프로그래밍 워크플로우를 조기에 도입하여 개발 속도와 결과물의 높은 퀄리티 간 균형을 체계적으로 극대화하고 있습니다.
-              </p>
-            </div>
-
-            {/* 3. Strengths */}
-            <div className="space-y-1.5 pt-1 border-t border-gray-200/60">
-              <div className="flex items-center gap-2 text-xs font-bold text-text-main font-funnel uppercase">
-                <span className="w-2 h-2 rounded-full bg-accent-lime inline-block"></span>
-                장점 (Strengths)
-              </div>
-              <ul className="text-xs sm:text-sm text-text-sub space-y-1.5 list-disc list-inside leading-relaxed pl-1">
-                <li>
-                  <strong className="text-text-main">독보적인 디테일 집착 및 완성도:</strong> 픽셀 단위의 정밀한 UI 디자인과 깔끔한 구조의 코드 품질 유지.
-                </li>
-                <li>
-                  <strong className="text-text-main">최신 AI 에이전트 &amp; 바이브 코딩 빠르게 습득:</strong> Claude, GPT, AGY, Figma Agent 등 최첨단 AI 툴을 누구보다 빠르게 익혀 압도적인 개발 생산성 발휘.
-                </li>
-                <li>
-                  <strong className="text-text-main">엔드투엔드(End-to-End) 통합 구현력:</strong> 기획부터 UX/UI 디자인, 프론트엔드 코드 개발, 실전 브랜드 운영 경험까지 프로젝트 전 과정을 책임감 있게 통합 수행.
-                </li>
-              </ul>
-            </div>
+          <div className="p-4 sm:p-5 bg-bg-secondary rounded-2xl border border-gray-100 space-y-3 text-xs sm:text-sm text-text-sub leading-relaxed">
+            <p>
+              완성도와 픽셀 단위 디테일에 대한 높은 집착으로 인해, 초반 세부 요소를 다듬는 과정에서 필요 이상의 시간과 리소스가 집중되는 경향이 있습니다. 이를 극복하기 위해 프로젝트 초기 단계부터 재사용 가능한 컴포넌트 구조와 디자인 시스템 토큰을 엄격히 정립하고, 최신 AI 에이전트와의 페어 프로그래밍 워크플로우를 조기에 도입하여 작업 속도와 고품질 결과물 간의 균형을 체계적으로 극대화하고 있습니다.
+            </p>
+            <p>
+              이러한 세심한 디테일 감각은 타협 없는 정밀한 UI 디자인과 깔끔하고 유지보수가 용이한 프론트엔드 코드 구조라는 결과물로 나타납니다. 나아가 Claude, GPT, AGY, Figma Agent 등 최신 AI 바이브 코딩 기술을 누구보다 빠르게 습득하여 압도적인 개발 생산성을 발휘하며, 단순 코딩에 그치지 않고 아이디어 기획부터 UX/UI 디자인, 코드 개발, 실전 브랜드 운영까지 프로젝트 전 과정을 통합 완수하는 엔드투엔드(End-to-End) 수행 능력이 가장 큰 강점입니다.
+            </p>
           </div>
         </div>
 
