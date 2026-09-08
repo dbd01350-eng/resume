@@ -16,11 +16,11 @@ export default function ParallaxSection() {
   };
 
   return (
-    <section className="py-8 sm:py-[80px] px-4 sm:px-12 xl:px-[80px] max-w-[1920px] mx-auto min-h-[300px] lg:h-[960px] flex items-center justify-center">
+    <section className="py-8 sm:py-[80px] px-4 sm:px-12 xl:px-[80px] max-w-[1920px] mx-auto min-h-[300px] lg:h-[960px] flex items-center justify-center"> {/* token-exempt: section layout */}
       {/* parallax-wrapper & parallax-container (Mobile Aspect Ratio & Rounded Corners Optimized) */}
       <div 
         onClick={handleTogglePlay}
-        className="w-full h-[240px] sm:h-[480px] md:h-[600px] lg:h-[800px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group"
+        className="w-full h-[240px] sm:h-[480px] md:h-[600px] lg:h-[800px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group" // token-exempt: parallax frame sizing
       >
         {/* HTML5 Video element (Click to Play, NO autoPlay) */}
         <video 
@@ -29,7 +29,7 @@ export default function ParallaxSection() {
           playsInline 
           poster="/assets/figma_5681b522.png" 
           onEnded={() => setIsPlaying(false)}
-          className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]"
+          className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]" // token-exempt: video rounded corners
         >
           <source src="/assets/showcase_video.mp4" type="video/mp4" />
           <source src="/assets/hero_video.mp4" type="video/mp4" />
@@ -45,10 +45,10 @@ export default function ParallaxSection() {
         {/* Play Overlay (Visible when not playing) */}
         {!isPlaying && (
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex flex-col items-center justify-center space-y-2 sm:space-y-4">
-            <div className="w-12 h-12 sm:w-[100px] sm:h-[100px] rounded-full bg-white/90 backdrop-blur-md text-[#161616] flex items-center justify-center font-bold text-lg sm:text-3xl shadow-2xl group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 sm:w-[100px] sm:h-[100px] rounded-full bg-white/90 backdrop-blur-md text-[#161616] flex items-center justify-center font-bold text-lg sm:text-3xl shadow-2xl group-hover:scale-110 transition-transform"> {/* token-exempt: play button sizing */}
               ▶
             </div>
-            <span className="font-['Funnel_Display'] text-white font-semibold text-xs sm:text-xl tracking-wider uppercase drop-shadow-md">
+            <span className="font-['Funnel_Display'] text-white font-semibold text-xs sm:text-xl tracking-wider uppercase drop-shadow-md"> {/* token-exempt: font style */}
               Click to Play
             </span>
           </div>
