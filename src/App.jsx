@@ -63,7 +63,7 @@ export default function App() {
         <AboutSection />
         <MarqueeTextSection />
         <ProjectsSection />
-        <ParallaxSection />
+        <ParallaxSection onOpenResume={handleOpenResume} />
         <CTASection onOpenContact={handleOpenContact} />
       </main>
 

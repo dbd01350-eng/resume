@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-export default function ParallaxSection() {
+export default function ParallaxSection({ onOpenResume }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -74,7 +74,13 @@ export default function ParallaxSection() {
 
           {/* Resume Page Link Button */}
           <a
-            href="#about"
+            href="#resume"
+            onClick={(e) => {
+              if (onOpenResume) {
+                e.preventDefault();
+                onOpenResume();
+              }
+            }}
             className="py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl sm:rounded-[200px] bg-accent-purple hover:bg-opacity-90 text-white font-semibold font-['Funnel_Display'] text-sm sm:text-base inline-flex items-center gap-2.5 sm:gap-3 transition-all shadow-md group cursor-pointer whitespace-nowrap" // token-exempt: button styling
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-none stroke-current shrink-0" viewBox="0 0 24 24" strokeWidth="2">
