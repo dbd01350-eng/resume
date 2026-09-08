@@ -54,7 +54,7 @@ const portfolioData = {
   projects: [
     {
       id: "ikea-redesign",
-      title: "IKEA Website 반응형 웹페이지 리디자인",
+      title: "IKEA Website 리디자인",
       previewImage: "/assets/project_ikea_full_preview.png",
       fallbackImage: "/assets/figma_8bed76a4.png",
       type: "WEBSITE",
@@ -66,7 +66,7 @@ const portfolioData = {
     },
     {
       id: "ikea-dev",
-      title: "IKEA Website UI/UX 개발",
+      title: "IKEA 반응형 웹사이트 UI/UX 개발",
       previewImage: "/assets/project_ikea_full_preview.png",
       fallbackImage: "/assets/figma_8bed76a4.png",
       type: "WEBSITE",
@@ -79,7 +79,7 @@ const portfolioData = {
     },
     {
       id: "campaign",
-      title: "보건복지부 금연캠페인 영상 AI-powered",
+      title: "보건복지부 금연캠페인 홍보영상",
       previewImage: "/assets/project_campaign_full_preview.jpeg",
       fallbackImage: "/assets/figma_4b660c10.png",
       type: "VIDEO",
@@ -88,11 +88,11 @@ const portfolioData = {
         { label: "영상기획서", url: "#" },
         { label: "스토리보드", url: "#" },
       ],
-      tags: ["Flow", "AGY", "premiere pro", "after effect"],
+      tags: ["Flow", "AGY", "Premiere pro", "After effect"],
     },
     {
       id: "archive",
-      title: "웹 개발 아카이브 프론트엔드 도구 학습 아카이브",
+      title: "웹 개발 학습 아카이브",
       previewImage: "/assets/project_archive_full_preview.png",
       fallbackImage: "/assets/figma_bcd0c6b6.png",
       type: "WEBSITE",
