@@ -74,7 +74,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 overflow-hidden relative bg-neutral-950 flex flex-col items-center justify-center">
+        <div className="flex-1 overflow-hidden relative bg-neutral-950">
           {viewMode === 'slide' ? (
             /* Slide View Mode */
             <div className="w-full h-full relative flex items-center justify-center p-2 sm:p-6 select-none">
@@ -133,7 +133,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [] }) {
 
         {/* Footer Thumbnail Bar (Only in Slide Mode) */}
         {viewMode === 'slide' && (
-          <div className="h-20 bg-bg-dark border-t border-neutral-800 px-4 py-2 flex items-center gap-2 overflow-x-auto shrink-0 select-none">
+          <div className="h-20 bg-bg-dark border-t border-neutral-800 px-4 py-2 flex items-center gap-2 overflow-x-auto overflow-y-hidden shrink-0 select-none">
             {images.map((imgUrl, idx) => (
               <button
                 key={idx}
