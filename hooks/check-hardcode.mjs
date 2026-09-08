@@ -13,7 +13,10 @@ const ALLOWED_CDNS = [
   'cdn.jsdelivr.net',
   'www.google.com',
   'www.gstatic.com',
-  'recaptcha.net'
+  'recaptcha.net',
+  'spline.design',
+  'prod.spline.design',
+  'build.spline.design'
 ];
 
 const TARGET_EXTENSIONS = new Set(['.html', '.css', '.scss', '.jsx', '.tsx', '.vue', '.js', '.ts']);

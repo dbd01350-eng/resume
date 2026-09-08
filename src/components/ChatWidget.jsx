@@ -1,7 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Suspense, lazy } from 'react';
 import portfolioData from '../data/portfolioData.js';
 
+const Spline = lazy(() => import('@splinetool/react-spline'));
+
 const API_URL = import.meta.env.VITE_CHAT_API_URL || 'https://resume-qrv3.onrender.com/chat'; // token-exempt: chatbot backend endpoint
+const SPLINE_SCENE_URL = 'https://prod.spline.design/6Wnt1B776t7hEg26/scene.splinecode'; // token-exempt: 3D glass scene endpoint
 
 // Smart Client-side AI Responder for fallback when backend API is offline
 function generatePortfolioResponse(userText) {
@@ -43,6 +46,8 @@ export default function ChatWidget() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [splineLoaded, setSplineLoaded] = useState(false);
+  const [splineError, setSplineError] = useState(false);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -66,7 +71,6 @@ export default function ChatWidget() {
 
     let botReply = '';
 
-    // Attempt to call API server with 30s timeout
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000); // token-exempt: 30s timeout for Render cold start
@@ -110,39 +114,70 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Floating Toggle Button (Bottom Left) */}
+      {/* Floating 3D Glassmorphism Toggle Button (Bottom Left) */}
       <div className="fixed bottom-6 left-6 z-50"> {/* token-exempt: fixed layout positioning */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Chatbot"
-          className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-200 relative drop-shadow-md" // token-exempt: custom button sizing
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full glass-3d-container flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300 relative group overflow-hidden" // token-exempt: 3D glass button container
         >
-          <img
-            src="/assets/glassheart.png"
-            alt="Chatbot Logo"
-            className="w-full h-full object-contain animate-spin-3d"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = '/assets/logo_icon.svg';
-            }}
-          />
+          {/* Ambient Glow Aura */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple/30 via-transparent to-accent-lime/30 rounded-full blur-md opacity-70 group-hover:opacity-100 transition-opacity" /> {/* token-exempt: ambient glow aura */}
+
+          {/* Spline 3D Model with Glassmorphism 2.5D Fallback */}
+          {!splineError ? (
+            <Suspense
+              fallback={
+                <img
+                  src="/assets/glassheart.png"
+                  alt="Chatbot 3D Logo"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10" // token-exempt: logo sizing
+                />
+              }
+            >
+              <div className="w-full h-full relative z-10 flex items-center justify-center pointer-events-none">
+                <Spline
+                  scene={SPLINE_SCENE_URL}
+                  onLoad={() => setSplineLoaded(true)}
+                  onError={() => setSplineError(true)}
+                  className="w-full h-full"
+                />
+                {!splineLoaded && (
+                  <img
+                    src="/assets/glassheart.png"
+                    alt="Chatbot 3D Logo"
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d absolute inset-0 m-auto z-10" // token-exempt: logo sizing
+                  />
+                )}
+              </div>
+            </Suspense>
+          ) : (
+            <img
+              src="/assets/glassheart.png"
+              alt="Chatbot 3D Logo"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10" // token-exempt: logo sizing
+            />
+          )}
+
           {!isOpen && (
-            <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-accent-lime rounded-full border border-white animate-pulse" /> // token-exempt: indicator badge
+            <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-accent-lime rounded-full border border-white animate-pulse z-20" /> // token-exempt: indicator badge
           )}
         </button>
       </div>
 
       {/* Floating Chat Popup Window (Bottom Left) */}
       {isOpen && (
-        <div className="fixed bottom-24 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-primary border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn"> {/* token-exempt: chatbot window fixed container */}
+        <div className="fixed bottom-28 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-primary border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn"> {/* token-exempt: chatbot window fixed container */}
           {/* Header */}
           <div className="px-5 py-4 bg-bg-dark text-white flex items-center justify-between border-b border-neutral-800">
             <div className="flex items-center gap-3">
-              <img
-                src="/assets/glassheart.png"
-                alt="Chatbot Logo"
-                className="w-8 h-8 object-contain"
-              />
+              <div className="w-8 h-8 rounded-full glass-3d-avatar p-1 flex items-center justify-center">
+                <img
+                  src="/assets/glassheart.png"
+                  alt="Chatbot Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <div>
                 <h3 className="font-semibold text-base leading-tight font-['Funnel_Display']">AI Chatbot</h3> {/* token-exempt: font style */}
                 <div className="flex items-center gap-1.5 text-xs text-neutral-400">
@@ -168,11 +203,13 @@ export default function ChatWidget() {
                 className={`flex gap-2.5 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {m.role === 'bot' && (
-                  <img
-                    src="/assets/glassheart.png"
-                    alt="Bot"
-                    className="w-7 h-7 object-contain shrink-0 mt-0.5"
-                  />
+                  <div className="w-7 h-7 rounded-full glass-3d-avatar p-0.5 shrink-0 flex items-center justify-center mt-0.5">
+                    <img
+                      src="/assets/glassheart.png"
+                      alt="Bot"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 )}
                 <div
                   className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${ // token-exempt: width limit
@@ -188,11 +225,13 @@ export default function ChatWidget() {
 
             {loading && (
               <div className="flex gap-2.5 justify-start items-center">
-                <img
-                  src="/assets/glassheart.png"
-                  alt="Bot"
-                  className="w-7 h-7 object-contain shrink-0 animate-spin-3d-fast"
-                />
+                <div className="w-7 h-7 rounded-full glass-3d-avatar p-0.5 shrink-0 flex items-center justify-center">
+                  <img
+                    src="/assets/glassheart.png"
+                    alt="Bot"
+                    className="w-full h-full object-contain animate-spin-3d-fast"
+                  />
+                </div>
                 <div className="bg-bg-primary border border-neutral-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 text-xs text-text-muted flex items-center gap-1.5">
                   <span>AI가 답변을 생성하는 중입니다</span>
                   <span className="animate-pulse">...</span>
