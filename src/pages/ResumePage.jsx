@@ -57,10 +57,7 @@ export default function ResumePage({ onClose }) {
             print-color-adjust: exact;
           }
           /* Hide background portfolio page elements during print */
-          header, footer, main {
-            display: none !important;
-          }
-          .print\\:hidden {
+          header, footer, main, .print\\:hidden, [class*="ChatWidget"] {
             display: none !important;
           }
         }
