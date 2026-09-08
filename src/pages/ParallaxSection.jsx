@@ -18,10 +18,10 @@ export default function ParallaxSection() {
   return (
     <section className="py-8 sm:py-[80px] px-4 sm:px-12 xl:px-[80px] max-w-[1920px] mx-auto"> {/* token-exempt: section layout */}
       <div className="flex flex-col lg:flex-row items-end justify-between gap-6 lg:gap-8">
-        {/* Left Column: Video Showcase with reduced width and original height, pushed left */}
+        {/* Left Column: Video Showcase with adjusted widescreen width & height */}
         <div 
           onClick={handleTogglePlay}
-          className="w-full lg:w-[55%] xl:w-[58%] h-[240px] sm:h-[480px] md:h-[600px] lg:h-[800px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group flex-shrink-0" // token-exempt: parallax video container sizing
+          className="w-full lg:w-[62%] xl:w-[65%] h-[220px] sm:h-[400px] md:h-[500px] lg:h-[640px] rounded-[24px] sm:rounded-[44px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group flex-shrink-0" // token-exempt: parallax video container sizing
         >
           {/* HTML5 Video element */}
           <video 
