@@ -107,3 +107,25 @@
 .animate-marquee:hover, .animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
+
+/* 3D Center Y-Axis Rotation for Chatbot Glassheart Logo */
+@keyframes spin-3d-y {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+.animate-spin-3d {
+  animation: spin-3d-y 8s linear infinite;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.animate-spin-3d-fast {
+  animation: spin-3d-y 2.5s linear infinite;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
