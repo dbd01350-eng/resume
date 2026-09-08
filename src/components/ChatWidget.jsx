@@ -127,7 +127,7 @@ export default function ChatWidget() {
             }}
           />
           {!isOpen && (
-            <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-bg-dark/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-neutral-700 shadow-xl flex items-center gap-1.5 whitespace-nowrap font-['Funnel_Display'] pointer-events-none"> {/* token-exempt: chatbot label badge */}
+            <span className="absolute -bottom-1 -right-3 bg-bg-dark/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-neutral-700 shadow-xl flex items-center gap-1.5 whitespace-nowrap font-['Funnel_Display'] pointer-events-none"> {/* token-exempt: chatbot label badge */}
               <span className="w-2 h-2 bg-accent-lime rounded-full animate-pulse inline-block" />
               AI Chatbot
             </span>
