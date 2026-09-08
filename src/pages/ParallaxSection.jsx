@@ -80,7 +80,7 @@ export default function ParallaxSection() {
             <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-none stroke-current shrink-0" viewBox="0 0 24 24" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <span>View Resume Page</span>
+            <span>이력서</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
