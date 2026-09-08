@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Header({ onOpenContact }) {
+export default function Header({ onOpenContact, onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -83,7 +83,13 @@ export default function Header({ onOpenContact }) {
 
           {/* Resume Link Button */}
           <a
-            href="#about"
+            href="#resume"
+            onClick={(e) => {
+              if (onOpenResume) {
+                e.preventDefault();
+                onOpenResume();
+              }
+            }}
             className="h-[44px] sm:h-[56px] px-3.5 sm:px-5 rounded-[200px] bg-[#9F8BE7] text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-opacity-90 transition-colors cursor-pointer whitespace-nowrap" // token-exempt: header button styling
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current shrink-0" viewBox="0 0 24 24" strokeWidth="2">

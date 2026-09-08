@@ -8,12 +8,14 @@ import MarqueeTextSection from "./pages/MarqueeTextSection.jsx";
 import ProjectsSection from "./pages/ProjectsSection.jsx";
 import CTASection from "./pages/CTASection.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import ResumePage from "./pages/ResumePage.jsx";
 import SkeletonLoader from "./components/SkeletonLoader.jsx";
 import ChatWidget from "./components/ChatWidget.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,6 +27,8 @@ export default function App() {
 
   const handleOpenContact = () => setIsContactOpen(true);
   const handleCloseContact = () => setIsContactOpen(false);
+  const handleOpenResume = () => setIsResumeOpen(true);
+  const handleCloseResume = () => setIsResumeOpen(false);
 
   if (loading) {
     return (
@@ -51,7 +55,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FAF7F6] text-[#161616] font-[var(--font-pretendard)]">
       {/* Header */}
-      <Header onOpenContact={handleOpenContact} />
+      <Header onOpenContact={handleOpenContact} onOpenResume={handleOpenResume} />
 
       {/* Main Figma Node Hierarchy */}
       <main>
@@ -68,6 +72,9 @@ export default function App() {
 
       {/* Contact Modal / Page */}
       {isContactOpen && <ContactPage onClose={handleCloseContact} />}
+
+      {/* Resume Modal / A4 Print Page */}
+      {isResumeOpen && <ResumePage onClose={handleCloseResume} />}
 
       {/* Floating AI Chatbot */}
       <ChatWidget />
