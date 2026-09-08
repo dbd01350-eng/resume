@@ -14,7 +14,7 @@ export default function ResumePage({ onClose }) {
       return {
         id: 'harufilm',
         queryTitle: '하루필름 이태원점',
-        imgSrc: '/assets/harufilm_store_1.jpg',
+        iframeUrl: 'https://www.google.com/search?igu=1&tbm=isch&q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84%20%EC%9D%B4%ED%83%9C%EC%9B%90', // token-exempt: google iframe search link
         googleUrl: 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
       };
     }
@@ -22,7 +22,7 @@ export default function ResumePage({ onClose }) {
       return {
         id: 'gmeumdal',
         queryTitle: '그믐달스튜디오 이태원점',
-        imgSrc: '/assets/gmeumdal_store_1.jpg',
+        iframeUrl: 'https://www.google.com/search?igu=1&tbm=isch&q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90', // token-exempt: google iframe search link
         googleUrl: 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
       };
     }
@@ -30,7 +30,7 @@ export default function ResumePage({ onClose }) {
       return {
         id: 'jagai',
         queryTitle: '자개장롱 약수',
-        imgSrc: '/assets/jagai_store_1.jpg',
+        iframeUrl: 'https://www.google.com/search?igu=1&tbm=isch&q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1%20%EC%95%BD%EC%88%98', // token-exempt: google iframe search link
         googleUrl: 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1%20%EC%95%BD%EC%88%98&tbm=isch', // token-exempt: google image search link
       };
     }
@@ -226,33 +226,41 @@ export default function ResumePage({ onClose }) {
                         </td>
                       </tr>
 
-                      {/* Inline A4 Printable Image Gallery */}
+                      {/* Inline Real Google Image Search iFrame View (Option 2) */}
                       {storeInfo && isExpanded && (
                         <tr className="bg-bg-secondary/60">
-                          <td colSpan={2} className="p-4 border-t border-gray-200">
-                            <div className="space-y-2">
-                              <div className="flex items-center justify-between">
-                                <span className="text-xs font-bold text-accent-purple font-funnel">
-                                  📷 {storeInfo.queryTitle} 현장 사진 / 이미지 결과
-                                </span>
+                          <td colSpan={2} className="p-3 sm:p-4 border-t border-gray-200">
+                            <div className="space-y-3">
+                              {/* Header bar of Google Search Frame */}
+                              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-gray-200 pb-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs font-bold text-accent-purple font-funnel flex items-center gap-1">
+                                    🌐 구글 라이브 이미지 검색: &quot;{storeInfo.queryTitle}&quot;
+                                  </span>
+                                </div>
+
                                 <a
                                   href={storeInfo.googleUrl}
                                   target="_blank"
                                   rel="noreferrer"
-                                  className="text-[11px] text-text-light-gray hover:text-text-main underline font-funnel print:hidden" // token-exempt: inline link font size
+                                  className="text-[11px] text-text-main hover:text-accent-purple underline font-funnel font-semibold shrink-0" // token-exempt: inline link font size
                                 >
-                                  구글 검색에서 전체 보기 ↗ {/* token-exempt: external url text */}
+                                  새 탭에서 구글 이미지 검색 열기 ↗ {/* token-exempt: external url text */}
                                 </a>
                               </div>
-                              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm max-h-80 bg-bg-primary">
-                                <img
-                                  src={storeInfo.imgSrc}
-                                  alt={`${storeInfo.queryTitle} 현장 사진`}
-                                  className="w-full h-80 object-cover"
+
+                              {/* Real Google Images Search iFrame Container */}
+                              <div className="w-full h-[450px] rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-white relative"> {/* token-exempt: custom iframe height */}
+                                <iframe
+                                  src={storeInfo.iframeUrl}
+                                  title={`${storeInfo.queryTitle} 구글 이미지 검색 결과`}
+                                  className="w-full h-full border-0"
+                                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                                 />
                               </div>
+
                               <p className="text-[11px] text-text-muted italic text-center font-funnel"> {/* token-exempt: caption font size */}
-                                * 구글 이미지 검색 대표 매장 전경 및 인테리어 사진 (A4 인쇄 포함)
+                                * 실시간 구글 이미지 검색 결과 페이지가 이력서 내 인라인 프레임으로 라이브 표출됩니다.
                               </p>
                             </div>
                           </td>
