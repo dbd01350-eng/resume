@@ -16,43 +16,92 @@ export default function ParallaxSection() {
   };
 
   return (
-    <section className="py-8 sm:py-[80px] px-4 sm:px-12 xl:px-[80px] max-w-[1920px] mx-auto min-h-[300px] lg:h-[960px] flex items-center justify-center"> {/* token-exempt: section layout */}
-      {/* parallax-wrapper & parallax-container (Mobile Aspect Ratio & Rounded Corners Optimized) */}
-      <div 
-        onClick={handleTogglePlay}
-        className="w-full h-[240px] sm:h-[480px] md:h-[600px] lg:h-[800px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group" // token-exempt: parallax frame sizing
-      >
-        {/* HTML5 Video element (Click to Play, NO autoPlay) */}
-        <video 
-          ref={videoRef}
-          loop 
-          playsInline 
-          poster="/assets/figma_5681b522.png" 
-          onEnded={() => setIsPlaying(false)}
-          className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]" // token-exempt: video rounded corners
+    <section className="py-8 sm:py-[80px] px-4 sm:px-12 xl:px-[80px] max-w-[1920px] mx-auto"> {/* token-exempt: section layout */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        {/* Left Column: Reduced Width Video Showcase (Pushed Left) */}
+        <div 
+          onClick={handleTogglePlay}
+          className="w-full lg:w-[68%] xl:w-[72%] h-[260px] sm:h-[420px] md:h-[520px] lg:h-[620px] rounded-[24px] sm:rounded-[40px] overflow-hidden relative shadow-2xl bg-black cursor-pointer group flex-shrink-0" // token-exempt: parallax video container sizing
         >
-          <source src="/assets/showcase_video.mp4" type="video/mp4" />
-          <source src="/assets/hero_video.mp4" type="video/mp4" />
-          {/* Poster fallback image */}
-          <img 
-            src="/assets/figma_5681b522.png" 
-            alt="Showcase Video Poster" 
-            className="w-full h-full object-cover" 
-            onError={(e) => e.target.style.display = 'none'}
-          />
-        </video>
+          {/* HTML5 Video element */}
+          <video 
+            ref={videoRef}
+            loop 
+            playsInline 
+            poster="/assets/figma_5681b522.png" 
+            onEnded={() => setIsPlaying(false)}
+            className="w-full h-full object-cover rounded-[24px] sm:rounded-[40px]" // token-exempt: video rounded corners
+          >
+            <source src="/assets/showcase_video.mp4" type="video/mp4" />
+            <source src="/assets/hero_video.mp4" type="video/mp4" />
+            {/* Poster fallback image */}
+            <img 
+              src="/assets/figma_5681b522.png" 
+              alt="Showcase Video Poster" 
+              className="w-full h-full object-cover" 
+              onError={(e) => e.target.style.display = 'none'}
+            />
+          </video>
 
-        {/* Play Overlay (Visible when not playing) */}
-        {!isPlaying && (
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex flex-col items-center justify-center space-y-2 sm:space-y-4">
-            <div className="w-12 h-12 sm:w-[100px] sm:h-[100px] rounded-full bg-white/90 backdrop-blur-md text-[#161616] flex items-center justify-center font-bold text-lg sm:text-3xl shadow-2xl group-hover:scale-110 transition-transform"> {/* token-exempt: play button sizing */}
-              ▶
+          {/* Play Overlay (Visible when not playing) */}
+          {!isPlaying && (
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex flex-col items-center justify-center space-y-2 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-[80px] sm:h-[80px] rounded-full bg-white/90 backdrop-blur-md text-[#161616] flex items-center justify-center font-bold text-lg sm:text-2xl shadow-2xl group-hover:scale-110 transition-transform"> {/* token-exempt: play button sizing */}
+                ▶
+              </div>
+              <span className="font-['Funnel_Display'] text-white font-semibold text-xs sm:text-lg tracking-wider uppercase drop-shadow-md"> {/* token-exempt: font style */}
+                Click to Play
+              </span>
             </div>
-            <span className="font-['Funnel_Display'] text-white font-semibold text-xs sm:text-xl tracking-wider uppercase drop-shadow-md"> {/* token-exempt: font style */}
-              Click to Play
+          )}
+        </div>
+
+        {/* Right Column: GitHub & Resume Link Buttons Box */}
+        <div className="w-full lg:w-[29%] xl:w-[25%] flex flex-col justify-center gap-6 p-6 sm:p-8 bg-white rounded-[24px] sm:rounded-[40px] border border-neutral-200/80 shadow-md"> {/* token-exempt: right column card */}
+          <div className="space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-wider text-accent-purple font-['Funnel_Display']"> {/* token-exempt: font style */}
+              Quick Links
             </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-text-main font-['Pretendard'] leading-snug"> {/* token-exempt: font style */}
+              Explore &amp; Connect
+            </h3>
+            <p className="text-sm text-text-mid-gray font-['Pretendard'] leading-relaxed"> {/* token-exempt: font style */}
+              소스 코드와 상세 이력을 확인하실 수 있는 주요 링크입니다.
+            </p>
           </div>
-        )}
+
+          <div className="flex flex-col gap-4 pt-2">
+            {/* GitHub Link Button */}
+            <a
+              href="https://github.com/dbd01350-eng" // token-exempt: external profile link
+              target="_blank"
+              rel="noreferrer"
+              className="w-full py-4 px-6 rounded-2xl bg-bg-dark hover:bg-neutral-800 text-white font-semibold font-['Funnel_Display'] flex items-center justify-between transition-all shadow-md group cursor-pointer" // token-exempt: button styling
+            >
+              <div className="flex items-center gap-3">
+                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span className="text-base">GitHub Profile</span>
+              </div>
+              <span className="group-hover:translate-x-1 transition-transform">↗</span>
+            </a>
+
+            {/* Resume Page Link Button */}
+            <a
+              href="#about"
+              className="w-full py-4 px-6 rounded-2xl bg-accent-purple hover:bg-opacity-90 text-white font-semibold font-['Funnel_Display'] flex items-center justify-between transition-all shadow-md group cursor-pointer" // token-exempt: button styling
+            >
+              <div className="flex items-center gap-3">
+                <svg className="w-6 h-6 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span className="text-base">View Resume Page</span>
+              </div>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
