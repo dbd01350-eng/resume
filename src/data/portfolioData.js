@@ -67,7 +67,7 @@ const portfolioData = {
     {
       id: "ikea-dev",
       title: "IKEA 반응형 웹사이트 UI/UX 개발",
-      previewImage: "/assets/project_ikea_full_preview.png",
+      previewImage: "/assets/project_ikea_full_preview2.png",
       fallbackImage: "/assets/figma_8bed76a4.png",
       type: "WEBSITE",
       links: [
