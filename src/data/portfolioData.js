@@ -62,7 +62,7 @@ const portfolioData = {
         { label: "리디자인 기획안", url: "#" },
         { label: "Figma", url: "https://www.figma.com/design/SDTgcPmNqolK9N3QBKHwAY/3.-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=533-3396&t=dbcQAySd7xC5k2tI-1" }, // token-exempt: external project link
       ],
-      tags: ["UI/UX", "Frontend", "React", "Claude", "Vibe coding"],
+      tags: ["Web design", "Figma", "Photoshop", "Illustrator"],
     },
     {
       id: "ikea-dev",
