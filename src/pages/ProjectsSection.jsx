@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PlanModal from "../components/PlanModal.jsx";
 import portfolioData from "../data/portfolioData.js";
-import { getModalDataForLink } from "../utils/modalHelpers.js";
 
 export default function ProjectsSection() {
   const [modalData, setModalData] = useState({
@@ -15,7 +14,7 @@ export default function ProjectsSection() {
   const projects = portfolioData.projects;
 
   const handleLinkClick = (e, link, projectTitle) => {
-    const modalConfig = getModalDataForLink(link, projectTitle);
+    const modalConfig = PlanModal.getModalConfig(link, projectTitle);
     if (modalConfig) {
       e.preventDefault();
       setModalData(modalConfig);

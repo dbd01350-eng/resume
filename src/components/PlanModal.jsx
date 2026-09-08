@@ -174,3 +174,69 @@ export default function PlanModal({
     </div>
   );
 }
+
+/**
+ * Static helper method to calculate modal configuration for a clicked project link
+ */
+PlanModal.getModalConfig = function (link, projectTitle = '') {
+  const label = link.label;
+  const url = link.url || '';
+
+  if (label === '리디자인 기획안') {
+    return {
+      isOpen: true,
+      title: 'IKEA Website 리디자인 기획안',
+      images: Array.from({ length: 30 }, (_, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        return `/assets/ikea_redesign/${num}.png`;
+      }),
+      isVideo: false,
+      videoUrl: '',
+    };
+  }
+
+  if (label === '개발 기획안') {
+    return {
+      isOpen: true,
+      title: 'IKEA Website UI/UX 개발 기획안',
+      images: [
+        '/assets/ikea_uiux/01.png',
+        ...Array.from({ length: 22 }, (_, i) => `/assets/ikea_uiux/${i + 31}.png`),
+      ],
+      isVideo: false,
+      videoUrl: '',
+    };
+  }
+
+  if (label === '영상기획서') {
+    return {
+      isOpen: true,
+      title: `${projectTitle} 영상기획서`,
+      images: Array.from({ length: 9 }, (_, i) => `/assets/no_smoking_makeplan/${i + 1}.png`),
+      isVideo: false,
+      videoUrl: '',
+    };
+  }
+
+  if (label === '스토리보드') {
+    return {
+      isOpen: true,
+      title: `${projectTitle} 스토리보드`,
+      images: Array.from({ length: 2 }, (_, i) => `/assets/no_smoking_storyboard/${i + 1}.png`),
+      isVideo: false,
+      videoUrl: '',
+    };
+  }
+
+  if (label === 'VIDEO' || url.endsWith('.mp4')) {
+    return {
+      isOpen: true,
+      title: `${projectTitle} VIDEO`,
+      images: [],
+      isVideo: true,
+      videoUrl: url || '/assets/no_smoking_video.mp4',
+    };
+  }
+
+  return null;
+};
