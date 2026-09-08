@@ -22,8 +22,8 @@ export default function ResumePage({ onClose }) {
       return {
         id: 'gmeumdal',
         queryTitle: '그믐달스튜디오 이태원점',
-        iframeUrl: 'https://www.google.com/search?igu=1&tbm=isch&q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90', // token-exempt: google iframe search link
-        googleUrl: 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
+        iframeUrl: 'https://www.google.com/search?igu=1&tbm=isch&q=%EA%B7%B8%EB%AF%90%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90', // token-exempt: google iframe search link
+        googleUrl: 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%90%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
       };
     }
     if (title.includes('자개장롱')) {
