@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:8000/chat";
+const API = "https://resume-qrv3.onrender.com";
 
 export default function App() {
   const [msgs, setMsgs] = useState([]);
