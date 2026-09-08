@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import portfolioData from '../data/portfolioData.js';
 
 export default function ResumePage({ onClose }) {
   const { profile, experience, projects } = portfolioData;
+  const [activeGallery, setActiveGallery] = useState(null);
 
   const handlePrint = () => {
     window.print();
   };
 
-  const getExperienceLink = (title) => {
+  const getStoreInfo = (title) => {
     if (title.includes('하루필름') && !title.includes('본사')) {
-      return 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+      return {
+        id: 'harufilm',
+        queryTitle: '하루필름 이태원점',
+        imgSrc: '/assets/harufilm_store_1.jpg',
+        googleUrl: 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
+      };
     }
     if (title.includes('그믐달스튜디오')) {
-      return 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%90%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+      return {
+        id: 'gmeumdal',
+        queryTitle: '그믐달스튜디오 이태원점',
+        imgSrc: '/assets/gmeumdal_store_1.jpg',
+        googleUrl: 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch', // token-exempt: google image search link
+      };
     }
     if (title.includes('자개장롱')) {
-      return 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1%20%EC%95%BD%EC%88%98&tbm=isch'; // token-exempt: google image search link
+      return {
+        id: 'jagai',
+        queryTitle: '자개장롱 약수',
+        imgSrc: '/assets/jagai_store_1.jpg',
+        googleUrl: 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1%20%EC%95%BD%EC%88%98&tbm=isch', // token-exempt: google image search link
+      };
     }
     return null;
+  };
+
+  const toggleGallery = (id) => {
+    setActiveGallery((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -184,26 +204,61 @@ export default function ResumePage({ onClose }) {
               </thead>
               <tbody className="divide-y divide-gray-100 text-text-sub">
                 {experience.map((item, idx) => {
-                  const linkUrl = getExperienceLink(item.title);
+                  const storeInfo = getStoreInfo(item.title);
+                  const isExpanded = storeInfo && activeGallery === storeInfo.id;
                   return (
-                    <tr key={idx} className="hover:bg-bg-secondary/50 transition-colors">
-                      <td className="py-2.5 px-4 font-funnel text-text-mid-gray whitespace-nowrap">
-                        {item.period}
-                      </td>
-                      <td className="py-2.5 px-4 font-medium text-text-main flex items-center justify-between gap-2">
-                        <span>{item.title}</span>
-                        {linkUrl && (
-                          <a
-                            href={linkUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-xs text-text-sub hover:text-accent-purple underline font-funnel inline-flex items-center gap-0.5 shrink-0 cursor-pointer print:hidden"
-                          >
-                            link ↗
-                          </a>
-                        )}
-                      </td>
-                    </tr>
+                    <React.Fragment key={idx}>
+                      <tr className="hover:bg-bg-secondary/50 transition-colors">
+                        <td className="py-2.5 px-4 font-funnel text-text-mid-gray whitespace-nowrap">
+                          {item.period}
+                        </td>
+                        <td className="py-2.5 px-4 font-medium text-text-main flex items-center justify-between gap-2">
+                          <span>{item.title}</span>
+                          {storeInfo && (
+                            <button
+                              type="button"
+                              onClick={() => toggleGallery(storeInfo.id)}
+                              className="text-xs text-text-sub hover:text-accent-purple underline font-funnel inline-flex items-center gap-0.5 shrink-0 cursor-pointer"
+                            >
+                              {isExpanded ? '이미지 닫기 ▲' : 'link ↗'}
+                            </button>
+                          )}
+                        </td>
+                      </tr>
+
+                      {/* Inline A4 Printable Image Gallery */}
+                      {storeInfo && isExpanded && (
+                        <tr className="bg-bg-secondary/60">
+                          <td colSpan={2} className="p-4 border-t border-gray-200">
+                            <div className="space-y-2">
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs font-bold text-accent-purple font-funnel">
+                                  📷 {storeInfo.queryTitle} 현장 사진 / 이미지 결과
+                                </span>
+                                <a
+                                  href={storeInfo.googleUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="text-[11px] text-text-light-gray hover:text-text-main underline font-funnel print:hidden" // token-exempt: inline link font size
+                                >
+                                  구글 검색에서 전체 보기 ↗ {/* token-exempt: external url text */}
+                                </a>
+                              </div>
+                              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm max-h-80 bg-bg-primary">
+                                <img
+                                  src={storeInfo.imgSrc}
+                                  alt={`${storeInfo.queryTitle} 현장 사진`}
+                                  className="w-full h-80 object-cover"
+                                />
+                              </div>
+                              <p className="text-[11px] text-text-muted italic text-center font-funnel"> {/* token-exempt: caption font size */}
+                                * 구글 이미지 검색 대표 매장 전경 및 인테리어 사진 (A4 인쇄 포함)
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                    </React.Fragment>
                   );
                 })}
               </tbody>
