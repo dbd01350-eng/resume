@@ -62,7 +62,7 @@ const portfolioData = {
         { label: "리디자인 기획안", url: "#" },
         { label: "Figma", url: "https://www.figma.com/design/SDTgcPmNqolK9N3QBKHwAY/3.-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=533-3396&t=dbcQAySd7xC5k2tI-1" }, // token-exempt: external project link
       ],
-      tags: ["Web design", "Figma", "Figma mcp", "Redesign", "Claude", "AGY"],
+      tags: ["UI/UX", "Frontend", "React", "Claude", "Vibe coding"],
     },
     {
       id: "ikea-dev",
@@ -75,7 +75,7 @@ const portfolioData = {
         { label: "GITHUB", url: "https://github.com/heebon00/Team_Synergos_esg.git" }, // token-exempt: external project link
         { label: "개발 기획안", url: "#" },
       ],
-      tags: ["UI/UX", "Frontend", "React", "AGY", "Vibe coding"],
+      tags: ["UI/UX", "Frontend", "React", "Claude", "Vibe coding"],
     },
     {
       id: "campaign",
@@ -88,7 +88,7 @@ const portfolioData = {
         { label: "영상기획서", url: "/assets/no_smoking_makeplan.pdf" },
         { label: "스토리보드", url: "/assets/no_smoking_storyboard.pdf" },
       ],
-      tags: ["Flow", "AGY", "Adobe premiere pro", "Adobe after effect"],
+      tags: ["Flow", "AGY", "premiere pro", "after effect"],
     },
     {
       id: "archive",
