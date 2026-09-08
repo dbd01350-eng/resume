@@ -53,7 +53,7 @@ const portfolioData = {
   ],
   projects: [
     {
-      id: 'ikea',
+      id: 'ikea-redesign',
       title: 'IKEA Website 반응형 웹페이지 리디자인',
       type: 'WEBSITE',
       links: [
@@ -61,7 +61,18 @@ const portfolioData = {
         { label: 'GITHUB', url: '#' },
         { label: '리디자인 기획안', url: '#' },
       ],
-      tags: ['UI/UX', 'Web design', 'Figma', 'Figma mcp', 'Claude', 'AGY', 'Vibe coding'],
+      tags: ['Web design', 'Figma', 'Figma mcp', 'Redesign', 'Claude', 'AGY'],
+    },
+    {
+      id: 'ikea-dev',
+      title: 'IKEA Website UI/UX 개발',
+      type: 'WEBSITE',
+      links: [
+        { label: 'WEBSITE', url: '#' },
+        { label: 'GITHUB', url: '#' },
+        { label: '개발 기획안', url: '#' },
+      ],
+      tags: ['UI/UX', 'Frontend', 'React', 'AGY', 'Vibe coding'],
     },
     {
       id: 'nosmoking',
