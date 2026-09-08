@@ -1,88 +1,29 @@
 import React, { useState } from "react";
 import PlanModal from "../components/PlanModal.jsx";
-
-const ikeaRedesignImages = Array.from({ length: 30 }, (_, i) => {
-  const num = String(i + 1).padStart(2, "0");
-  return `/assets/ikea_redesign/${num}.png`;
-});
-
-const ikeaUiuxImages = [
-  "/assets/ikea_uiux/01.png",
-  ...Array.from({ length: 22 }, (_, i) => `/assets/ikea_uiux/${i + 31}.png`),
-];
+import portfolioData from "../data/portfolioData.js";
+import { getModalDataForLink } from "../utils/modalHelpers.js";
 
 export default function ProjectsSection() {
   const [modalData, setModalData] = useState({
     isOpen: false,
     title: "",
     images: [],
+    isVideo: false,
+    videoUrl: "",
   });
 
-  const projects = [
-    {
-      id: "ikea-redesign",
-      title: "IKEA Website 반응형 웹페이지 리디자인",
-      previewImage: "/assets/project_ikea_full_preview.png",
-      fallbackImage: "/assets/figma_8bed76a4.png",
-      links: [
-        { label: "리디자인 기획안", url: "#" },
-        { label: "Figma", url: "https://www.figma.com/design/SDTgcPmNqolK9N3QBKHwAY/3.-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=533-3396&t=dbcQAySd7xC5k2tI-1" }, // token-exempt: external project link
-      ],
-      tags: ["Web design", "Figma", "Photoshop", "Illustrator"],
-    },
-    {
-      id: "ikea-dev",
-      title: "IKEA Website UI/UX 개발",
-      previewImage: "/assets/project_ikea_full_preview.png",
-      fallbackImage: "/assets/figma_8bed76a4.png",
-      links: [
-        { label: "WEBSITE", url: "https://heebon00.github.io/Team_Synergos_esg/index.html" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/heebon00/Team_Synergos_esg.git" }, // token-exempt: external project link
-        { label: "개발 기획안", url: "#" },
-      ],
-      tags: ["UI/UX", "Frontend", "React", "Claude", "Vibe coding"],
-    },
-    {
-      id: "campaign",
-      title: "보건복지부 금연캠페인 영상 AI-powered",
-      previewImage: "/assets/project_campaign_full_preview.jpeg",
-      fallbackImage: "/assets/figma_4b660c10.png",
-      links: [
-        { label: "VIDEO", url: "/assets/no_smoking_video.mp4" },
-        { label: "영상기획서", url: "/assets/no_smoking_makeplan.pdf" },
-        { label: "스토리보드", url: "/assets/no_smoking_storyboard.pdf" },
-      ],
-      tags: ["Flow", "AGY", "premiere pro", "after effect"],
-    },
-    {
-      id: "archive",
-      title: "웹 개발 아카이브 프론트엔드 도구 학습 아카이브",
-      previewImage: "/assets/project_archive_full_preview.png",
-      fallbackImage: "/assets/figma_bcd0c6b6.png",
-      links: [
-        { label: "WEBSITE", url: "https://dbd01350-eng.github.io/VScode_study/archive/" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/dbd01350-eng/VScode_study.git" }, // token-exempt: external project link
-      ],
-      tags: ["React", "AGY", "Claude", "Vibe coding"],
-    },
-  ];
+  const projects = portfolioData.projects;
 
-  const handleLinkClick = (e, link) => {
-    if (link.label === "리디자인 기획안") {
+  const handleLinkClick = (e, link, projectTitle) => {
+    const modalConfig = getModalDataForLink(link, projectTitle);
+    if (modalConfig) {
       e.preventDefault();
-      setModalData({
-        isOpen: true,
-        title: "IKEA Website 리디자인 기획안",
-        images: ikeaRedesignImages,
-      });
-    } else if (link.label === "개발 기획안") {
-      e.preventDefault();
-      setModalData({
-        isOpen: true,
-        title: "IKEA Website UI/UX 개발 기획안",
-        images: ikeaUiuxImages,
-      });
+      setModalData(modalConfig);
     }
+  };
+
+  const handleCloseModal = () => {
+    setModalData((prev) => ({ ...prev, isOpen: false }));
   };
 
   return (
@@ -135,9 +76,7 @@ export default function ProjectsSection() {
               {/* Title & External Links Row */}
               <div className="space-y-3 sm:space-y-[16px] pt-1 sm:pt-[8px]"> {/* token-exempt: title spacing */}
                 <h3 className="font-['Pretendard'] font-semibold text-[20px] sm:text-[28px] md:text-[34px] leading-[1.3em] text-[#161616]"> {/* token-exempt: figma font typography */}
-                  <a href={project.titleLink} target="_blank" rel="noreferrer" className="hover:underline">
-                    {project.title}
-                  </a>
+                  {project.title}
                 </h3>
 
                 {/* External Link Badges */}
@@ -145,8 +84,8 @@ export default function ProjectsSection() {
                   {project.links.map((link, idx) => (
                     <a
                       key={idx}
-                      href={link.url}
-                      onClick={(e) => handleLinkClick(e, link)}
+                      href={link.url || "#"}
+                      onClick={(e) => handleLinkClick(e, link, project.title)}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center space-x-1 font-['Funnel_Display'] font-medium text-[14px] sm:text-[16px] text-[#161616] underline hover:text-[#9F8BE7] transition-colors cursor-pointer" // token-exempt: link badge styling
@@ -165,9 +104,11 @@ export default function ProjectsSection() {
       {/* Proposal Modal Popup */}
       <PlanModal
         isOpen={modalData.isOpen}
-        onClose={() => setModalData({ ...modalData, isOpen: false })}
+        onClose={handleCloseModal}
         title={modalData.title}
         images={modalData.images}
+        isVideo={modalData.isVideo}
+        videoUrl={modalData.videoUrl}
       />
     </section>
   );

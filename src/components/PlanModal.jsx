@@ -1,22 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
-export default function PlanModal({ isOpen, onClose, title, images = [], isVideo = false, videoUrl = "" }) {
+export default function PlanModal({
+  isOpen,
+  onClose,
+  title,
+  images = [],
+  isVideo = false,
+  videoUrl = '',
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewMode, setViewMode] = useState('slide'); // 'slide' or 'scroll'
+  const [viewMode, setViewMode] = useState('slide'); // 'slide' | 'scroll'
 
   useEffect(() => {
     setCurrentIndex(0);
   }, [images, isOpen, videoUrl]);
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
       if (e.key === 'Escape') onClose();
-      if (!isVideo && e.key === 'ArrowRight' && viewMode === 'slide') {
-        setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
-      }
-      if (!isVideo && e.key === 'ArrowLeft' && viewMode === 'slide') {
-        setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
+      if (!isVideo && viewMode === 'slide') {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -26,16 +39,9 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
   if (!isOpen) return null;
   if (!isVideo && images.length === 0) return null;
 
-  const nextSlide = () => {
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = '/assets/figma_8bed76a4.png';
   };
 
   return (
@@ -57,7 +63,6 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
           </div>
 
           <div className="flex items-center gap-2">
-            {/* View Mode Toggle */}
             {!isVideo && (
               <button
                 onClick={() => setViewMode(viewMode === 'slide' ? 'scroll' : 'slide')}
@@ -67,7 +72,6 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
               </button>
             )}
 
-            {/* Close Button */}
             <button
               onClick={onClose}
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
@@ -95,7 +99,6 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
           ) : viewMode === 'slide' ? (
             /* Slide View Mode */
             <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-6 select-none">
-              {/* Previous Button */}
               <button
                 onClick={prevSlide}
                 disabled={currentIndex === 0}
@@ -105,20 +108,15 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
                 ◀
               </button>
 
-              {/* Slide Image */}
               <div className="w-full h-full flex items-center justify-center overflow-hidden">
                 <img
                   src={images[currentIndex]}
                   alt={`${title} Slide ${currentIndex + 1}`}
                   className="max-w-full max-h-full object-contain rounded-lg shadow-xl transition-all duration-200"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = '/assets/figma_8bed76a4.png';
-                  }}
+                  onError={handleImageError}
                 />
               </div>
 
-              {/* Next Button */}
               <button
                 onClick={nextSlide}
                 disabled={currentIndex === images.length - 1}
@@ -141,10 +139,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
                     alt={`${title} Page ${idx + 1}`}
                     className="w-full h-auto object-contain block"
                     loading="lazy"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = '/assets/figma_8bed76a4.png';
-                    }}
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -152,7 +147,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
           )}
         </div>
 
-        {/* Footer Thumbnail Bar (Only in Slide Mode) */}
+        {/* Footer Thumbnail Bar */}
         {!isVideo && viewMode === 'slide' && (
           <div className="h-20 bg-bg-dark border-t border-neutral-800 px-4 py-2 flex items-center gap-2 overflow-x-auto overflow-y-hidden shrink-0 select-none">
             {images.map((imgUrl, idx) => (
@@ -169,10 +164,7 @@ export default function PlanModal({ isOpen, onClose, title, images = [], isVideo
                   src={imgUrl}
                   alt={`Thumbnail ${idx + 1}`}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = '/assets/figma_8bed76a4.png';
-                  }}
+                  onError={handleImageError}
                 />
               </button>
             ))}
