@@ -120,7 +120,7 @@ export default function ChatWidget() {
           <img
             src="/assets/glassheart.png"
             alt="Chatbot Logo"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain animate-spin-3d"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = '/assets/logo_icon.svg';
@@ -191,7 +191,7 @@ export default function ChatWidget() {
                 <img
                   src="/assets/glassheart.png"
                   alt="Bot"
-                  className="w-7 h-7 object-contain shrink-0 animate-spin"
+                  className="w-7 h-7 object-contain shrink-0 animate-spin-3d-fast"
                 />
                 <div className="bg-bg-primary border border-neutral-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 text-xs text-text-muted flex items-center gap-1.5">
                   <span>AI가 답변을 생성하는 중입니다</span>
