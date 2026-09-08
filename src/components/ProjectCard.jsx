@@ -1,19 +1,19 @@
 import React from 'react';
 import Tag from './Tag.jsx';
 
-export default function ProjectCard({ title, type, links = [], tags = [], className = '' }) {
+export default function ProjectCard({ title, type, links = [], tags = [], className = '', onLinkClick }) {
   return (
     <div className={`bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col justify-between space-y-6 transition-all duration-300 hover:shadow-md ${className}`}>
       <div className="space-y-4">
         {/* Type badge */}
         <div className="flex items-center justify-between">
-          <span className="text-xs md:text-sm font-semibold tracking-wider uppercase px-3 py-1 bg-[#F3EFEF] text-[var(--color-accent-purple)] rounded-full font-[var(--font-funnel)]">
+          <span className="text-xs md:text-sm font-semibold tracking-wider uppercase px-3 py-1 bg-[#FAF7F6] text-accent-purple rounded-full font-['Funnel_Display']"> {/* token-exempt: badge style */}
             {type}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl md:text-3xl font-semibold font-[var(--font-pretendard)] text-[var(--color-text-main)] leading-snug">
+        <h3 className="text-2xl md:text-3xl font-semibold font-['Pretendard'] text-text-main leading-snug"> {/* token-exempt: heading font */}
           {title}
         </h3>
 
@@ -24,7 +24,8 @@ export default function ProjectCard({ title, type, links = [], tags = [], classN
               <a
                 key={idx}
                 href={link.url || '#'}
-                className="inline-flex items-center text-sm font-semibold font-[var(--font-funnel)] underline text-[var(--color-text-main)] hover:text-[var(--color-accent-purple)] transition-colors"
+                onClick={(e) => onLinkClick && onLinkClick(e, link)}
+                className="inline-flex items-center text-sm font-semibold font-['Funnel_Display'] underline text-text-main hover:text-accent-purple transition-colors cursor-pointer" // token-exempt: link font
               >
                 {link.label}
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
