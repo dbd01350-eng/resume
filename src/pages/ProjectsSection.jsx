@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PlanModal from "../components/PlanModal.jsx";
+import portfolioData from "../data/portfolioData.js";
 
 const ikeaRedesignImages = Array.from({ length: 30 }, (_, i) => {
   const num = String(i + 1).padStart(2, "0");
@@ -23,54 +24,7 @@ export default function ProjectsSection() {
     videoUrl: "",
   });
 
-  const projects = [
-    {
-      id: "ikea-redesign",
-      title: "IKEA Website 반응형 웹페이지 리디자인",
-      previewImage: "/assets/project_ikea_full_preview.png",
-      fallbackImage: "/assets/figma_8bed76a4.png",
-      links: [
-        { label: "리디자인 기획안", url: "#" },
-        { label: "Figma", url: "https://www.figma.com/design/SDTgcPmNqolK9N3QBKHwAY/3.-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=533-3396&t=dbcQAySd7xC5k2tI-1" }, // token-exempt: external project link
-      ],
-      tags: ["Web design", "Figma", "Figma mcp", "Redesign", "Claude", "AGY"],
-    },
-    {
-      id: "ikea-dev",
-      title: "IKEA Website UI/UX 개발",
-      previewImage: "/assets/project_ikea_full_preview.png",
-      fallbackImage: "/assets/figma_8bed76a4.png",
-      links: [
-        { label: "WEBSITE", url: "https://heebon00.github.io/Team_Synergos_esg/index.html" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/heebon00/Team_Synergos_esg.git" }, // token-exempt: external project link
-        { label: "개발 기획안", url: "#" },
-      ],
-      tags: ["UI/UX", "Frontend", "React", "AGY", "Vibe coding"],
-    },
-    {
-      id: "campaign",
-      title: "보건복지부 금연캠페인 영상 AI-powered",
-      previewImage: "/assets/project_campaign_full_preview.jpeg",
-      fallbackImage: "/assets/figma_4b660c10.png",
-      links: [
-        { label: "VIDEO", url: "/assets/no_smoking_video.mp4" },
-        { label: "영상기획서", url: "/assets/no_smoking_makeplan.pdf" },
-        { label: "스토리보드", url: "/assets/no_smoking_storyboard.pdf" },
-      ],
-      tags: ["Flow", "AGY", "Adobe premiere pro", "Adobe after effect"],
-    },
-    {
-      id: "archive",
-      title: "웹 개발 아카이브 프론트엔드 도구 학습 아카이브",
-      previewImage: "/assets/project_archive_full_preview.png",
-      fallbackImage: "/assets/figma_bcd0c6b6.png",
-      links: [
-        { label: "WEBSITE", url: "https://dbd01350-eng.github.io/VScode_study/archive/" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/dbd01350-eng/VScode_study.git" }, // token-exempt: external project link
-      ],
-      tags: ["React", "AGY", "Claude", "Vibe coding"],
-    },
-  ];
+  const projects = portfolioData.projects;
 
   const handleLinkClick = (e, link) => {
     if (link.label === "리디자인 기획안") {

@@ -53,47 +53,54 @@ const portfolioData = {
   ],
   projects: [
     {
-      id: 'ikea-redesign',
-      title: 'IKEA Website 반응형 웹페이지 리디자인',
-      type: 'WEBSITE',
+      id: "ikea-redesign",
+      title: "IKEA Website 반응형 웹페이지 리디자인",
+      previewImage: "/assets/project_ikea_full_preview.png",
+      fallbackImage: "/assets/figma_8bed76a4.png",
+      type: "WEBSITE",
       links: [
-        { label: 'WEBSITE', url: '#' },
-        { label: 'GITHUB', url: '#' },
-        { label: '리디자인 기획안', url: '#' },
+        { label: "리디자인 기획안", url: "#" },
+        { label: "Figma", url: "https://www.figma.com/design/SDTgcPmNqolK9N3QBKHwAY/3.-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=533-3396&t=dbcQAySd7xC5k2tI-1" }, // token-exempt: external project link
       ],
-      tags: ['Web design', 'Figma', 'Figma mcp', 'Redesign', 'Claude', 'AGY'],
+      tags: ["Web design", "Figma", "Figma mcp", "Redesign", "Claude", "AGY"],
     },
     {
-      id: 'ikea-dev',
-      title: 'IKEA Website UI/UX 개발',
-      type: 'WEBSITE',
+      id: "ikea-dev",
+      title: "IKEA Website UI/UX 개발",
+      previewImage: "/assets/project_ikea_full_preview.png",
+      fallbackImage: "/assets/figma_8bed76a4.png",
+      type: "WEBSITE",
       links: [
-        { label: 'WEBSITE', url: '#' },
-        { label: 'GITHUB', url: '#' },
-        { label: '개발 기획안', url: '#' },
+        { label: "WEBSITE", url: "https://heebon00.github.io/Team_Synergos_esg/index.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/heebon00/Team_Synergos_esg.git" }, // token-exempt: external project link
+        { label: "개발 기획안", url: "#" },
       ],
-      tags: ['UI/UX', 'Frontend', 'React', 'AGY', 'Vibe coding'],
+      tags: ["UI/UX", "Frontend", "React", "AGY", "Vibe coding"],
     },
     {
-      id: 'nosmoking',
-      title: '보건복지부 금연캠페인 영상 AI-powered',
-      type: 'VIDEO',
+      id: "campaign",
+      title: "보건복지부 금연캠페인 영상 AI-powered",
+      previewImage: "/assets/project_campaign_full_preview.jpeg",
+      fallbackImage: "/assets/figma_4b660c10.png",
+      type: "VIDEO",
       links: [
-        { label: 'VIDEO', url: 'https://drive.google.com/file/d/10d6UEqNIgxSS0ldjxd8_MTxDG_yDMS_Y/view?usp=sharing' },
-        { label: '영상기획서', url: '#' },
-        { label: '스토리보드', url: '#' },
+        { label: "VIDEO", url: "/assets/no_smoking_video.mp4" },
+        { label: "영상기획서", url: "/assets/no_smoking_makeplan.pdf" },
+        { label: "스토리보드", url: "/assets/no_smoking_storyboard.pdf" },
       ],
-      tags: ['Flow', 'AGY', 'Adobe premiere pro', 'Adobe after effect'],
+      tags: ["Flow", "AGY", "Adobe premiere pro", "Adobe after effect"],
     },
     {
-      id: 'webarchive',
-      title: '웹 개발 아카이브 프론트엔드 도구 학습 아카이브',
-      type: 'WEBSITE',
+      id: "archive",
+      title: "웹 개발 아카이브 프론트엔드 도구 학습 아카이브",
+      previewImage: "/assets/project_archive_full_preview.png",
+      fallbackImage: "/assets/figma_bcd0c6b6.png",
+      type: "WEBSITE",
       links: [
-        { label: 'WEBSITE', url: '#' },
-        { label: 'GITHUB', url: '#' },
+        { label: "WEBSITE", url: "https://dbd01350-eng.github.io/VScode_study/archive/" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/VScode_study.git" }, // token-exempt: external project link
       ],
-      tags: ['React', 'AGY', 'Claude', 'Vibe coding'],
+      tags: ["React", "AGY", "Claude", "Vibe coding"],
     },
   ],
   values: [
