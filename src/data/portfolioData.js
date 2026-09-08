@@ -85,8 +85,8 @@ const portfolioData = {
       type: "VIDEO",
       links: [
         { label: "VIDEO", url: "/assets/no_smoking_video.mp4" },
-        { label: "영상기획서", url: "/assets/no_smoking_makeplan.pdf" },
-        { label: "스토리보드", url: "/assets/no_smoking_storyboard.pdf" },
+        { label: "영상기획서", url: "#" },
+        { label: "스토리보드", url: "#" },
       ],
       tags: ["Flow", "AGY", "premiere pro", "after effect"],
     },
