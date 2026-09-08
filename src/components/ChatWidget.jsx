@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import portfolioData from '../data/portfolioData.js';
 
-const API_URL = import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000/chat'; // token-exempt: chatbot backend endpoint
+const API_URL = import.meta.env.VITE_CHAT_API_URL || 'https://resume-qrv3.onrender.com/chat'; // token-exempt: chatbot backend endpoint
 
 // Smart Client-side AI Responder for fallback when backend API is unreachable
 function generatePortfolioResponse(userText) {
