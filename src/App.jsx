@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import HeroSection from './pages/HeroSection.jsx';
-import ParallaxSection from './pages/ParallaxSection.jsx';
-import AboutSection from './pages/AboutSection.jsx';
-import MarqueeTextSection from './pages/MarqueeTextSection.jsx';
-import ProjectsSection from './pages/ProjectsSection.jsx';
-import CTASection from './pages/CTASection.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import SkeletonLoader from './components/SkeletonLoader.jsx';
-import ChatWidget from './components/ChatWidget.jsx';
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import HeroSection from "./pages/HeroSection.jsx";
+import ParallaxSection from "./pages/ParallaxSection.jsx";
+import AboutSection from "./pages/AboutSection.jsx";
+import MarqueeTextSection from "./pages/MarqueeTextSection.jsx";
+import ProjectsSection from "./pages/ProjectsSection.jsx";
+import CTASection from "./pages/CTASection.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import SkeletonLoader from "./components/SkeletonLoader.jsx";
+import ChatWidget from "./components/ChatWidget.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -57,9 +57,9 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ParallaxSection />
         <MarqueeTextSection />
         <ProjectsSection />
+        <ParallaxSection />
         <CTASection onOpenContact={handleOpenContact} />
       </main>
 
