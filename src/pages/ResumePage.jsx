@@ -8,6 +8,19 @@ export default function ResumePage({ onClose }) {
     window.print();
   };
 
+  const getExperienceLink = (title) => {
+    if (title.includes('하루필름')) {
+      return 'https://www.google.com/search?q=%ED%95%98%EB%A3%A8%ED%95%84%EB%A6%84+%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+    }
+    if (title.includes('그믐달스튜디오')) {
+      return 'https://www.google.com/search?q=%EA%B7%B8%EB%AF%B0%EB%8B%AC%EC%8A%A4%ED%8A%AC%EB%94%94%EC%98%A4+%EC%9D%B4%ED%83%9C%EC%9B%90&tbm=isch'; // token-exempt: google image search link
+    }
+    if (title.includes('자개장롱')) {
+      return 'https://www.google.com/search?q=%EC%9E%90%EA%B0%9C%EC%9E%A5%EB%A1%B1+%EC%95%BD%EC%88%98&tbm=isch'; // token-exempt: google image search link
+    }
+    return null;
+  };
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex justify-center items-start p-4 sm:p-6 md:p-8 print:p-0 print:bg-white print:static print:overflow-visible font-pretendard">
       {/* Print styles optimization */}
@@ -134,7 +147,7 @@ export default function ResumePage({ onClose }) {
               &quot;예쁘게, 될 때 까지 - 디자인 하고, 코드로 만듭니다. 결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.&quot;
             </blockquote>
             <p className="text-xs sm:text-sm text-text-sub leading-relaxed">
-              공학적 데이터 기반 사고와 실제 비즈니스 브랜딩 운영 경험을 결합하여, 기획부터 UX/UI 디자인, 최신 AI 에이전트 기반 프론트엔드 개발까지 완성도 높게 이끄는 융합형 디자이너 겸 개발자입니다. 서울시립대학교 토목공학과 졸업 및 설계 회사 근무를 통해 다져진 세밀한 구조 설계 감각과, 하루필름·그믐달스튜디오·자개장롱 등 다수의 핫플 공간 브랜드를 운영하며 쌓은 실전 사용자 경험(UX) 분석력을 바탕으로 완성도 있는 디지털 웹 서비스를 구축합니다.
+              공학적 데이터 기반 사고와 실제 비즈니스 브랜딩 운영 경험을 결합하여, 기획부터 UX/UI 디자인, 최신 AI 에이전트 기반 프론트엔드 개발까지 완성도 높게 이끄는 융합형 디자이너 겸 개발자입니다. 토목공학과 졸업 및 설계 회사 근무를 통해 다져진 세밀한 구조 설계 감각과, 하루필름·그믐달스튜디오·자개장롱 등 다수의 핫플 공간 브랜드를 운영하며 쌓은 실전 사용자 경험(UX) 분석력을 바탕으로 완성도 있는 디지털 웹 서비스를 구축합니다.
             </p>
           </div>
         </div>
@@ -170,16 +183,29 @@ export default function ResumePage({ onClose }) {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 text-text-sub">
-                {experience.map((item, idx) => (
-                  <tr key={idx} className="hover:bg-bg-secondary/50 transition-colors">
-                    <td className="py-2.5 px-4 font-funnel text-text-mid-gray whitespace-nowrap">
-                      {item.period}
-                    </td>
-                    <td className="py-2.5 px-4 font-medium text-text-main">
-                      {item.title}
-                    </td>
-                  </tr>
-                ))}
+                {experience.map((item, idx) => {
+                  const linkUrl = getExperienceLink(item.title);
+                  return (
+                    <tr key={idx} className="hover:bg-bg-secondary/50 transition-colors">
+                      <td className="py-2.5 px-4 font-funnel text-text-mid-gray whitespace-nowrap">
+                        {item.period}
+                      </td>
+                      <td className="py-2.5 px-4 font-medium text-text-main flex items-center justify-between gap-2">
+                        <span>{item.title}</span>
+                        {linkUrl && (
+                          <a
+                            href={linkUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-xs text-text-sub hover:text-accent-purple underline font-funnel inline-flex items-center gap-0.5 shrink-0 cursor-pointer print:hidden"
+                          >
+                            link ↗
+                          </a>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
