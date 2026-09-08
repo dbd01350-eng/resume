@@ -19,7 +19,14 @@ export default function Header({ onOpenContact, onOpenResume }) {
     >
       <div className="w-[1664px] mx-auto flex items-center justify-between">
         {/* Nav Logo */}
-        <a href="#home" className="flex items-center gap-[10px] sm:gap-[15px] h-[44px] sm:h-[56px]">
+        <a 
+          href="#top" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="flex items-center gap-[10px] sm:gap-[15px] h-[44px] sm:h-[56px] cursor-pointer"
+        >
           <img 
             src="/assets/logo_icon.svg" 
             alt="Logo" 
