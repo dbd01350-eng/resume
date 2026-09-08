@@ -60,6 +60,16 @@ export default function ChatWidget() {
     }
   }, [msgs, isOpen]);
 
+  // Timeout for Spline 3D Scene loading (fallback to 3D Glassheart logo if load is slow/blocked)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!splineLoaded) {
+        setSplineError(true);
+      }
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [splineLoaded]);
+
   const send = async () => {
     if (!input.trim() || loading) return;
 
@@ -112,17 +122,31 @@ export default function ChatWidget() {
     }
   };
 
+  const toggleChat = (e) => {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <>
       {/* Floating 3D Glassmorphism Toggle Button (Bottom Left) */}
       <div className="fixed bottom-6 left-6 z-50"> {/* token-exempt: fixed layout positioning */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
+        <div
+          onClick={toggleChat}
           aria-label="Toggle Chatbot"
           className="w-16 h-16 sm:w-20 sm:h-20 rounded-full glass-3d-container flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300 relative group overflow-hidden" // token-exempt: 3D glass button container
         >
+          {/* Top Layer Click Interceptor (guarantees click always triggers open/close) */}
+          <div
+            onClick={toggleChat}
+            className="absolute inset-0 z-30 cursor-pointer"
+          />
+
           {/* Ambient Glow Aura */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple/30 via-transparent to-accent-lime/30 rounded-full blur-md opacity-70 group-hover:opacity-100 transition-opacity" /> {/* token-exempt: ambient glow aura */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple/30 via-transparent to-accent-lime/30 rounded-full blur-md opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none" /> {/* token-exempt: ambient glow aura */}
 
           {/* Spline 3D Model with Glassmorphism 2.5D Fallback */}
           {!splineError ? (
@@ -131,7 +155,7 @@ export default function ChatWidget() {
                 <img
                   src="/assets/glassheart.png"
                   alt="Chatbot 3D Logo"
-                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10" // token-exempt: logo sizing
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10 pointer-events-none" // token-exempt: logo sizing
                 />
               }
             >
@@ -140,13 +164,13 @@ export default function ChatWidget() {
                   scene={SPLINE_SCENE_URL}
                   onLoad={() => setSplineLoaded(true)}
                   onError={() => setSplineError(true)}
-                  className="w-full h-full"
+                  className="w-full h-full pointer-events-none"
                 />
                 {!splineLoaded && (
                   <img
                     src="/assets/glassheart.png"
                     alt="Chatbot 3D Logo"
-                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d absolute inset-0 m-auto z-10" // token-exempt: logo sizing
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d absolute inset-0 m-auto z-10 pointer-events-none" // token-exempt: logo sizing
                   />
                 )}
               </div>
@@ -155,14 +179,14 @@ export default function ChatWidget() {
             <img
               src="/assets/glassheart.png"
               alt="Chatbot 3D Logo"
-              className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10" // token-exempt: logo sizing
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-spin-3d relative z-10 pointer-events-none" // token-exempt: logo sizing
             />
           )}
 
           {!isOpen && (
-            <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-accent-lime rounded-full border border-white animate-pulse z-20" /> // token-exempt: indicator badge
+            <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-accent-lime rounded-full border border-white animate-pulse z-20 pointer-events-none" /> // token-exempt: indicator badge
           )}
-        </button>
+        </div>
       </div>
 
       {/* Floating Chat Popup Window (Bottom Left) */}
@@ -187,7 +211,7 @@ export default function ChatWidget() {
               </div>
             </div>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={toggleChat}
               className="w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors cursor-pointer"
               aria-label="Close Chatbot"
             >
