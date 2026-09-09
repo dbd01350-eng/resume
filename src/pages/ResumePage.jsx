@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import portfolioData from '../data/portfolioData.js';
+import ModalWrapper from '../components/common/ModalWrapper.jsx';
 
 export default function ResumePage({ onClose }) {
   const { profile, experience, projects } = portfolioData;
@@ -42,7 +43,13 @@ export default function ResumePage({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex justify-center items-start p-4 sm:p-6 md:p-8 print:p-0 print:bg-white print:static print:overflow-visible font-pretendard">
+    <ModalWrapper
+      isOpen={true}
+      onClose={onClose || (() => {})}
+      titleId="resume-modal-title"
+      backdropClassName="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex justify-center items-start p-4 sm:p-6 md:p-8 print:p-0 print:bg-white print:static print:overflow-visible font-pretendard"
+      className="w-full max-w-4xl flex flex-col items-center"
+    >
       {/* Print styles optimization */}
       <style>{`
         @media print {
@@ -365,6 +372,6 @@ export default function ResumePage({ onClose }) {
         </div>
 
       </div>
-    </div>
+    </ModalWrapper>
   );
 }

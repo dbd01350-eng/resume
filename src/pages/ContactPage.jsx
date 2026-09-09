@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import ModalWrapper from '../components/common/ModalWrapper.jsx';
 
 export default function ContactPage({ onClose }) {
   const formRef = useRef(null);
@@ -80,8 +81,13 @@ export default function ContactPage({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10">
-      <div className="bg-bg-primary text-text-main rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative border border-gray-200">
+    <ModalWrapper
+      isOpen={true}
+      onClose={onClose}
+      titleId="contact-modal-title"
+      backdropClassName="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10"
+      className="bg-bg-primary text-text-main rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative border border-gray-200"
+    >
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -207,7 +213,6 @@ export default function ContactPage({ onClose }) {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+    </ModalWrapper>
   );
 }

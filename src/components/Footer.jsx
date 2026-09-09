@@ -1,5 +1,6 @@
 import React from 'react';
 import portfolioData from '../data/portfolioData.js';
+import ExternalLink from './common/ExternalLink.jsx';
 
 export default function Footer({ onOpenContact }) {
   const { profile } = portfolioData;
@@ -72,51 +73,42 @@ export default function Footer({ onOpenContact }) {
             <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Ecosystem</h4>
             <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-3 text-[#161616] dark:text-white">
               <li>
-                <a 
+                <ExternalLink 
                   href="https://github.com/dbd01350-eng" // token-exempt: external profile link
-                  target="_blank" 
-                  rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                  showArrow
                 >
-                  <span>GitHub</span>
-                  <span className="text-xs opacity-60">↗</span>
-                </a>
+                  GitHub
+                </ExternalLink>
               </li>
 
               <li>
-                <a 
+                <ExternalLink 
                   href="https://www.instagram.com/da_ni_nim" // token-exempt: external instagram link
-                  target="_blank" 
-                  rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                  showArrow
                 >
-                  <span>Instagram</span>
-                  <span className="text-xs opacity-60">↗</span>
-                </a>
+                  Instagram
+                </ExternalLink>
               </li>
               <li>
-                <a 
+                <ExternalLink 
                   href="https://app.notion.com/p/Daeun-Sim-3d6b09059111805e9cc5d821f30da516?source=copy_link" // token-exempt: external notion link
-                  target="_blank" 
-                  rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                  showArrow
                 >
-                  <span>Notion</span>
-                  <span className="text-xs opacity-60">↗</span>
-                </a>
+                  Notion
+                </ExternalLink>
               </li>
               <li>
-                <a 
+                <ExternalLink 
                   href="https://www.figma.com/design/r4GMpAA7dQrAadLlmcQVGn/%EC%8B%AC%EB%8B%A4%EC%9D%80-%EC%9D%B4%EB%A0%A5%EC%84%9C-%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=7227-600&t=sRrX4rlgyUj93qVx-1" // token-exempt: external figma design link
-                  target="_blank" 
-                  rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                  showArrow
                 >
-                  <span>Figma</span>
-                  <span className="text-xs opacity-60">↗</span>
-                </a>
+                  Figma
+                </ExternalLink>
               </li>
-
             </ul>
           </div>
         </div>
