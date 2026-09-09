@@ -43,16 +43,16 @@ export default function HeroSection() {
             <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
               예쁘게,
             </span>
-            <div className="bg-[#9F8BE7] rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-[40px] py-1 sm:py-2 lg:py-[10px] flex items-center flex-shrink-0 overflow-hidden relative pointer-events-none">
+            <div className="bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-[40px] py-1 sm:py-2 lg:py-[10px] flex items-center flex-shrink-0 overflow-hidden relative pointer-events-none">
               {/* Invisible Sizing Placeholder (Ensures 100% exact original pill badge width & height) */}
               <div className="invisible flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap pointer-events-none">
-                <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
+                <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
                   될 때 까지
                 </span>
                 <img 
                   src="/assets/hero_title_star_icon.svg" 
                   alt="Star Icon" 
-                  className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
+                  className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                 />
               </div>
 
@@ -61,26 +61,26 @@ export default function HeroSection() {
                 <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '10s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
                   {/* Group 1 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
+                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
                       될 때 까지
                     </span>
                     <img 
                       src="/assets/hero_title_star_icon.svg" 
                       alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
+                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
                     />
                   </div>
 
                   {/* Group 2 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
+                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
                       될 때 까지
                     </span>
                     <img 
                       src="/assets/hero_title_star_icon.svg" 
                       alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
+                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
                     />
                   </div>
@@ -159,7 +159,7 @@ export default function HeroSection() {
           </div>
 
           {/* Photo Thumbnail Card in Original Desktop Position */}
-          <div className="w-[205px] h-[160px] bg-[#9F8BE7] rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
+          <div className="w-[205px] h-[160px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
             <img 
               src="/assets/figma_bb286482.png" 
               alt="Hero Photo Thumbnail" 
@@ -191,7 +191,7 @@ export default function HeroSection() {
             </div>
 
             {/* Photo Thumbnail Card placed on Right Side of Description Text in Breakpoint Mode */}
-            <div className="w-[110px] sm:w-[160px] h-[95px] sm:h-[130px] bg-[#9F8BE7] rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
+            <div className="w-[110px] sm:w-[160px] h-[95px] sm:h-[130px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
               <img 
                 src="/assets/figma_bb286482.png" 
                 alt="Hero Photo Thumbnail" 
