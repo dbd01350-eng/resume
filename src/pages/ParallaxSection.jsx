@@ -78,7 +78,7 @@ export default function ParallaxSection({ onOpenResume }) {
             href="https://www.figma.com/design/r4GMpAA7dQrAadLlmcQVGn/%EC%8B%AC%EB%8B%A4%EC%9D%80-%EC%9D%B4%EB%A0%A5%EC%84%9C-%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=7227-600&t=sRrX4rlgyUj93qVx-1" // token-exempt: external figma design link
             target="_blank"
             rel="noreferrer"
-            className="py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl sm:rounded-[200px] bg-[#DDF160] hover:bg-[#cbe046] text-[#161616] font-semibold font-['Funnel_Display'] text-sm sm:text-base inline-flex items-center gap-2.5 sm:gap-3 transition-all shadow-md group cursor-pointer whitespace-nowrap"
+            className="py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl sm:rounded-[200px] bg-[#DDF160] hover:bg-[#cbe046] text-[#161616] dark:bg-[#9F8BE7] dark:hover:bg-[#8b76d4] dark:text-white font-semibold font-['Funnel_Display'] text-sm sm:text-base inline-flex items-center gap-2.5 sm:gap-3 transition-all shadow-md group cursor-pointer whitespace-nowrap"
             title="Figma 디자인 시안"
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0" viewBox="0 0 24 24">

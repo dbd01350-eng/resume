@@ -92,7 +92,7 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub 프로필 외부 링크"
-            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] bg-[#161616] dark:bg-white text-white dark:text-[#161616] flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors cursor-pointer whitespace-nowrap"
+            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] border border-[#161616] dark:border-white/40 text-[#161616] dark:text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-[#161616] hover:text-white dark:hover:bg-white dark:hover:text-[#161616] transition-all cursor-pointer whitespace-nowrap"
             title="GitHub 프로필"
           >
             <svg className="w-5 h-5 sm:w-5 sm:h-5 fill-current shrink-0" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
                 onOpenResume();
               }
             }}
-            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] bg-[#9F8BE7] text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-opacity-90 transition-colors cursor-pointer whitespace-nowrap"
+            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] border border-[#161616] dark:border-white/40 text-[#161616] dark:text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-[#161616] hover:text-white dark:hover:bg-white dark:hover:text-[#161616] transition-all cursor-pointer whitespace-nowrap"
             title="이력서"
           >
             <svg className="w-5 h-5 sm:w-5 sm:h-5 fill-none stroke-current shrink-0" viewBox="0 0 24 24" strokeWidth="2">

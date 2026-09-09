@@ -110,8 +110,8 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Floating Trigger Button (Top Right) */}
-      <div className="fixed top-20 sm:top-24 right-4 sm:right-6 z-50 flex flex-col items-center gap-1.5 print:hidden"> {/* token-exempt: fixed layout positioning */}
+      {/* Floating Trigger Button (Bottom Left) */}
+      <div className="fixed bottom-6 left-4 sm:left-6 z-50 flex flex-col items-center gap-1.5 print:hidden"> {/* token-exempt: fixed layout positioning */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Chatbot"
@@ -135,9 +135,9 @@ export default function ChatWidget() {
         )}
       </div>
 
-      {/* Floating Chat Popup Window (Top Right) */}
+      {/* Floating Chat Popup Window (Bottom Left) */}
       {isOpen && (
-        <div className="fixed top-36 sm:top-40 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-primary border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn print:hidden"> {/* token-exempt: chatbot window fixed container */}
+        <div className="fixed bottom-24 sm:bottom-28 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-primary border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn print:hidden"> {/* token-exempt: chatbot window fixed container */}
           {/* Header */}
           <div className="px-5 py-4 bg-bg-dark text-white flex items-center justify-between border-b border-neutral-800">
             <div className="flex items-center gap-3">
