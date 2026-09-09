@@ -125,3 +125,34 @@
   transform-style: preserve-3d;
   transform-origin: center center;
 }
+
+/* Zero-gravity Floating Animations for Hero Floating Images */
+@keyframes float-zero-gravity {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(3deg);
+  }
+}
+
+@keyframes float-zero-gravity-alt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(-4deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-zero-gravity 5.2s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-zero-gravity-alt 6.8s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-zero-gravity 4.4s ease-in-out infinite;
+}
