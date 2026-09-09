@@ -55,7 +55,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FAF7F6] text-[#161616] font-[var(--font-pretendard)]">
       {/* Header */}
-      <Header onOpenContact={handleOpenContact} onOpenResume={handleOpenResume} />
+      <Header onOpenResume={handleOpenResume} />
 
       {/* Main Figma Node Hierarchy */}
       <main>
