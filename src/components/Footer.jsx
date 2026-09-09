@@ -27,8 +27,8 @@ export default function Footer({ onOpenContact }) {
           </p>
         </div>
 
-        {/* 4 Column Links Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm font-['Pretendard']">
+        {/* 3 Column Links Grid (Newsletter Removed, Ecosystem 2 Columns) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm font-['Pretendard']">
           {/* Navigation */}
           <div className="space-y-4">
             <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Navigation</h4>
@@ -57,39 +57,80 @@ export default function Footer({ onOpenContact }) {
           <div className="space-y-4">
             <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Contact</h4>
             <ul className="space-y-2.5 text-[#161616]">
-              <li><a href={`mailto:${profile.email}`} className="hover:text-[#9F8BE7] transition-colors">{profile.email}</a></li>
-              <li><a href={`tel:${profile.phone}`} className="hover:text-[#9F8BE7] transition-colors">{profile.phone}</a></li>
+              <li>
+                <a href={`mailto:${profile.email}`} className="hover:text-[#9F8BE7] transition-colors break-all">
+                  {profile.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${profile.phone}`} className="hover:text-[#9F8BE7] transition-colors">
+                  {profile.phone}
+                </a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onOpenContact && onOpenContact()}
+                  className="mt-2 px-4 py-2 rounded-full border border-[#161616] text-xs font-semibold hover:bg-[#161616] hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                >
+                  <span>이메일 보내기</span>
+                  <span>✉</span>
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* Ecosystem */}
-          <div className="space-y-4">
+          {/* Ecosystem (2 Columns Grid Layout) */}
+          <div className="space-y-4 md:col-span-1">
             <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Ecosystem</h4>
-            <ul className="space-y-2.5 text-[#161616]">
-              <li><a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-[#9F8BE7] transition-colors">Github</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#9F8BE7] transition-colors">Instagram</a></li>
-              <li><a href="https://notion.so" target="_blank" rel="noreferrer" className="hover:text-[#9F8BE7] transition-colors">Notion</a></li>
-              <li><a href="https://figma.com/@simdaeun" target="_blank" rel="noreferrer" className="hover:text-[#9F8BE7] transition-colors">Figma Community</a></li>
-            </ul>
-          </div>
+            <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-3 text-[#161616]">
+              <li>
+                <a 
+                  href="https://github.com/dbd01350-eng" // token-exempt: external profile link
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <span>GitHub</span>
+                  <span className="text-xs opacity-60">↗</span>
+                </a>
+              </li>
 
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Newsletter</h4>
-            <p className="text-[#585858] text-xs">Subscribe to our insights:</p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Your Email" 
-                className="bg-white text-[#161616] text-xs px-3.5 py-2.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#9F8BE7] flex-1"
-              />
-              <button 
-                type="submit" 
-                className="bg-[#161616] text-white px-4 py-2.5 rounded-xl text-xs font-bold font-['Funnel_Display'] hover:bg-[#303030] transition-colors cursor-pointer"
-              >
-                Subscribe
-              </button>
-            </form>
+              <li>
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <span>Instagram</span>
+                  <span className="text-xs opacity-60">↗</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://notion.so" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <span>Notion</span>
+                  <span className="text-xs opacity-60">↗</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://figma.com/@simdaeun" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  <span>Figma Community</span>
+                  <span className="text-xs opacity-60">↗</span>
+                </a>
+              </li>
+
+            </ul>
           </div>
         </div>
 
