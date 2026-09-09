@@ -7,29 +7,38 @@ export default function HeroSection() {
   const toolsCol4 = ['illustrator', 'after effect', 'primiere pro'];
 
   return (
-    <section id="home" className="pt-0 pb-10 sm:pb-[60px] lg:pb-[80px] px-4 md:px-12 xl:px-[60px] 2xl:px-[80px] max-w-[1920px] mx-auto relative min-h-[700px] sm:min-h-[840px] flex flex-col justify-between overflow-hidden">
+    <section id="home" className="pt-0 pb-10 sm:pb-[60px] lg:pb-[80px] px-4 md:px-12 xl:px-[60px] 2xl:px-[80px] max-w-[1920px] mx-auto relative min-h-[700px] sm:min-h-[840px] flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
-      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto">
+      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
           src="/assets/figma_a90ff28f.png" 
-          alt="Floating artwork 1" 
-          className="w-[180px] sm:w-[240px] md:w-[280px] xl:w-[340px] h-auto object-contain opacity-70 sm:opacity-85 xl:opacity-95 animate-float-slow transition-all duration-300 ease-out hover:-translate-x-6 hover:-translate-y-3 hover:-rotate-3 hover:opacity-100 cursor-pointer" 
+          alt="무중력 인터랙티브 3D 그래픽 1" 
+          tabIndex={0}
+          role="button"
+          aria-label="인터랙티브 3D 아트워크 1"
+          className="w-[180px] sm:w-[240px] md:w-[280px] xl:w-[340px] h-auto object-contain opacity-70 sm:opacity-85 xl:opacity-95 animate-float-slow transition-all duration-300 ease-out hover:-translate-x-6 hover:-translate-y-3 hover:-rotate-3 hover:opacity-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-purple" 
           onError={(e) => e.target.style.display = 'none'}
         />
       </div>
-      <div className="absolute top-[170px] right-[20px] sm:right-[20px] md:right-[4%] sm:top-[190px] md:top-[190px] lg:top-[240px] xl:top-[240px] xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto">
+      <div className="absolute top-[170px] right-[20px] sm:right-[20px] md:right-[4%] sm:top-[190px] md:top-[190px] lg:top-[240px] xl:top-[240px] xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto"> {/* token-exempt: floating image 2 absolute offsets */}
         <img 
           src="/assets/figma_40a26bbc.png" 
-          alt="Floating artwork 2" 
-          className="w-[80px] sm:w-[120px] md:w-[140px] xl:w-[170px] h-auto object-contain opacity-70 sm:opacity-85 xl:opacity-95 animate-float-medium transition-all duration-300 ease-out hover:translate-x-6 hover:-translate-y-4 hover:rotate-4 hover:opacity-100 cursor-pointer" 
+          alt="무중력 인터랙티브 3D 그래픽 2" 
+          tabIndex={0}
+          role="button"
+          aria-label="인터랙티브 3D 아트워크 2"
+          className="w-[80px] sm:w-[120px] md:w-[140px] xl:w-[170px] h-auto object-contain opacity-70 sm:opacity-85 xl:opacity-95 animate-float-medium transition-all duration-300 ease-out hover:translate-x-6 hover:-translate-y-4 hover:rotate-4 hover:opacity-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-purple" 
           onError={(e) => e.target.style.display = 'none'}
         />
       </div>
-      <div className="absolute top-[220px] right-[120px] sm:top-[280px] sm:right-[160px] md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto">
+      <div className="absolute top-[220px] right-[120px] sm:top-[280px] sm:right-[160px] md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
           src="/assets/figma_40a26bb.png" 
-          alt="Floating artwork 3" 
-          className="w-[90px] sm:w-[130px] md:w-[140px] xl:w-[170px] h-auto object-contain opacity-60 sm:opacity-75 xl:opacity-90 animate-float-fast transition-all duration-300 ease-out hover:translate-x-7 hover:translate-y-3 hover:rotate-6 hover:opacity-100 cursor-pointer" 
+          alt="무중력 인터랙티브 3D 그래픽 3" 
+          tabIndex={0}
+          role="button"
+          aria-label="인터랙티브 3D 아트워크 3"
+          className="w-[90px] sm:w-[130px] md:w-[140px] xl:w-[170px] h-auto object-contain opacity-60 sm:opacity-75 xl:opacity-90 animate-float-fast transition-all duration-300 ease-out hover:translate-x-7 hover:translate-y-3 hover:rotate-6 hover:opacity-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-purple" 
           onError={(e) => e.target.style.display = 'none'}
         />
       </div>

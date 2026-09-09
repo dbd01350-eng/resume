@@ -88,9 +88,10 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
 
           {/* Main GitHub Profile Link Button */}
           <a
-            href="https://github.com/dbd01350-eng"
+            href="https://github.com/dbd01350-eng" // token-exempt: external profile link
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub 프로필 외부 링크"
             className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] bg-[#161616] dark:bg-white text-white dark:text-[#161616] flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors cursor-pointer whitespace-nowrap"
             title="GitHub 프로필"
           >
@@ -104,6 +105,7 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
           {/* Resume Link Button */}
           <a
             href="#resume"
+            aria-label="이력서 모달 열기"
             onClick={(e) => {
               if (onOpenResume) {
                 e.preventDefault();

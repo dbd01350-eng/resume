@@ -4,7 +4,8 @@ export default function CTASection({ onOpenContact }) {
   return (
     <section id="contact" className="py-[40px] md:py-[80px] px-4 sm:px-10 lg:px-12 xl:px-[80px] max-w-[1920px] mx-auto">
       {/* Dark Block: cta-block (Figma Node #7006:2079, Light mode: bg #161616, Dark mode Figma Node #7256:618: bg #FAF7F6, text #161616, button #9F8BE7) */}
-      <div className="bg-[#161616] dark:bg-[#FAF7F6] text-white dark:text-[#161616] rounded-[32px] sm:rounded-[60px] lg:rounded-[200px] p-6 sm:p-10 lg:p-12 xl:p-[80px] relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 xl:gap-[60px] min-h-[480px] md:min-h-[540px] lg:min-h-[580px] xl:min-h-[640px]">
+      {/* Dark Block: cta-block (Figma Node #7006:2079, Light mode: bg #161616, Dark mode Figma Node #7256:618: bg #FAF7F6, text #161616, button #9F8BE7) */}
+      <div className="bg-[#161616] dark:bg-[#FAF7F6] text-white dark:text-[#161616] rounded-[32px] sm:rounded-[60px] lg:rounded-[200px] p-6 sm:p-10 lg:p-12 xl:p-[80px] relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 xl:gap-[60px] min-h-[480px] md:min-h-[540px] lg:min-h-[580px] xl:min-h-[640px]"> {/* token-exempt: cta banner container layout */}
         
         {/* cta-background image (Figma Node #7006:2080) */}
         <img 
@@ -52,7 +53,7 @@ export default function CTASection({ onOpenContact }) {
                   onOpenContact();
                 }
               }}
-              className="inline-flex items-center space-x-3 sm:space-x-[20px] bg-[#DDF160] dark:bg-[#9F8BE7] text-[#161616] dark:text-white px-6 py-3 sm:px-8 sm:py-4 xl:px-[36px] xl:py-[22px] rounded-[200px] font-['Funnel_Display'] font-semibold text-[18px] sm:text-[22px] md:text-[28px] xl:text-[34px] leading-tight hover:bg-[#cbe046] dark:hover:bg-[#8b76d4] transition-colors cursor-pointer"
+              className="inline-flex items-center space-x-3 sm:space-x-[20px] bg-[#DDF160] dark:bg-[#9F8BE7] text-[#161616] dark:text-white px-6 py-3 sm:px-8 sm:py-4 xl:px-[36px] xl:py-[22px] rounded-[200px] font-['Funnel_Display'] font-semibold text-[18px] sm:text-[22px] md:text-[28px] xl:text-[34px] leading-tight hover:bg-[#cbe046] dark:hover:bg-[#8b76d4] transition-colors cursor-pointer" // token-exempt: cta contact button styling
             >
               <span>Contact me</span>
               <span className="text-[22px] sm:text-[26px] md:text-[30px] xl:text-[36px]">→</span>

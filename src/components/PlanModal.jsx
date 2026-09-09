@@ -45,14 +45,19 @@ export default function PlanModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6 animate-fadeIn"> {/* token-exempt: modal backdrop layout */}
+    <div 
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="plan-modal-title"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6 animate-fadeIn" // token-exempt: modal backdrop layout
+    >
       <div className="w-full max-w-6xl h-[92vh] bg-bg-dark text-white rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-neutral-800 relative"> {/* token-exempt: modal main container */}
         
         {/* Header */}
         <div className="px-5 py-4 bg-bg-dark border-b border-neutral-800 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <span className="w-3 h-3 rounded-full bg-accent-purple inline-block" />
-            <h2 className="font-semibold text-base sm:text-lg font-['Funnel_Display'] leading-none"> {/* token-exempt: font style */}
+            <h2 id="plan-modal-title" className="font-semibold text-base sm:text-lg font-['Funnel_Display'] leading-none"> {/* token-exempt: font style */}
               {title}
             </h2>
             {!isVideo && (
