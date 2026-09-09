@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PlanModal from "../components/PlanModal.jsx";
 import portfolioData from "../data/portfolioData.js";
 
@@ -11,6 +11,7 @@ export default function ProjectsSection() {
     videoUrl: "",
   });
 
+  const projectRefs = useRef([]);
   const projects = portfolioData.projects;
 
   const handleLinkClick = (e, link, projectTitle) => {
@@ -23,6 +24,46 @@ export default function ProjectsSection() {
 
   const handleCloseModal = () => {
     setModalData((prev) => ({ ...prev, isOpen: false }));
+  };
+
+  const handleNextProject = (e) => {
+    e.preventDefault();
+    if (!projectRefs.current || projectRefs.current.length === 0) return;
+
+    // 반응형 스티키 헤더 높이(Desktop: 120px, Mobile: 72px) + 여백을 고려한 정확한 오프셋 계산
+    const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 640;
+    const headerOffset = isDesktop ? 150 : 90;
+    const currentScroll = window.scrollY + headerOffset;
+
+    let nextIndex = 0;
+    let found = false;
+
+    for (let i = 0; i < projectRefs.current.length; i++) {
+      const el = projectRefs.current[i];
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (top > currentScroll + 20) {
+          nextIndex = i;
+          found = true;
+          break;
+        }
+      }
+    }
+
+    if (!found) {
+      nextIndex = 0; // 마지막 프로젝트에 도달하면 첫 번째 프로젝트로 순환
+    }
+
+    const targetEl = projectRefs.current[nextIndex];
+    if (targetEl) {
+      const elementTop = targetEl.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = elementTop - headerOffset; // 사진 상단이 잘리지 않고 완벽하게 표출되도록 오프셋 적용
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -40,7 +81,11 @@ export default function ProjectsSection() {
             <p className="font-['Pretendard'] font-normal text-[15px] sm:text-[18px] leading-[1.6em] text-[#585858] max-w-sm whitespace-pre-line">Explore a selection of projects blending{"\n"}creativity with practical design</p> {/* token-exempt: sidebar subtext */}
           </div>
           <div>
-            <a href="#works" className="inline-flex items-center space-x-3 px-5 py-2.5 sm:px-[26px] sm:py-[12px] rounded-[200px] border border-[#161616] font-['Funnel_Display'] font-semibold text-[16px] sm:text-[18px] text-[#161616] hover:bg-[#161616] hover:text-white transition-colors"> {/* token-exempt: sidebar button */}
+            <a 
+              href="#works" 
+              onClick={handleNextProject}
+              className="inline-flex items-center space-x-3 px-5 py-2.5 sm:px-[26px] sm:py-[12px] rounded-[200px] border border-[#161616] font-['Funnel_Display'] font-semibold text-[16px] sm:text-[18px] text-[#161616] hover:bg-[#161616] hover:text-white transition-colors cursor-pointer" // token-exempt: sidebar button
+            >
               <span>Works</span>
               <span>→</span>
             </a>
@@ -49,8 +94,12 @@ export default function ProjectsSection() {
 
         {/* Right Column: Project Card List */}
         <div className="flex-1 w-full space-y-12 sm:space-y-[80px]"> {/* token-exempt: project list spacing */}
-          {projects.map((project) => (
-            <div key={project.id} className="space-y-4 sm:space-y-[24px]"> {/* token-exempt: project card spacing */}
+          {projects.map((project, index) => (
+            <div 
+              key={project.id} 
+              ref={(el) => (projectRefs.current[index] = el)}
+              className="space-y-4 sm:space-y-[24px]" // token-exempt: project card spacing
+            >
               {/* Media Preview Frame */}
               <div className="w-full h-[260px] sm:h-[480px] md:h-[600px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-lg bg-[#FAF7F6]"> {/* token-exempt: figma layout frame */}
                 <img
