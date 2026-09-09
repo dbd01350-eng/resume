@@ -104,6 +104,11 @@ export default function ProjectsSection() {
               <div className="w-full h-[260px] sm:h-[480px] md:h-[600px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-lg bg-[#FAF7F6] dark:bg-[#303030]"> {/* token-exempt: figma layout frame */}
                 <img
                   src={project.previewImage}
+                  srcSet={`${project.previewImage.replace(/\.webp$/, '-sm.webp')} 600w, ${project.previewImage} 1200w`}
+                  sizes="(max-width: 640px) 100vw, 600px"
+                  width="600"
+                  height="400"
+                  loading="lazy"
                   alt={project.title}
                   className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]" // token-exempt: preview image rounded corners
                   onError={(e) => {

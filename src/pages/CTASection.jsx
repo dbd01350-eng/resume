@@ -25,6 +25,11 @@ export default function CTASection({ onOpenContact }) {
               <div className="w-[26px] h-[26px] min-[380px]:w-[34px] min-[380px]:h-[34px] sm:w-[46px] sm:h-[46px] md:w-[54px] md:h-[54px] lg:w-[60px] lg:h-[60px] xl:w-[76px] xl:h-[76px] 2xl:w-[80px] 2xl:h-[80px] flex items-center justify-center flex-shrink-0">
                 <img 
                   src="/assets/projects/figma_d4c367a2.webp" 
+                  srcSet="/assets/projects/figma_d4c367a2-sm.webp 600w, /assets/projects/figma_d4c367a2.webp 1200w"
+                  sizes="80px"
+                  width="80"
+                  height="80"
+                  loading="lazy"
                   alt="" 
                   className="w-full h-full object-contain" 
                   onError={(e) => e.target.style.display = 'none'}

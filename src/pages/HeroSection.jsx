@@ -12,6 +12,11 @@ export default function HeroSection() {
       <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
           src="/assets/hero/figma_a90ff28f.webp" 
+          srcSet="/assets/hero/figma_a90ff28f-sm.webp 600w, /assets/hero/figma_a90ff28f.webp 1200w"
+          sizes="(max-width: 640px) 180px, 340px"
+          width="340"
+          height="340"
+          fetchPriority="high"
           alt="무중력 인터랙티브 3D 그래픽 1" 
           tabIndex={0}
           role="button"
@@ -23,6 +28,10 @@ export default function HeroSection() {
       <div className="absolute top-[170px] right-[20px] sm:right-[20px] md:right-[4%] sm:top-[190px] md:top-[190px] lg:top-[240px] xl:top-[240px] xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto"> {/* token-exempt: floating image 2 absolute offsets */}
         <img 
           src="/assets/hero/figma_40a26bbc.webp" 
+          srcSet="/assets/hero/figma_40a26bbc-sm.webp 600w, /assets/hero/figma_40a26bbc.webp 1200w"
+          sizes="(max-width: 640px) 80px, 170px"
+          width="170"
+          height="170"
           alt="무중력 인터랙티브 3D 그래픽 2" 
           tabIndex={0}
           role="button"
@@ -34,6 +43,10 @@ export default function HeroSection() {
       <div className="absolute top-[220px] right-[120px] sm:top-[280px] sm:right-[160px] md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
           src="/assets/hero/figma_40a26bb.webp" 
+          srcSet="/assets/hero/figma_40a26bb-sm.webp 600w, /assets/hero/figma_40a26bb.webp 1200w"
+          sizes="(max-width: 640px) 90px, 170px"
+          width="170"
+          height="170"
           alt="무중력 인터랙티브 3D 그래픽 3" 
           tabIndex={0}
           role="button"
