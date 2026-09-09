@@ -98,7 +98,7 @@ export default function Footer({ onOpenContact }) {
 
               <li>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/da_ni_nim" // token-exempt: external instagram link
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
@@ -109,7 +109,7 @@ export default function Footer({ onOpenContact }) {
               </li>
               <li>
                 <a 
-                  href="https://notion.so" 
+                  href="https://app.notion.com/p/Daeun-Sim-3d6b09059111805e9cc5d821f30da516?source=copy_link" // token-exempt: external notion link
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
