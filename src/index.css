@@ -94,18 +94,14 @@
 
 .animate-marquee {
   display: flex;
-  width: 200%;
+  width: max-content;
   animation: marquee 26s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
-  width: 200%;
+  width: max-content;
   animation: marquee-reverse 26s linear infinite;
-}
-
-.animate-marquee:hover, .animate-marquee-reverse:hover {
-  animation-play-state: paused;
 }
 
 /* 3D Center Y-Axis Rotation for Chatbot Glassheart Logo */

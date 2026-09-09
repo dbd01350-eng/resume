@@ -43,37 +43,24 @@ export default function HeroSection() {
             <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] whitespace-nowrap">
               예쁘게,
             </span>
-            <div className="bg-[#9F8BE7] border border-[#FAF7F6] rounded-[30px] sm:rounded-[66px] py-1 sm:py-2 lg:py-[10px] px-3 sm:px-6 overflow-hidden flex-shrink-0 w-[180px] min-[400px]:w-[230px] sm:w-[380px] md:w-[460px] lg:w-[560px] xl:w-[680px]">
-              <div className="flex w-max animate-marquee transform-gpu" style={{ animationDuration: '10s', animationTimingFunction: 'linear' }}>
-                {/* Group 1 */}
-                <div className="flex items-center gap-3 sm:gap-6 lg:gap-10 pr-3 sm:pr-6 lg:pr-10">
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
-                      될 때 까지
-                    </span>
-                    <img 
-                      src="/assets/hero_title_star_icon.svg" 
-                      alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
-                      onError={(e) => e.target.style.display = 'none'}
-                    />
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
-                      될 때 까지
-                    </span>
-                    <img 
-                      src="/assets/hero_title_star_icon.svg" 
-                      alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
-                      onError={(e) => e.target.style.display = 'none'}
-                    />
-                  </div>
-                </div>
+            <div className="bg-[#9F8BE7] border border-[#FAF7F6] rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-[40px] py-1 sm:py-2 lg:py-[10px] flex items-center flex-shrink-0 overflow-hidden relative pointer-events-none">
+              {/* Invisible Sizing Placeholder (Ensures 100% exact original pill badge width & height) */}
+              <div className="invisible flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap pointer-events-none">
+                <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
+                  될 때 까지
+                </span>
+                <img 
+                  src="/assets/hero_title_star_icon.svg" 
+                  alt="Star Icon" 
+                  className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
+                />
+              </div>
 
-                {/* Group 2 (Exact Symmetric Duplicate for Seamless 50% Reset) */}
-                <div className="flex items-center gap-3 sm:gap-6 lg:gap-10 pr-3 sm:pr-6 lg:pr-10">
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap">
+              {/* Infinite Marquee Layer (Scrolls seamlessly inside the exact original pill badge) */}
+              <div className="absolute inset-0 px-3 sm:px-8 lg:px-[40px] flex items-center overflow-hidden pointer-events-none">
+                <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '12.5s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
+                  {/* Group 1 */}
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
                       될 때 까지
                     </span>
@@ -84,7 +71,9 @@ export default function HeroSection() {
                       onError={(e) => e.target.style.display = 'none'}
                     />
                   </div>
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap">
+
+                  {/* Group 2 */}
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
                       될 때 까지
                     </span>
