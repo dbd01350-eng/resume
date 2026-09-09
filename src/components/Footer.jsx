@@ -8,20 +8,7 @@ export default function Footer({ onOpenContact }) {
     <footer className="bg-[#FAF7F6] text-[#161616] py-12 sm:py-[80px] px-6 sm:px-10 lg:px-[80px] max-w-[1920px] mx-auto">
       <div className="space-y-[80px]">
         {/* Brand & Logo */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-8 border-b border-gray-200 gap-6">
-          <a
-            href="#top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="flex items-center space-x-3 sm:space-x-4 whitespace-nowrap cursor-pointer"
-          >
-            <img src="/assets/logo_icon.svg" alt="Logo" className="w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] shrink-0" onError={(e) => e.target.style.display = 'none'} />
-            <h3 className="font-['Funnel_Display'] font-semibold text-[20px] sm:text-[28px] text-[#161616] whitespace-nowrap">
-              심다은 포트폴리오
-            </h3>
-          </a>
+        <div className="flex flex-col md:flex-row justify-end items-start md:items-center pb-8 border-b border-gray-200 gap-6">
           <p className="text-sm text-[#585858] font-['Pretendard']">
             Design and Coding Portfolio © {new Date().getFullYear()}
           </p>

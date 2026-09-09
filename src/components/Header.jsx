@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
+import sparkleData from '../assets/Sparkle.json';
 
 export default function Header({ onOpenContact, onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
+  const lottieContainerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -9,6 +12,19 @@ export default function Header({ onOpenContact, onOpenResume }) {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!lottieContainerRef.current) return;
+    const anim = lottie.loadAnimation({
+      container: lottieContainerRef.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: sparkleData,
+    });
+
+    return () => anim.destroy();
   }, []);
 
   return (
@@ -27,12 +43,20 @@ export default function Header({ onOpenContact, onOpenResume }) {
           }}
           className="flex items-center gap-[10px] sm:gap-[15px] h-[44px] sm:h-[56px] cursor-pointer"
         >
-          <img 
-            src="/assets/logo_icon.svg" 
-            alt="Logo" 
-            className="w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] object-contain" 
-            onError={(e) => e.target.style.display = 'none'} 
-          />
+          <div className="relative w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] flex items-center justify-center flex-shrink-0">
+            {/* Sparkle Lottie Animation Behind Logo (Centered & Larger Lime Accent) */}
+            <div 
+              ref={lottieContainerRef} 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] pointer-events-none z-0 flex items-center justify-center"
+            />
+            {/* Original Logo Icon (Foreground) */}
+            <img 
+              src="/assets/logo_icon.svg" 
+              alt="Logo" 
+              className="relative z-10 w-full h-full object-contain drop-shadow-xs" 
+              onError={(e) => e.target.style.display = 'none'} 
+            />
+          </div>
           <div className="font-['Funnel_Display'] font-semibold text-[15px] sm:text-[22px] leading-[1.2] sm:leading-[26px] text-[#161616] whitespace-nowrap">
             <div className="whitespace-nowrap">Daeun Sim</div>
             <div className="whitespace-nowrap text-[13px] sm:text-[22px]">Portfolio</div>
