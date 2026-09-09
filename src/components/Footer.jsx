@@ -125,7 +125,7 @@ export default function Footer({ onOpenContact }) {
                   rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
                 >
-                  <span>Figma Community</span>
+                  <span>Figma</span>
                   <span className="text-xs opacity-60">↗</span>
                 </a>
               </li>
