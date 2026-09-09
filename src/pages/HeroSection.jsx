@@ -58,7 +58,7 @@ export default function HeroSection() {
 
               {/* Infinite Marquee Layer (Scrolls seamlessly inside the exact original pill badge) */}
               <div className="absolute inset-0 px-3 sm:px-8 lg:px-[40px] flex items-center overflow-hidden pointer-events-none">
-                <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '12.5s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
+                <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '10s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
                   {/* Group 1 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white whitespace-nowrap">
