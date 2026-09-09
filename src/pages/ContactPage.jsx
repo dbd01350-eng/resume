@@ -11,16 +11,46 @@ export default function ContactPage({ onClose }) {
     message: ''
   });
 
+  const recaptchaRef = useRef(null);
+
   useEffect(() => {
-    // Dynamically load Google reCAPTCHA Enterprise script if not already present
+    // Dynamically load Google reCAPTCHA Enterprise script and render explicitly on mount
     const scriptId = 'google-recaptcha-enterprise-script';
+
+    const renderWidget = () => {
+      if (window.grecaptcha && recaptchaRef.current) {
+        try {
+          if (window.grecaptcha.enterprise && typeof window.grecaptcha.enterprise.render === 'function') {
+            window.grecaptcha.enterprise.render(recaptchaRef.current, {
+              sitekey: '6Leg6a0tAAAAAGejFNSU--fwm6M91K_Js_1lsomg',
+              action: 'LOGIN',
+            });
+          } else if (typeof window.grecaptcha.render === 'function') {
+            window.grecaptcha.render(recaptchaRef.current, {
+              sitekey: '6Leg6a0tAAAAAGejFNSU--fwm6M91K_Js_1lsomg',
+            });
+          }
+        } catch (err) {
+          // Prevent error if already rendered
+          console.log('reCAPTCHA already rendered or info:', err);
+        }
+      }
+    };
+
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
       script.id = scriptId;
-      script.src = 'https://www.google.com/recaptcha/enterprise.js';
+      script.src = 'https://www.google.com/recaptcha/enterprise.js?render=explicit';
       script.async = true;
       script.defer = true;
+      script.onload = () => {
+        setTimeout(renderWidget, 100);
+      };
       document.head.appendChild(script);
+    } else {
+      // Script already loaded, render widget with slight delay for DOM ready
+      const timer = setTimeout(renderWidget, 100);
+      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -142,12 +172,8 @@ export default function ContactPage({ onClose }) {
           </div>
 
           {/* Google reCAPTCHA Enterprise */}
-          <div className="py-2 flex justify-center sm:justify-start">
-            <div
-              className="g-recaptcha"
-              data-sitekey="6Leg6a0tAAAAAGejFNSU--fwm6M91K_Js_1lsomg"
-              data-action="LOGIN"
-            />
+          <div className="py-2 flex justify-center sm:justify-start min-h-[78px]">
+            <div ref={recaptchaRef} />
           </div>
 
           {/* Status Feedback */}
