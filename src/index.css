@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #FAF7F6;
@@ -15,6 +17,18 @@
 
   --font-funnel: 'Funnel Display', sans-serif;
   --font-pretendard: 'Pretendard', sans-serif;
+}
+
+.dark {
+  --color-bg-primary: #303030;
+  --color-bg-secondary: #161616;
+  --color-bg-dark: #161616;
+  --color-text-main: #FFFFFF;
+  --color-text-sub: #B2AEAD;
+  --color-text-dark-gray: #B2AEAD;
+  --color-text-mid-gray: #B2AEAD;
+  --color-text-light-gray: #838383;
+  --color-text-muted: #B2AEAD;
 }
 
 @layer base {

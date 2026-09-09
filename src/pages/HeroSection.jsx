@@ -40,7 +40,7 @@ export default function HeroSection() {
           
           {/* hero-title-row-1 (Right aligned with balanced middle ground offset) */}
           <div className="flex flex-nowrap items-center justify-end gap-2 sm:gap-3 lg:gap-[26px] pr-0 sm:pr-2 md:pr-6 lg:pr-[50px] xl:pr-[90px] 2xl:pr-[100px]">
-            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] whitespace-nowrap">
+            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
               예쁘게,
             </span>
             <div className="bg-[#9F8BE7] rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-[40px] py-1 sm:py-2 lg:py-[10px] flex items-center flex-shrink-0 overflow-hidden relative pointer-events-none">
@@ -89,15 +89,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* hero-title-row-2 (Left aligned with balanced middle ground offset) */}
-          <div className="flex flex-nowrap items-center justify-start gap-2 sm:gap-3 lg:gap-[36px] pl-0 sm:pl-2 md:pl-6 lg:pl-[50px] xl:pl-[90px] 2xl:pl-[100px]">
-            <img 
-              src="/assets/hero_title_icon_2.svg" 
-              alt="Hero Icon 2" 
-              className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0" 
-              onError={(e) => e.target.style.display = 'none'}
-            />
-            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] whitespace-nowrap">
+          {/* hero-title-row-2 (Centered/Left-aligned) */}
+          <div className="flex flex-nowrap items-center justify-start gap-2 sm:gap-3 lg:gap-[26px]">
+            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
               Design and Coding
             </span>
           </div>
@@ -112,7 +106,7 @@ export default function HeroSection() {
         <div className="hidden lg:flex items-center justify-between gap-[40px] xl:gap-[60px] w-full">
           {/* Circular Badge + Description Text */}
           <div className="flex items-center gap-[40px] flex-1">
-            <div className="w-[80px] h-[80px] rounded-full bg-white flex items-center justify-center flex-shrink-0">
+            <div className="w-[80px] h-[80px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
               <img 
                 src="/assets/figma_225ce678.png" 
                 alt="" 
@@ -121,7 +115,7 @@ export default function HeroSection() {
               />
             </div>
 
-            <p className="font-['Funnel_Display'] font-normal text-[22px] leading-[1.6em] text-[#161616]">
+            <p className="font-['Funnel_Display'] font-normal text-[22px] leading-[1.6em] text-[#161616] dark:text-white">
               <span className="block whitespace-nowrap">디자인 하고, 코드로 만듭니다.</span>
               <span className="block whitespace-nowrap">가끔은 둘 다 하다가 새벽을 만납니다.</span>
               <span className="block whitespace-nowrap">결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.</span>
@@ -129,11 +123,11 @@ export default function HeroSection() {
           </div>
 
           {/* Desktop Tools Grid with Progressive Visibility */}
-          <div className="w-[624px] flex flex-nowrap items-start gap-[20px] font-['Funnel_Display'] text-[22px] leading-[1.6em] text-[#161616] whitespace-nowrap overflow-hidden flex-shrink-0">
+          <div className="w-[624px] flex flex-nowrap items-start gap-[20px] font-['Funnel_Display'] text-[22px] leading-[1.6em] text-[#161616] dark:text-[#B2AEAD] whitespace-nowrap overflow-hidden flex-shrink-0">
             <div className="space-y-1 flex-shrink-0">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -141,7 +135,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex-shrink-0">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -149,7 +143,7 @@ export default function HeroSection() {
             <div className="space-y-1 hidden xl:block flex-shrink-0">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -157,7 +151,7 @@ export default function HeroSection() {
             <div className="space-y-1 hidden 2xl:block flex-shrink-0">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -180,7 +174,7 @@ export default function HeroSection() {
           {/* Top Row: Description Text + Photo Card placed on Right Side */}
           <div className="flex flex-row items-center justify-between gap-3 sm:gap-6 w-full">
             <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
-              <div className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] rounded-full bg-white flex items-center justify-center flex-shrink-0">
+              <div className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
                 <img 
                   src="/assets/figma_225ce678.png" 
                   alt="" 
@@ -189,7 +183,7 @@ export default function HeroSection() {
                 />
               </div>
 
-              <p className="font-['Funnel_Display'] font-normal text-[14px] sm:text-[18px] leading-[1.5em] sm:leading-[1.6em] text-[#161616] break-keep">
+              <p className="font-['Funnel_Display'] font-normal text-[14px] sm:text-[18px] leading-[1.5em] sm:leading-[1.6em] text-[#161616] dark:text-white break-keep">
                 <span className="block sm:whitespace-nowrap">디자인 하고, 코드로 만듭니다.</span>
                 <span className="block sm:whitespace-nowrap">가끔은 둘 다 하다가 새벽을 만납니다.</span>
                 <span className="block sm:whitespace-nowrap">결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.</span>
@@ -208,11 +202,11 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom Row: Restored Full Tools Grid aligned to hero_study_icon.svg (Shifted Rightward for Optical Balance on Mobile) */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-2 sm:gap-4 font-['Funnel_Display'] text-[13px] sm:text-[18px] leading-[1.6em] text-[#161616] whitespace-nowrap w-full justify-items-start max-w-sm sm:max-w-none mx-auto sm:mx-0 pl-6 sm:pl-0"> {/* token-exempt: mobile tools grid layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-2 sm:gap-4 font-['Funnel_Display'] text-[13px] sm:text-[18px] leading-[1.6em] text-[#161616] dark:text-[#B2AEAD] whitespace-nowrap w-full justify-items-start max-w-sm sm:max-w-none mx-auto sm:mx-0 pl-6 sm:pl-0"> {/* token-exempt: mobile tools grid layout */}
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -220,7 +214,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -228,7 +222,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -236,7 +230,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}

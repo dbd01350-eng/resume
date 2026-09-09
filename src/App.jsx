@@ -17,6 +17,27 @@ export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -32,7 +53,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#FAF7F6] p-8 max-w-6xl mx-auto space-y-12 pt-32">
+      <div className="min-h-screen bg-[#FAF7F6] dark:bg-[#161616] p-8 max-w-6xl mx-auto space-y-12 pt-32">
         <div className="flex justify-between items-center pb-8">
           <SkeletonLoader className="h-8 w-44" />
           <div className="flex space-x-6">
@@ -53,9 +74,14 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAF7F6] text-[#161616] font-[var(--font-pretendard)]">
+    <div className="min-h-screen bg-[#FAF7F6] dark:bg-[#161616] text-[#161616] dark:text-white font-[var(--font-pretendard)]">
       {/* Header */}
-      <Header onOpenContact={handleOpenContact} onOpenResume={handleOpenResume} />
+      <Header 
+        onOpenContact={handleOpenContact} 
+        onOpenResume={handleOpenResume} 
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={toggleDarkMode}
+      />
 
       {/* Main Figma Node Hierarchy */}
       <main>

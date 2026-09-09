@@ -63,7 +63,7 @@ export default function ParallaxSection({ onOpenResume }) {
             href="https://github.com/dbd01350-eng/resume" // token-exempt: external resume repo link
             target="_blank"
             rel="noreferrer"
-            className="py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl sm:rounded-[200px] bg-bg-dark hover:bg-neutral-800 text-white font-semibold font-['Funnel_Display'] text-sm sm:text-base inline-flex items-center gap-2.5 sm:gap-3 transition-all shadow-md group cursor-pointer whitespace-nowrap" // token-exempt: button styling
+            className="py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl sm:rounded-[200px] bg-bg-dark dark:bg-white hover:bg-neutral-800 dark:hover:bg-neutral-200 text-white dark:text-[#161616] font-semibold font-['Funnel_Display'] text-sm sm:text-base inline-flex items-center gap-2.5 sm:gap-3 transition-all shadow-md group cursor-pointer whitespace-nowrap" // token-exempt: button styling
             title="Resume GitHub Repository"
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0" viewBox="0 0 24 24">

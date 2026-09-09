@@ -5,9 +5,9 @@ export default function MarqueeTextSection() {
   const groupItems = items.concat(items); // 8 items per group for wide screen support
 
   return (
-    <section className="py-8 bg-[#FAF7F6] overflow-hidden">
+    <section className="py-8 bg-[#FAF7F6] dark:bg-[#161616] overflow-hidden">
       <div className="overflow-hidden py-4">
-        <div className="flex w-max animate-marquee transform-gpu text-[#B2AEAD] items-center" style={{ animationDuration: '35s', animationTimingFunction: 'linear' }}>
+        <div className="flex w-max animate-marquee transform-gpu text-[#B2AEAD] dark:text-[#838383] items-center" style={{ animationDuration: '35s', animationTimingFunction: 'linear' }}>
           {/* Group 1 */}
           <div className="flex items-center gap-[48px] pr-[48px]">
             {groupItems.map((item, idx) => (

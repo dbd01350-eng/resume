@@ -5,11 +5,11 @@ export default function Footer({ onOpenContact }) {
   const { profile } = portfolioData;
 
   return (
-    <footer className="bg-[#FAF7F6] text-[#161616] py-12 sm:py-[80px] px-6 sm:px-10 lg:px-[80px] max-w-[1920px] mx-auto">
+    <footer className="bg-[#FAF7F6] dark:bg-[#303030] text-[#161616] dark:text-white py-12 sm:py-[80px] px-6 sm:px-10 lg:px-[80px] max-w-[1920px] mx-auto">
       <div className="space-y-[80px]">
         {/* Brand & Logo */}
-        <div className="flex flex-col md:flex-row justify-end items-start md:items-center pb-8 border-b border-gray-200 gap-6">
-          <p className="text-sm text-[#585858] font-['Pretendard']">
+        <div className="flex flex-col md:flex-row justify-end items-start md:items-center pb-8 border-b border-gray-200 dark:border-[#585858] gap-6">
+          <p className="text-sm text-[#585858] dark:text-[#B2AEAD] font-['Pretendard']">
             Design and Coding Portfolio © {new Date().getFullYear()}
           </p>
         </div>
@@ -18,8 +18,8 @@ export default function Footer({ onOpenContact }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm font-['Pretendard']">
           {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Navigation</h4>
-            <ul className="space-y-2.5 text-[#161616]">
+            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Navigation</h4>
+            <ul className="space-y-2.5 text-[#161616] dark:text-white">
               <li><a href="#home" className="hover:text-[#9F8BE7] transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-[#9F8BE7] transition-colors">About me</a></li>
               <li><a href="#works" className="hover:text-[#9F8BE7] transition-colors">Works</a></li>
@@ -42,8 +42,8 @@ export default function Footer({ onOpenContact }) {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Contact</h4>
-            <ul className="space-y-2.5 text-[#161616]">
+            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Contact</h4>
+            <ul className="space-y-2.5 text-[#161616] dark:text-white">
               <li>
                 <a href={`mailto:${profile.email}`} className="hover:text-[#9F8BE7] transition-colors break-all">
                   {profile.email}
@@ -58,7 +58,7 @@ export default function Footer({ onOpenContact }) {
                 <button
                   type="button"
                   onClick={() => onOpenContact && onOpenContact()}
-                  className="mt-2 px-4 py-2 rounded-full border border-[#161616] text-xs font-semibold hover:bg-[#161616] hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                  className="mt-2 px-4 py-2 rounded-full border border-[#161616] dark:border-white/40 text-xs font-semibold hover:bg-[#161616] hover:text-white dark:hover:bg-white dark:hover:text-[#161616] transition-colors cursor-pointer inline-flex items-center gap-1.5 dark:text-white"
                 >
                   <span>이메일 보내기</span>
                   <span>✉</span>
@@ -69,8 +69,8 @@ export default function Footer({ onOpenContact }) {
 
           {/* Ecosystem (2 Columns Grid Layout) */}
           <div className="space-y-4 md:col-span-1">
-            <h4 className="font-bold text-[#585858] font-['Funnel_Display'] text-sm uppercase">Ecosystem</h4>
-            <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-3 text-[#161616]">
+            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Ecosystem</h4>
+            <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-3 text-[#161616] dark:text-white">
               <li>
                 <a 
                   href="https://github.com/dbd01350-eng" // token-exempt: external profile link
@@ -122,7 +122,7 @@ export default function Footer({ onOpenContact }) {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 text-center text-xs text-[#838383] font-['Funnel_Display']">
+        <div className="pt-8 text-center text-xs text-[#838383] dark:text-[#B2AEAD] font-['Funnel_Display']">
           심다은 포트폴리오 • Created with Vibe Coding &amp; Figma MCP
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import sparkleData from '../assets/Sparkle.json';
 
-export default function Header({ onOpenContact, onOpenResume }) {
+export default function Header({ onOpenContact, onOpenResume, isDarkMode, onToggleDarkMode }) {
   const [scrolled, setScrolled] = useState(false);
   const lottieContainerRef = useRef(null);
 
@@ -23,15 +23,15 @@ export default function Header({ onOpenContact, onOpenResume }) {
       autoplay: true,
       animationData: sparkleData,
     });
-    anim.setSpeed(2.0);
+    anim.setSpeed(1.0);
 
     return () => anim.destroy();
   }, []);
 
   return (
     <header 
-      className={`sticky top-0 left-0 right-0 z-50 h-[72px] sm:h-[96px] px-4 sm:px-10 lg:px-[60px] flex items-center transition-colors duration-300 ${
-        scrolled ? 'bg-[#FAF7F6]/95 backdrop-blur-[4px] shadow-xs' : 'bg-[#FAF7F6]'
+      className={`sticky top-0 left-0 right-0 z-50 h-[72px] sm:h-[80px] px-4 sm:px-10 lg:px-[60px] flex items-center transition-shadow ${
+        scrolled ? 'bg-[#FAF7F6]/95 dark:bg-[#161616]/95 backdrop-blur-[4px] shadow-xs' : 'bg-[#FAF7F6] dark:bg-[#161616]'
       }`}
     >
       <div className="w-[1664px] mx-auto flex items-center justify-between">
@@ -42,13 +42,13 @@ export default function Header({ onOpenContact, onOpenResume }) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="flex items-center gap-[10px] sm:gap-[15px] h-[44px] sm:h-[56px] cursor-pointer"
+          className="flex items-center gap-[10px] sm:gap-[15px] h-[44px] sm:h-[48px] cursor-pointer"
         >
-          <div className="relative w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] flex items-center justify-center flex-shrink-0">
-            {/* Sparkle Lottie Animation Behind Logo (Centered & Larger, Faster Lime Accent) */}
+          <div className="relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] flex items-center justify-center flex-shrink-0">
+            {/* Sparkle Lottie Animation Behind Logo (Centered Accent) */}
             <div 
               ref={lottieContainerRef} 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] sm:w-[210px] sm:h-[210px] pointer-events-none z-0 flex items-center justify-center"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] sm:w-[125px] sm:h-[125px] pointer-events-none z-0 flex items-center justify-center"
             />
             {/* Original Logo Icon (Foreground) */}
             <img 
@@ -58,33 +58,40 @@ export default function Header({ onOpenContact, onOpenResume }) {
               onError={(e) => e.target.style.display = 'none'} 
             />
           </div>
-          <div className="font-['Funnel_Display'] font-semibold text-[15px] sm:text-[22px] leading-[1.2] sm:leading-[26px] text-[#161616] whitespace-nowrap">
+          <div className="font-['Funnel_Display'] font-semibold text-[15px] sm:text-[20px] leading-[1.2] sm:leading-[24px] text-[#161616] dark:text-white whitespace-nowrap">
             <div className="whitespace-nowrap">Daeun Sim</div>
-            <div className="whitespace-nowrap text-[13px] sm:text-[22px]">Portfolio</div>
+            <div className="whitespace-nowrap text-[13px] sm:text-[20px]">Portfolio</div>
           </div>
         </a>
 
-        {/* Nav Actions (ArrowButton, TextIconButton, nav-hamburger) */}
-        <div className="flex items-center gap-3 sm:gap-[20px] h-[44px] sm:h-[56px]">
-          {/* ArrowButton */}
-          <a 
-            href="#works" 
-            className="w-[44px] h-[44px] sm:w-[56px] sm:h-[56px] rounded-[200px] border border-[#161616] flex items-center justify-center backdrop-blur-[3px] hover:bg-[#161616] hover:text-white transition-colors text-[#161616]"
+        {/* Nav Actions (ThemeToggle, GitHub, Resume) */}
+        <div className="flex items-center gap-3 sm:gap-[16px] h-[44px] sm:h-[48px]">
+          {/* Dark / Light Mode Toggle Button */}
+          <button 
+            onClick={onToggleDarkMode} 
+            className="w-[44px] h-[44px] sm:w-[48px] sm:h-[48px] rounded-[200px] border border-[#161616] dark:border-white/40 flex items-center justify-center backdrop-blur-[3px] hover:bg-[#161616] hover:text-white dark:hover:bg-white dark:hover:text-[#161616] transition-all text-[#161616] dark:text-white cursor-pointer"
+            title={isDarkMode ? "라이트 모드로 전환" : "다크 모드로 전환"}
+            aria-label="테마 토글"
           >
-            <img 
-              src="/assets/arrow_button_icon.svg" 
-              alt="Arrow" 
-              className="w-[22px] h-[22px] sm:w-[30px] sm:h-[30px] object-contain" 
-              onError={(e) => e.target.style.display = 'none'} 
-            />
-          </a>
+            {isDarkMode ? (
+              /* Sun Icon for Dark Mode (Click to switch to Light) */
+              <svg className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.59 1.59a.75.75 0 1 0 1.06 1.06l1.59-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.59a.75.75 0 1 0-1.06 1.06l1.59 1.59ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.592-1.591ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06L6.166 5.106a.75.75 0 0 0-1.06 1.06l1.59 1.591Z" />
+              </svg>
+            ) : (
+              /* Moon Icon for Light Mode (Click to switch to Dark) */
+              <svg className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] fill-current" viewBox="0 0 24 24">
+                <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+              </svg>
+            )}
+          </button>
 
           {/* Main GitHub Profile Link Button */}
           <a
             href="https://github.com/dbd01350-eng"
             target="_blank"
             rel="noreferrer"
-            className="w-[44px] h-[44px] sm:w-auto sm:h-[56px] px-0 sm:px-5 rounded-[200px] bg-[#161616] text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-neutral-800 transition-colors cursor-pointer whitespace-nowrap"
+            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] bg-[#161616] dark:bg-white text-white dark:text-[#161616] flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors cursor-pointer whitespace-nowrap"
             title="GitHub 프로필"
           >
             <svg className="w-5 h-5 sm:w-5 sm:h-5 fill-current shrink-0" viewBox="0 0 24 24">
@@ -103,7 +110,7 @@ export default function Header({ onOpenContact, onOpenResume }) {
                 onOpenResume();
               }
             }}
-            className="w-[44px] h-[44px] sm:w-auto sm:h-[56px] px-0 sm:px-5 rounded-[200px] bg-[#9F8BE7] text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-opacity-90 transition-colors cursor-pointer whitespace-nowrap"
+            className="w-[44px] h-[44px] sm:w-auto sm:h-[48px] px-0 sm:px-4.5 rounded-[200px] bg-[#9F8BE7] text-white flex items-center justify-center gap-2 font-['Funnel_Display'] font-semibold text-xs sm:text-base backdrop-blur-[3px] hover:bg-opacity-90 transition-colors cursor-pointer whitespace-nowrap"
             title="이력서"
           >
             <svg className="w-5 h-5 sm:w-5 sm:h-5 fill-none stroke-current shrink-0" viewBox="0 0 24 24" strokeWidth="2">
