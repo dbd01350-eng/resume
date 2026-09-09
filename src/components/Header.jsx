@@ -16,16 +16,24 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
 
   useEffect(() => {
     if (!lottieContainerRef.current) return;
-    const anim = lottie.loadAnimation({
-      container: lottieContainerRef.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: sparkleData,
-    });
-    anim.setSpeed(1.0);
+    let anim = null;
+    const timer = setTimeout(() => {
+      if (lottieContainerRef.current) {
+        anim = lottie.loadAnimation({
+          container: lottieContainerRef.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          animationData: sparkleData,
+        });
+        anim.setSpeed(1.0);
+      }
+    }, 300);
 
-    return () => anim.destroy();
+    return () => {
+      clearTimeout(timer);
+      if (anim) anim.destroy();
+    };
   }, []);
 
   return (
