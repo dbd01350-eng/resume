@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
       <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
-          src="/assets/figma_a90ff28f.webp" 
+          src="/assets/hero/figma_a90ff28f.webp" 
           alt="무중력 인터랙티브 3D 그래픽 1" 
           tabIndex={0}
           role="button"
@@ -22,7 +22,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-[170px] right-[20px] sm:right-[20px] md:right-[4%] sm:top-[190px] md:top-[190px] lg:top-[240px] xl:top-[240px] xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto"> {/* token-exempt: floating image 2 absolute offsets */}
         <img 
-          src="/assets/figma_40a26bbc.webp" 
+          src="/assets/hero/figma_40a26bbc.webp" 
           alt="무중력 인터랙티브 3D 그래픽 2" 
           tabIndex={0}
           role="button"
@@ -33,7 +33,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-[220px] right-[120px] sm:top-[280px] sm:right-[160px] md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
-          src="/assets/figma_40a26bb.webp" 
+          src="/assets/hero/figma_40a26bb.webp" 
           alt="무중력 인터랙티브 3D 그래픽 3" 
           tabIndex={0}
           role="button"
@@ -59,7 +59,7 @@ export default function HeroSection() {
                   될 때 까지
                 </span>
                 <img 
-                  src="/assets/hero_title_star_icon.svg" 
+                  src="/assets/icons/hero_title_star_icon.svg" 
                   alt="Star Icon" 
                   className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                 />
@@ -74,7 +74,7 @@ export default function HeroSection() {
                       될 때 까지
                     </span>
                     <img 
-                      src="/assets/hero_title_star_icon.svg" 
+                      src="/assets/icons/hero_title_star_icon.svg" 
                       alt="Star Icon" 
                       className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
@@ -87,7 +87,7 @@ export default function HeroSection() {
                       될 때 까지
                     </span>
                     <img 
-                      src="/assets/hero_title_star_icon.svg" 
+                      src="/assets/icons/hero_title_star_icon.svg" 
                       alt="Star Icon" 
                       className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
@@ -117,7 +117,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-[40px] flex-1">
             <div className="w-[80px] h-[80px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
               <img 
-                src="/assets/figma_225ce678.webp" 
+                src="/assets/hero/figma_225ce678.webp" 
                 alt="" 
                 className="w-[60px] h-[60px] object-contain animate-spin-slow" 
                 onError={(e) => e.target.style.display = 'none'}
@@ -136,7 +136,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex-shrink-0">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -144,7 +144,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex-shrink-0">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -152,7 +152,7 @@ export default function HeroSection() {
             <div className="space-y-1 hidden xl:block flex-shrink-0">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ export default function HeroSection() {
             <div className="space-y-1 hidden 2xl:block flex-shrink-0">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -170,7 +170,7 @@ export default function HeroSection() {
           {/* Photo Thumbnail Card in Original Desktop Position */}
           <div className="w-[205px] h-[160px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
             <img 
-              src="/assets/figma_bb286482.webp" 
+              src="/assets/hero/figma_bb286482.webp" 
               alt="Hero Photo Thumbnail" 
               className="w-[171px] h-[228px] object-cover rounded-xl"
               onError={(e) => e.target.style.display = 'none'}
@@ -185,7 +185,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
               <div className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
                 <img 
-                  src="/assets/figma_225ce678.webp" 
+                  src="/assets/hero/figma_225ce678.webp" 
                   alt="" 
                   className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] object-contain animate-spin-slow" 
                   onError={(e) => e.target.style.display = 'none'}
@@ -202,7 +202,7 @@ export default function HeroSection() {
             {/* Photo Thumbnail Card placed on Right Side of Description Text in Breakpoint Mode */}
             <div className="w-[110px] sm:w-[160px] h-[95px] sm:h-[130px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
               <img 
-                src="/assets/figma_bb286482.webp" 
+                src="/assets/hero/figma_bb286482.webp" 
                 alt="Hero Photo Thumbnail" 
                 className="w-[90px] sm:w-[130px] h-[125px] sm:h-[175px] object-cover rounded-lg sm:rounded-xl"
                 onError={(e) => e.target.style.display = 'none'}
@@ -215,7 +215,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -223,7 +223,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -231,7 +231,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -239,7 +239,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}

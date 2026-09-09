@@ -52,7 +52,7 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
             />
             {/* Original Logo Icon (Foreground) */}
             <img 
-              src="/assets/logo_icon.svg" 
+              src="/assets/icons/logo_icon.svg" 
               alt="Logo" 
               className="relative z-10 w-full h-full object-contain drop-shadow-xs" 
               onError={(e) => e.target.style.display = 'none'} 

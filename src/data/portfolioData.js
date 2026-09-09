@@ -55,8 +55,8 @@ const portfolioData = {
     {
       id: "ikea-redesign",
       title: "IKEA Website 리디자인",
-      previewImage: "/assets/project_ikea_full_preview.webp",
-      fallbackImage: "/assets/figma_8bed76a4.webp",
+      previewImage: "/assets/projects/project_ikea_full_preview.webp",
+      fallbackImage: "/assets/projects/figma_8bed76a4.webp",
       type: "WEBSITE",
       links: [
         { label: "리디자인 기획안", url: "#" },
@@ -67,8 +67,8 @@ const portfolioData = {
     {
       id: "ikea-dev",
       title: "IKEA 반응형 웹사이트 UI/UX 개발",
-      previewImage: "/assets/project_ikea_full_preview2.webp",
-      fallbackImage: "/assets/figma_8bed76a4.webp",
+      previewImage: "/assets/projects/project_ikea_full_preview2.webp",
+      fallbackImage: "/assets/projects/figma_8bed76a4.webp",
       type: "WEBSITE",
       links: [
         { label: "WEBSITE", url: "https://heebon00.github.io/Team_Synergos_esg/index.html" }, // token-exempt: external project link
@@ -80,11 +80,11 @@ const portfolioData = {
     {
       id: "campaign",
       title: "보건복지부 금연캠페인 홍보영상",
-      previewImage: "/assets/project_campaign_full_preview.webp",
-      fallbackImage: "/assets/figma_4b660c10.webp",
+      previewImage: "/assets/projects/project_campaign_full_preview.webp",
+      fallbackImage: "/assets/projects/figma_4b660c10.webp",
       type: "VIDEO",
       links: [
-        { label: "VIDEO", url: "/assets/no_smoking_video.mp4" },
+        { label: "VIDEO", url: "/assets/videos/no_smoking_video.mp4" },
         { label: "영상기획서", url: "#" },
         { label: "스토리보드", url: "#" },
       ],
@@ -93,8 +93,8 @@ const portfolioData = {
     {
       id: "archive",
       title: "웹 개발 학습 아카이브",
-      previewImage: "/assets/figma_bcd0c6b6.webp",
-      fallbackImage: "/assets/figma_bcd0c6b6.webp",
+      previewImage: "/assets/projects/figma_bcd0c6b6.webp",
+      fallbackImage: "/assets/projects/figma_bcd0c6b6.webp",
       type: "WEBSITE",
       links: [
         { label: "WEBSITE", url: "https://dbd01350-eng.github.io/VScode_study/archive/" }, // token-exempt: external project link
@@ -108,25 +108,25 @@ const portfolioData = {
       id: 'detail',
       title: 'Detail-Oriented',
       description: '디테일에 집착합니다.\n픽셀 하나, 코드 한 줄까지 타협 없이 완성도 높은 결과물을 만들어냅니다.',
-      icon: '/assets/end_to_end_icon.webp'
+      icon: '/assets/icons/end_to_end_icon.webp'
     },
     {
       id: 'trend',
       title: 'Trend-Driven',
       description: '트렌드를 읽고, 새로운 시각적 언어를 프로젝트에 녹여냅니다.\n늘 한 발 앞선 디자인을 지향합니다.',
-      icon: '/assets/trend_driven_icon.webp'
+      icon: '/assets/icons/trend_driven_icon.webp'
     },
     {
       id: 'tech',
       title: 'Tech-Savvy',
       description: '인터랙션, 모션 디자인, 반응형 설계 등 기술적 깊이로 차별화된 사용자 경험을 설계합니다.',
-      icon: '/assets/tech_savvy_icon.webp'
+      icon: '/assets/icons/tech_savvy_icon.webp'
     },
     {
       id: 'endtoend',
       title: 'End-to-End',
       description: '기획부터 UX/UI 디자인, 프론트엔드 개발, 브랜딩까지\n프로젝트를 처음부터 끝까지 책임집니다.',
-      icon: '/assets/end_to_end_icon.webp'
+      icon: '/assets/icons/end_to_end_icon.webp'
     },
   ],
   marqueeTexts: ['Desktop', 'Mobile', 'Vibe coding', 'Design'],

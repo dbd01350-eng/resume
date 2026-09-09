@@ -118,12 +118,12 @@ export default function ChatWidget() {
           className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-200 relative drop-shadow-md" // token-exempt: custom button sizing
         >
           <img
-            src="/assets/glassheart.webp"
+            src="/assets/hero/glassheart.webp"
             alt="Chatbot Logo"
             className="w-full h-full object-contain animate-spin-3d"
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = '/assets/logo_icon.svg';
+              e.target.src = '/assets/icons/logo_icon.svg';
             }}
           />
         </button>
@@ -142,7 +142,7 @@ export default function ChatWidget() {
           <div className="px-5 py-4 bg-bg-dark text-white flex items-center justify-between border-b border-neutral-800">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/glassheart.webp"
+                src="/assets/hero/glassheart.webp"
                 alt="Chatbot Logo"
                 className="w-8 h-8 object-contain"
               />
@@ -172,7 +172,7 @@ export default function ChatWidget() {
               >
                 {m.role === 'bot' && (
                   <img
-                    src="/assets/glassheart.webp"
+                    src="/assets/hero/glassheart.webp"
                     alt="Bot"
                     className="w-7 h-7 object-contain shrink-0 mt-0.5"
                   />
@@ -192,7 +192,7 @@ export default function ChatWidget() {
             {loading && (
               <div className="flex gap-2.5 justify-start items-center">
                 <img
-                  src="/assets/glassheart.webp"
+                  src="/assets/hero/glassheart.webp"
                   alt="Bot"
                   className="w-7 h-7 object-contain shrink-0 animate-spin-3d-fast"
                 />

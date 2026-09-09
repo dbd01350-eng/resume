@@ -16,7 +16,7 @@ export default function MarqueeTextSection() {
                   {item}
                 </span>
                 <img 
-                  src="/assets/marquee_text_icon.svg" 
+                  src="/assets/icons/marquee_text_icon.svg" 
                   alt="" 
                   className="w-[81px] h-[81px] object-contain flex-shrink-0" 
                   onError={(e) => e.target.style.display = 'none'}
@@ -33,7 +33,7 @@ export default function MarqueeTextSection() {
                   {item}
                 </span>
                 <img 
-                  src="/assets/marquee_text_icon.svg" 
+                  src="/assets/icons/marquee_text_icon.svg" 
                   alt="" 
                   className="w-[81px] h-[81px] object-contain flex-shrink-0" 
                   onError={(e) => e.target.style.display = 'none'}

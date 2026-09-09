@@ -7,7 +7,7 @@ export default function AboutSection() {
         {/* Left Column: About me Header (Shifted slightly rightward as preferred) */}
         <div className="flex items-center gap-3 py-1.5 flex-shrink-0 lg:pl-10 xl:pl-16 2xl:pl-24">
           <img 
-            src="/assets/about_badge_icon.svg" 
+            src="/assets/icons/about_badge_icon.svg" 
             alt="About Icon" 
             className="w-6 h-6 sm:w-7 sm:h-7 object-contain flex-shrink-0" 
             onError={(e) => e.target.style.display = 'none'} 

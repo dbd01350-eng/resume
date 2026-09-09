@@ -103,7 +103,7 @@ export default function ResumePage({ onClose }) {
             {/* Profile Photo */}
             <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex-shrink-0 bg-bg-secondary">
               <img
-                src="/assets/Person_standing_in_white_shirt_202608261512.webp"
+                src="/assets/projects/Person_standing_in_white_shirt_202608261512.webp"
                 alt="심다은 프로필 사진"
                 className="w-full h-full object-cover object-[center_15%]" // token-exempt: custom image center crop ratio
               />

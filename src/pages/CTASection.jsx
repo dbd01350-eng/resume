@@ -9,7 +9,7 @@ export default function CTASection({ onOpenContact }) {
         
         {/* cta-background image (Figma Node #7006:2080) */}
         <img 
-          src="/assets/figma_58d0ae89.webp" 
+          src="/assets/projects/figma_58d0ae89.webp" 
           alt="" 
           className="absolute right-0 top-0 w-[45%] sm:w-[55%] md:w-[65%] lg:w-auto h-auto lg:h-full object-contain object-right-top opacity-30 lg:opacity-35 pointer-events-none z-0" 
           onError={(e) => e.target.style.display = 'none'}
@@ -24,7 +24,7 @@ export default function CTASection({ onOpenContact }) {
             <div className="flex flex-nowrap items-center gap-1.5 min-[380px]:gap-2 sm:gap-[10px] whitespace-nowrap">
               <div className="w-[26px] h-[26px] min-[380px]:w-[34px] min-[380px]:h-[34px] sm:w-[46px] sm:h-[46px] md:w-[54px] md:h-[54px] lg:w-[60px] lg:h-[60px] xl:w-[76px] xl:h-[76px] 2xl:w-[80px] 2xl:h-[80px] flex items-center justify-center flex-shrink-0">
                 <img 
-                  src="/assets/figma_d4c367a2.webp" 
+                  src="/assets/projects/figma_d4c367a2.webp" 
                   alt="" 
                   className="w-full h-full object-contain" 
                   onError={(e) => e.target.style.display = 'none'}
@@ -66,14 +66,14 @@ export default function CTASection({ onOpenContact }) {
         <div className="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-none lg:w-1/2 h-[220px] sm:h-[270px] md:h-[340px] lg:h-[420px] xl:h-[500px] 2xl:h-[540px] flex items-center justify-center z-10 mx-auto lg:mx-0 flex-shrink-0">
           {/* Large Helmet Image */}
           <img 
-            src="/assets/figma_ffd7f43c.webp" 
+            src="/assets/projects/figma_ffd7f43c.webp" 
             alt="CTA Image Large" 
             className="absolute bottom-[40px] sm:bottom-[30px] md:bottom-[25px] lg:bottom-[20px] xl:bottom-[15px] right-[20px] sm:right-[15px] md:right-[10px] lg:right-[0px] h-[170px] sm:h-[220px] md:h-[280px] lg:h-[360px] xl:h-[440px] 2xl:h-[480px] max-h-full object-contain drop-shadow-2xl" 
             onError={(e) => e.target.style.display = 'none'}
           />
           {/* Small Bouncing Image */}
           <img 
-            src="/assets/figma_9b50fe7b.webp" 
+            src="/assets/projects/figma_9b50fe7b.webp" 
             alt="CTA Image Small" 
             className="absolute bottom-[20px] sm:bottom-[15px] md:bottom-[10px] lg:bottom-[5px] xl:bottom-[0px] right-[140px] sm:right-[180px] md:right-[240px] lg:right-[290px] xl:right-[380px] 2xl:right-[440px] w-[70px] sm:w-[95px] md:w-[125px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px] object-contain animate-bounce" 
             style={{ animationDuration: '3s' }}
