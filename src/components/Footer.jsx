@@ -120,7 +120,7 @@ export default function Footer({ onOpenContact }) {
               </li>
               <li>
                 <a 
-                  href="https://figma.com/@simdaeun" 
+                  href="https://www.figma.com/design/r4GMpAA7dQrAadLlmcQVGn/%EC%8B%AC%EB%8B%A4%EC%9D%80-%EC%9D%B4%EB%A0%A5%EC%84%9C-%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=7227-600&t=sRrX4rlgyUj93qVx-1" // token-exempt: external figma design link
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-[#9F8BE7] transition-colors inline-flex items-center gap-1 font-medium"
