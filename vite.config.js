@@ -43,4 +43,14 @@ function autoStartChatbotBackend() {
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), autoStartChatbotBackend()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          lottie: ['lottie-web'],
+        },
+      },
+    },
+  },
 });

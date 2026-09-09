@@ -28,7 +28,7 @@ export default function ParallaxSection({ onOpenResume }) {
             ref={videoRef}
             loop 
             playsInline 
-            poster="/assets/figma_5681b522.png" 
+            poster="/assets/figma_5681b522.webp" 
             onEnded={() => setIsPlaying(false)}
             className="w-full h-full object-cover rounded-[24px] sm:rounded-[40px] block" // token-exempt: video rounded corners
           >
@@ -36,7 +36,7 @@ export default function ParallaxSection({ onOpenResume }) {
             <source src="/assets/hero_video.mp4" type="video/mp4" />
             {/* Poster fallback image */}
             <img 
-              src="/assets/figma_5681b522.png" 
+              src="/assets/figma_5681b522.webp" 
               alt="Showcase Video Poster" 
               className="w-full h-full object-cover" 
               onError={(e) => e.target.style.display = 'none'}

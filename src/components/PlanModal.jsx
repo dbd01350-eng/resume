@@ -41,7 +41,7 @@ export default function PlanModal({
 
   const handleImageError = (e) => {
     e.target.onerror = null;
-    e.target.src = '/assets/figma_8bed76a4.png';
+    e.target.src = '/assets/figma_8bed76a4.webp';
   };
 
   return (
@@ -193,7 +193,7 @@ PlanModal.getModalConfig = function (link, projectTitle = '') {
       title: 'IKEA Website 리디자인 기획안',
       images: Array.from({ length: 30 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0');
-        return `/assets/ikea_redesign/${num}.png`;
+        return `/assets/ikea_redesign/${num}.webp`;
       }),
       isVideo: false,
       videoUrl: '',
@@ -205,7 +205,7 @@ PlanModal.getModalConfig = function (link, projectTitle = '') {
       isOpen: true,
       title: 'IKEA Website UI/UX 개발 기획안',
       images: [
-        '/assets/ikea_uiux/01.png',
+        '/assets/ikea_uiux/01.webp',
         ...Array.from({ length: 22 }, (_, i) => `/assets/ikea_uiux/${i + 31}.png`),
       ],
       isVideo: false,

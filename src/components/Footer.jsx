@@ -19,7 +19,7 @@ export default function Footer({ onOpenContact }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm font-['Pretendard']">
           {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Navigation</h4>
+            <p className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Navigation</p>
             <ul className="space-y-2.5 text-[#161616] dark:text-white">
               <li><a href="#home" className="hover:text-[#9F8BE7] transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-[#9F8BE7] transition-colors">About me</a></li>
@@ -43,7 +43,7 @@ export default function Footer({ onOpenContact }) {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Contact</h4>
+            <p className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Contact</p>
             <ul className="space-y-2.5 text-[#161616] dark:text-white">
               <li>
                 <a href={`mailto:${profile.email}`} className="hover:text-[#9F8BE7] transition-colors break-all">
@@ -70,7 +70,7 @@ export default function Footer({ onOpenContact }) {
 
           {/* Ecosystem (2 Columns Grid Layout) */}
           <div className="space-y-4 md:col-span-1">
-            <h4 className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Ecosystem</h4>
+            <p className="font-bold text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display'] text-sm uppercase">Ecosystem</p>
             <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-3 text-[#161616] dark:text-white">
               <li>
                 <ExternalLink 
@@ -114,7 +114,7 @@ export default function Footer({ onOpenContact }) {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 text-center text-xs text-[#838383] dark:text-[#B2AEAD] font-['Funnel_Display']">
+        <div className="pt-8 text-center text-xs text-[#585858] dark:text-[#B2AEAD] font-['Funnel_Display']">
           심다은 포트폴리오 • Created with Vibe Coding &amp; Figma MCP
         </div>
       </div>
