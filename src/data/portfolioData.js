@@ -93,7 +93,7 @@ const portfolioData = {
     {
       id: "archive",
       title: "웹 개발 학습 아카이브",
-      previewImage: "/assets/project_archive_full_preview2.png",
+      previewImage: "/assets/figma_bcd0c6b6.png",
       fallbackImage: "/assets/figma_bcd0c6b6.png",
       type: "WEBSITE",
       links: [
