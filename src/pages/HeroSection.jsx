@@ -11,12 +11,7 @@ export default function HeroSection() {
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
       <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
-          src="/assets/hero/figma_a90ff28f.webp" 
-          srcSet="/assets/hero/figma_a90ff28f-sm.webp 600w, /assets/hero/figma_a90ff28f.webp 1200w"
-          sizes="(max-width: 640px) 180px, 340px"
-          width="340"
-          height="340"
-          fetchPriority="high"
+          src="/assets/hero/figma_a90ff28f.png" 
           alt="무중력 인터랙티브 3D 그래픽 1" 
           tabIndex={0}
           role="button"
@@ -27,11 +22,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-[170px] right-[20px] sm:right-[20px] md:right-[4%] sm:top-[190px] md:top-[190px] lg:top-[240px] xl:top-[240px] xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto"> {/* token-exempt: floating image 2 absolute offsets */}
         <img 
-          src="/assets/hero/figma_40a26bbc.webp" 
-          srcSet="/assets/hero/figma_40a26bbc-sm.webp 600w, /assets/hero/figma_40a26bbc.webp 1200w"
-          sizes="(max-width: 640px) 80px, 170px"
-          width="170"
-          height="170"
+          src="/assets/hero/figma_40a26bbc.png" 
           alt="무중력 인터랙티브 3D 그래픽 2" 
           tabIndex={0}
           role="button"
@@ -42,11 +33,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-[220px] right-[120px] sm:top-[280px] sm:right-[160px] md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
-          src="/assets/hero/figma_40a26bb.webp" 
-          srcSet="/assets/hero/figma_40a26bb-sm.webp 600w, /assets/hero/figma_40a26bb.webp 1200w"
-          sizes="(max-width: 640px) 90px, 170px"
-          width="170"
-          height="170"
+          src="/assets/hero/figma_40a26bb.png" 
           alt="무중력 인터랙티브 3D 그래픽 3" 
           tabIndex={0}
           role="button"
@@ -57,11 +44,11 @@ export default function HeroSection() {
       </div>
       {/* hero-top & hero-title-wrap (Always on top of background images) */}
       <div className="w-full max-w-[1500px] 2xl:max-w-[1640px] mx-auto px-1 sm:px-6 xl:px-8 relative z-20 min-h-[380px] sm:min-h-[480px] lg:min-h-[600px] flex flex-col justify-center py-4 sm:py-6 pointer-events-none">
-        {/* hero-title-text (padding: 0px 40px, gap: 20px) */}
-        <div className="px-0 sm:px-4 xl:px-[20px] space-y-3 sm:space-y-4 lg:space-y-[20px] pointer-events-none">
+        {/* hero-title-text (Centered title layout across 2 rows) */}
+        <div className="px-0 sm:px-4 xl:px-[20px] space-y-3 sm:space-y-4 lg:space-y-[20px] pointer-events-none flex flex-col items-center w-full">
           
-          {/* hero-title-row-1 (Right aligned with balanced middle ground offset) */}
-          <div className="flex flex-nowrap items-center justify-end gap-2 sm:gap-3 lg:gap-[26px] pr-0 sm:pr-2 md:pr-6 lg:pr-[50px] xl:pr-[90px] 2xl:pr-[100px]">
+          {/* hero-title-row-1 (Center aligned) */}
+          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-[26px] w-full">
             <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
               예쁘게,
             </span>
@@ -111,8 +98,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* hero-title-row-2 (Centered/Left-aligned) */}
-          <div className="flex flex-nowrap items-center justify-start gap-2 sm:gap-3 lg:gap-[26px]">
+          {/* hero-title-row-2 (Center aligned) */}
+          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-[26px] w-full">
             <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
               Design and Coding
             </span>
@@ -130,7 +117,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-[40px] flex-1">
             <div className="w-[80px] h-[80px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
               <img 
-                src="/assets/hero/figma_225ce678.webp" 
+                src="/assets/hero/figma_225ce678.png" 
                 alt="" 
                 className="w-[60px] h-[60px] object-contain animate-spin-slow" 
                 onError={(e) => e.target.style.display = 'none'}
@@ -183,7 +170,7 @@ export default function HeroSection() {
           {/* Photo Thumbnail Card in Original Desktop Position */}
           <div className="w-[205px] h-[160px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
             <img 
-              src="/assets/hero/figma_bb286482.webp" 
+              src="/assets/hero/figma_bb286482.png" 
               alt="Hero Photo Thumbnail" 
               className="w-[171px] h-[228px] object-cover rounded-xl"
               onError={(e) => e.target.style.display = 'none'}
@@ -198,7 +185,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
               <div className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
                 <img 
-                  src="/assets/hero/figma_225ce678.webp" 
+                  src="/assets/hero/figma_225ce678.png" 
                   alt="" 
                   className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] object-contain animate-spin-slow" 
                   onError={(e) => e.target.style.display = 'none'}
@@ -215,7 +202,7 @@ export default function HeroSection() {
             {/* Photo Thumbnail Card placed on Right Side of Description Text in Breakpoint Mode */}
             <div className="w-[110px] sm:w-[160px] h-[95px] sm:h-[130px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
               <img 
-                src="/assets/hero/figma_bb286482.webp" 
+                src="/assets/hero/figma_bb286482.png" 
                 alt="Hero Photo Thumbnail" 
                 className="w-[90px] sm:w-[130px] h-[125px] sm:h-[175px] object-cover rounded-lg sm:rounded-xl"
                 onError={(e) => e.target.style.display = 'none'}
