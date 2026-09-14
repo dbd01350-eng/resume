@@ -3,8 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #FAF7F6;
+  --color-bg-canvas: #FAF7F6;
+  --color-bg-card: #FFFFFF;
+  --color-bg-input: #FAF7F6;
   --color-bg-dark: #161616;
   --color-accent-purple: #9F8BE7;
   --color-accent-lime: #DDF160;
@@ -20,8 +21,9 @@
 }
 
 .dark {
-  --color-bg-primary: #303030;
-  --color-bg-secondary: #161616;
+  --color-bg-canvas: #161616;
+  --color-bg-card: #303030;
+  --color-bg-input: #161616;
   --color-bg-dark: #161616;
   --color-text-main: #FFFFFF;
   --color-text-sub: #B2AEAD;
@@ -37,7 +39,7 @@
   }
   body {
     font-family: var(--font-pretendard);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-canvas);
     color: var(--color-text-main);
     overflow-x: hidden;
   }
@@ -90,31 +92,35 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translate3d(0%, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @keyframes marquee-reverse {
   0% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
-    transform: translateX(0%);
+    transform: translate3d(0%, 0, 0);
   }
 }
 
 .animate-marquee {
   display: flex;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: marquee 26s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: marquee-reverse 26s linear infinite;
 }
 

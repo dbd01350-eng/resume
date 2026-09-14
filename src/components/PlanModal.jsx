@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function PlanModal({
   isOpen,
@@ -11,9 +11,36 @@ export default function PlanModal({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState('slide'); // 'slide' | 'scroll'
 
+  const thumbnailRefs = useRef({});
+  const scrollItemRefs = useRef({});
+
   useEffect(() => {
     setCurrentIndex(0);
   }, [images, isOpen, videoUrl]);
+
+  // Thumbnail Auto-Scroll effect in Slide mode
+  useEffect(() => {
+    if (viewMode === 'slide' && thumbnailRefs.current[currentIndex]) {
+      thumbnailRefs.current[currentIndex].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      });
+    }
+  }, [currentIndex, viewMode]);
+
+  // Scroll View Position Sync effect when switching to scroll mode
+  useEffect(() => {
+    if (viewMode === 'scroll' && scrollItemRefs.current[currentIndex]) {
+      const timer = setTimeout(() => {
+        scrollItemRefs.current[currentIndex]?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 60);
+      return () => clearTimeout(timer);
+    }
+  }, [viewMode]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
@@ -135,7 +162,11 @@ export default function PlanModal({
             /* Scroll View Mode */
             <div className="absolute inset-0 overflow-y-auto p-4 sm:p-8 space-y-6 flex flex-col items-center">
               {images.map((imgUrl, idx) => (
-                <div key={idx} className="w-full max-w-4xl bg-bg-dark rounded-xl overflow-hidden border border-neutral-800 shadow-md shrink-0">
+                <div 
+                  key={idx} 
+                  ref={(el) => (scrollItemRefs.current[idx] = el)}
+                  className="w-full max-w-4xl bg-bg-dark rounded-xl overflow-hidden border border-neutral-800 shadow-md shrink-0"
+                >
                   <div className="px-3 py-1.5 bg-neutral-900 text-xs text-neutral-400 font-['Pretendard']"> {/* token-exempt: font style */}
                     Page {idx + 1}
                   </div>
@@ -158,6 +189,7 @@ export default function PlanModal({
             {images.map((imgUrl, idx) => (
               <button
                 key={idx}
+                ref={(el) => (thumbnailRefs.current[idx] = el)}
                 onClick={() => setCurrentIndex(idx)}
                 className={`h-14 w-20 shrink-0 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
                   currentIndex === idx

@@ -86,13 +86,13 @@ export default function ContactPage({ onClose }) {
       onClose={onClose}
       titleId="contact-modal-title"
       backdropClassName="fixed inset-0 z-50 overflow-y-auto bg-bg-dark/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10"
-      className="bg-bg-primary text-text-main rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative border border-gray-200"
+      className="bg-bg-card text-text-main rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative border border-gray-200"
     >
         {/* Close Button */}
         <button
           onClick={onClose}
           type="button"
-          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-bg-secondary hover:bg-gray-200 flex items-center justify-center text-text-main font-bold text-xl transition-colors"
+          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-bg-input hover:bg-gray-200 flex items-center justify-center text-text-main font-bold text-xl transition-colors"
           aria-label="닫기"
         >
           ✕
@@ -125,7 +125,7 @@ export default function ContactPage({ onClose }) {
               onChange={handleChange}
               required
               placeholder="성함을 입력하세요"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-secondary text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-input text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
             />
           </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage({ onClose }) {
               onChange={handleChange}
               required
               placeholder="example@domain.com"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-secondary text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-input text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
             />
           </div>
 
@@ -157,7 +157,7 @@ export default function ContactPage({ onClose }) {
               onChange={handleChange}
               required
               placeholder="문의 제목을 입력하세요"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-secondary text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-input text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all"
             />
           </div>
 
@@ -173,7 +173,7 @@ export default function ContactPage({ onClose }) {
               onChange={handleChange}
               required
               placeholder="문의 내용을 상세히 작성해 주세요."
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-secondary text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-bg-input text-text-main focus:outline-none focus:ring-2 focus:ring-accent-purple transition-all resize-none"
             />
           </div>
 
@@ -200,7 +200,7 @@ export default function ContactPage({ onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-3 rounded-full border border-gray-300 text-text-main hover:bg-bg-secondary transition-colors font-semibold"
+              className="px-6 py-3 rounded-full border border-gray-300 text-text-main hover:bg-bg-input transition-colors font-semibold"
             >
               취소
             </button>

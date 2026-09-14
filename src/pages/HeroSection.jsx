@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="pt-0 pb-10 sm:pb-[60px] lg:pb-[80px] px-4 md:px-12 xl:px-[60px] 2xl:px-[80px] max-w-[1920px] mx-auto relative min-h-[700px] sm:min-h-[840px] flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
-      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[10%] xl:left-[12%] 2xl:left-[15%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
+      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[8%] xl:left-[10%] 2xl:left-[12%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
           src="/assets/hero/figma_a90ff28f.png" 
           alt="무중력 인터랙티브 3D 그래픽 1" 
@@ -67,7 +67,7 @@ export default function HeroSection() {
 
               {/* Infinite Marquee Layer (Scrolls seamlessly inside the exact original pill badge) */}
               <div className="absolute inset-0 px-3 sm:px-8 lg:px-[40px] flex items-center overflow-hidden pointer-events-none">
-                <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '10s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
+                <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '7s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
                   {/* Group 1 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">

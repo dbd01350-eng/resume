@@ -137,7 +137,7 @@ export default function ChatWidget() {
 
       {/* Floating Chat Popup Window (Bottom Left) */}
       {isOpen && (
-        <div className="fixed bottom-24 sm:bottom-28 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-primary border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn print:hidden"> {/* token-exempt: chatbot window fixed container */}
+        <div className="fixed bottom-24 sm:bottom-28 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] bg-bg-card border border-neutral-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-fadeIn print:hidden"> {/* token-exempt: chatbot window fixed container */}
           {/* Header */}
           <div className="px-5 py-4 bg-bg-dark text-white flex items-center justify-between border-b border-neutral-800">
             <div className="flex items-center gap-3">
@@ -164,7 +164,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Messages Box */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-bg-secondary/40">
+          <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-bg-input/40">
             {msgs.map((m, i) => (
               <div
                 key={i}
@@ -181,7 +181,7 @@ export default function ChatWidget() {
                   className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${ // token-exempt: width limit
                     m.role === 'user'
                       ? 'bg-bg-dark text-white rounded-br-none shadow-xs'
-                      : 'bg-bg-primary text-text-main border border-neutral-200/80 rounded-bl-none shadow-xs'
+                      : 'bg-bg-card text-text-main border border-neutral-200/80 rounded-bl-none shadow-xs'
                   }`}
                 >
                   <p className="whitespace-pre-wrap break-words">{m.text}</p>
@@ -196,7 +196,7 @@ export default function ChatWidget() {
                   alt="Bot"
                   className="w-7 h-7 object-contain shrink-0 animate-spin-3d-fast"
                 />
-                <div className="bg-bg-primary border border-neutral-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 text-xs text-text-muted flex items-center gap-1.5">
+                <div className="bg-bg-card border border-neutral-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 text-xs text-text-muted flex items-center gap-1.5">
                   <span>AI가 답변을 생성하는 중입니다</span>
                   <span className="animate-pulse">...</span>
                 </div>
@@ -206,13 +206,13 @@ export default function ChatWidget() {
           </div>
 
           {/* Input Form */}
-          <div className="p-3 bg-bg-primary border-t border-neutral-200/80">
+          <div className="p-3 bg-bg-card border-t border-neutral-200/80">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 send();
               }}
-              className="flex items-center gap-2 bg-bg-secondary rounded-2xl px-3 py-1.5 border border-neutral-200 focus-within:border-accent-purple transition-colors"
+              className="flex items-center gap-2 bg-bg-input rounded-2xl px-3 py-1.5 border border-neutral-200 focus-within:border-accent-purple transition-colors"
             >
               <input
                 type="text"

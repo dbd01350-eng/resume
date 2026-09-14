@@ -86,7 +86,7 @@ export default function ResumePage({ onClose }) {
           <button
             onClick={onClose}
             type="button"
-            className="w-10 h-10 rounded-full bg-bg-primary text-text-main font-bold shadow-lg hover:bg-gray-100 flex items-center justify-center transition-colors cursor-pointer"
+            className="w-10 h-10 rounded-full bg-bg-card text-text-main font-bold shadow-lg hover:bg-gray-100 flex items-center justify-center transition-colors cursor-pointer"
             aria-label="닫기"
           >
             ✕
@@ -95,13 +95,13 @@ export default function ResumePage({ onClose }) {
       </div>
 
       {/* Main A4 Resume Paper Container */}
-      <div className="bg-bg-primary text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-0 print:m-0 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
+      <div className="bg-bg-card text-text-main w-full max-w-4xl my-6 print:my-0 p-6 sm:p-10 print:p-0 print:m-0 rounded-3xl print:rounded-none shadow-2xl print:shadow-none border border-gray-200 print:border-none print:w-full space-y-7 print:space-y-5">
         
         {/* Header & Personal Profile Card */}
         <div className="border-b border-gray-200 pb-6 print:pb-4 flex flex-col sm:flex-row gap-6 items-start justify-between">
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             {/* Profile Photo */}
-            <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex-shrink-0 bg-bg-secondary">
+            <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex-shrink-0 bg-bg-input">
               <img
                 src="/assets/projects/Person_standing_in_white_shirt_202608261512.jpeg"
                 alt="심다은 프로필 사진"

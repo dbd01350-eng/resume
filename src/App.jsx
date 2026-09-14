@@ -53,7 +53,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-bg-primary dark:bg-bg-dark p-8 max-w-6xl mx-auto space-y-12 pt-32"> {/* token-exempt: skeleton loader layout */}
+      <div className="min-h-screen bg-bg-canvas p-8 max-w-6xl mx-auto space-y-12 pt-32"> {/* token-exempt: skeleton loader layout */}
         <div className="flex justify-between items-center pb-8">
           <SkeletonLoader className="h-8 w-44" />
           <div className="flex space-x-6">
@@ -74,7 +74,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg-primary dark:bg-bg-dark text-text-main dark:text-white font-[var(--font-pretendard)]"> {/* token-exempt: root app theme wrapper */}
+    <div className="min-h-screen bg-bg-canvas text-text-main dark:text-white font-[var(--font-pretendard)]"> {/* token-exempt: root app theme wrapper */}
       {/* Header */}
       <Header 
         onOpenContact={handleOpenContact} 

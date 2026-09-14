@@ -6,7 +6,7 @@ export default function Footer({ onOpenContact }) {
   const { profile } = portfolioData;
 
   return (
-    <footer className="bg-[#FAF7F6] dark:bg-[#303030] text-[#161616] dark:text-white py-12 sm:py-[80px] px-6 sm:px-10 lg:px-[80px] max-w-[1920px] mx-auto">
+    <footer className="bg-bg-canvas text-[#161616] dark:text-white py-12 sm:py-[80px] px-6 sm:px-10 lg:px-[80px] max-w-[1920px] mx-auto">
       <div className="space-y-[80px]">
         {/* Brand & Logo */}
         <div className="flex flex-col md:flex-row justify-end items-start md:items-center pb-8 border-b border-gray-200 dark:border-[#585858] gap-6">

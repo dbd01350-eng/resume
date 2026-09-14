@@ -30,14 +30,14 @@
 ### 3.1 디자인 토큰 위치 (Token Location)
 - **주 파일 경로**: `file:///Z:/0_AI/0.%20GPT/project/project/src/index.css` (`@theme` 블록)
 - **주요 선언 토큰**:
-  - 배경색: `--color-bg-primary` (`#FFFFFF`), `--color-bg-secondary` (`#FAF7F6`), `--color-bg-dark` (`#161616`)
+  - 배경색: `--color-bg-canvas` (`#FAF7F6`), `--color-bg-card` (`#FFFFFF`), `--color-bg-input` (`#FAF7F6`), `--color-bg-dark` (`#161616`)
   - 포인트색: `--color-accent-purple` (`#9F8BE7`), `--color-accent-lime` (`#DDF160`)
   - 텍스트색: `--color-text-main` (`#161616`), `--color-text-sub` (`#303030`), `--color-text-muted` (`#B2AEAD`)
   - 타이포그래피: `--font-funnel` (`'Funnel Display', sans-serif`), `--font-pretendard` (`'Pretendard', sans-serif`)
 
 ### 3.2 하드코딩 금지 규칙
 - `src/index.css`의 `@theme` 및 `:root` 선언부를 제외한 모든 JSX, HTML, CSS 코드에서 raw hex (`#HEX`), `rgb()`, `rgba()`, `hsl()`, `px`, `rem` 단위를 임의로 직접 기술하는 것을 금지합니다.
-- Tailwind arbitrary value (`p-[20px]`, `text-[#161616]` 등) 사용을 금지하며, 등록된 토큰 클래스(`bg-bg-primary`, `text-text-main` 등)를 사용해야 합니다.
+- Tailwind arbitrary value (`p-[20px]`, `text-[#161616]` 등) 사용을 금지하며, 등록된 토큰 클래스(`bg-bg-canvas`, `bg-bg-card`, `text-text-main` 등)를 사용해야 합니다.
 
 ### 3.3 예외 처리 (Exemption)
 - 불가피하게 하드코딩 수치가 필요한 경우, 해당 라인 끝에 예외 사유 주석을 추가해야만 검사를 통과할 수 있습니다:

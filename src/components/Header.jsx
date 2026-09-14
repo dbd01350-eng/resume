@@ -39,7 +39,7 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
   return (
     <header 
       className={`sticky top-0 left-0 right-0 z-50 h-[72px] sm:h-[80px] px-4 sm:px-10 lg:px-[60px] flex items-center transition-shadow ${
-        scrolled ? 'bg-[#FAF7F6]/95 dark:bg-[#161616]/95 backdrop-blur-[4px] shadow-xs' : 'bg-[#FAF7F6] dark:bg-[#161616]'
+        scrolled ? 'bg-bg-canvas/95 backdrop-blur-[4px] shadow-xs' : 'bg-bg-canvas'
       }`}
     >
       <div className="w-[1664px] mx-auto flex items-center justify-between">
