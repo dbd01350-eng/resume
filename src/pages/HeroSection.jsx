@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="pt-0 pb-10 sm:pb-[60px] lg:pb-[80px] px-4 md:px-12 xl:px-[60px] 2xl:px-[80px] max-w-[1920px] mx-auto relative min-h-[700px] sm:min-h-[840px] flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
-      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[8%] xl:left-[10%] 2xl:left-[12%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
+      <div className="absolute top-[40px] left-[20px] sm:left-[50px] md:left-[3%] xl:left-[6%] 2xl:left-[8%] sm:top-[40px] md:top-[35px] xl:top-[20px] z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
           src="/assets/hero/figma_a90ff28f.png" 
           alt="무중력 인터랙티브 3D 그래픽 1" 
