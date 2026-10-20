@@ -7,7 +7,7 @@ export default function HeroSection() {
   const toolsCol4 = ['illustrator', 'after effect', 'primiere pro'];
 
   return (
-    <section id="home" className="pt-0 pb-10 sm:pb-15 lg:pb-20 px-4 md:px-12 xl:px-15 2xl:px-20 max-w-[1920px] mx-auto relative min-h-175 sm:min-h-210 flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
+    <section id="home" className="pt-0 pb-10 sm:pb-15 lg:pb-20 px-4 md:px-12 xl:px-15 2xl:px-20 max-w-480 mx-auto relative min-h-175 sm:min-h-210 flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
       <div className="absolute top-10 left-5 sm:left-12.5 md:left-[3%] xl:left-[6%] 2xl:left-[8%] sm:top-10 md:top-8.75 xl:top-5 z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
@@ -31,65 +31,65 @@ export default function HeroSection() {
           onError={(e) => e.target.style.display = 'none'}
         />
       </div>
-      <div className="absolute top-55 right-30 sm:top-[280px] sm:right-40 md:right-[24%] md:top-[300px] lg:top-[360px] xl:top-[400px] xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
+      <div className="absolute top-55 right-30 sm:top-70 sm:right-40 md:right-[24%] md:top-75 lg:top-90 xl:top-100 xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
           src="/assets/hero/figma_40a26bb.png" 
           alt="무중력 인터랙티브 3D 그래픽 3" 
           tabIndex={0}
           role="button"
           aria-label="인터랙티브 3D 아트워크 3"
-          className="w-[90px] sm:w-[130px] md:w-[140px] xl:w-[170px] h-auto object-contain opacity-60 sm:opacity-75 xl:opacity-90 animate-float-fast transition-all duration-300 ease-out hover:translate-x-7 hover:translate-y-3 hover:rotate-6 hover:opacity-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-purple" 
+          className="w-22.5 sm:w-32.5 md:w-35 xl:w-42.5 h-auto object-contain opacity-60 sm:opacity-75 xl:opacity-90 animate-float-fast transition-all duration-300 ease-out hover:translate-x-7 hover:translate-y-3 hover:rotate-6 hover:opacity-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-purple" 
           onError={(e) => e.target.style.display = 'none'}
         />
       </div>
       {/* hero-top & hero-title-wrap (Always on top of background images) */}
-      <div className="w-full max-w-[1500px] 2xl:max-w-[1640px] mx-auto px-1 sm:px-6 xl:px-8 relative z-20 min-h-[380px] sm:min-h-[480px] lg:min-h-[600px] flex flex-col justify-center py-4 sm:py-6 pointer-events-none">
+      <div className="w-full max-w-375 2xl:max-w-410 mx-auto px-1 sm:px-6 xl:px-8 relative z-20 min-h-95 sm:min-h-120 lg:min-h-150 flex flex-col justify-center py-4 sm:py-6 pointer-events-none">
         {/* hero-title-text (Centered title layout across 2 rows) */}
-        <div className="px-0 sm:px-4 xl:px-[20px] space-y-3 sm:space-y-4 lg:space-y-[20px] pointer-events-none flex flex-col items-center w-full">
+        <div className="px-0 sm:px-4 xl:px-5 space-y-3 sm:space-y-4 lg:space-y-5 pointer-events-none flex flex-col items-center w-full">
           
           {/* hero-title-row-1 (Center aligned) */}
-          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-[26px] w-full">
-            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
+          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-6.5 w-full">
+            <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-bg-dark dark:text-white whitespace-nowrap">
               예쁘게,
             </span>
-            <div className="bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-[40px] py-1 sm:py-2 lg:py-[10px] flex items-center flex-shrink-0 overflow-hidden relative pointer-events-none">
+            <div className="bg-accent-purple dark:bg-accent-lime rounded-[30px] sm:rounded-[66px] px-3 sm:px-8 lg:px-10 py-1 sm:py-2 lg:py-2.5 flex items-center shrink-0 overflow-hidden relative pointer-events-none">
               {/* Invisible Sizing Placeholder (Ensures 100% exact original pill badge width & height) */}
-              <div className="invisible flex items-center gap-2 sm:gap-3 lg:gap-[20px] flex-shrink-0 whitespace-nowrap pointer-events-none">
-                <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
+              <div className="invisible flex items-center gap-2 sm:gap-3 lg:gap-5 shrink-0 whitespace-nowrap pointer-events-none">
+                <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
                   될 때 까지
                 </span>
                 <img 
                   src="/assets/icons/hero_title_star_icon.svg" 
                   alt="Star Icon" 
-                  className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
+                  className="w-7 h-7 sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain shrink-0 dark:invert" 
                 />
               </div>
 
               {/* Infinite Marquee Layer (Scrolls seamlessly inside the exact original pill badge) */}
-              <div className="absolute inset-0 px-3 sm:px-8 lg:px-[40px] flex items-center overflow-hidden pointer-events-none">
+              <div className="absolute inset-0 px-3 sm:px-8 lg:px-10 flex items-center overflow-hidden pointer-events-none">
                 <div className="flex w-max animate-marquee transform-gpu pointer-events-none" style={{ animationDuration: '7s', animationTimingFunction: 'linear', animationPlayState: 'running' }}>
                   {/* Group 1 */}
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 pr-6 sm:pr-10 lg:pr-14">
+                    <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
                       될 때 까지
                     </span>
                     <img 
                       src="/assets/icons/hero_title_star_icon.svg" 
                       alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
+                      className="w-7 h-7 sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
                     />
                   </div>
 
                   {/* Group 2 */}
-                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-[20px] pr-6 sm:pr-10 lg:pr-14">
-                    <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-[#161616] whitespace-nowrap">
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 pr-6 sm:pr-10 lg:pr-14">
+                    <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
                       될 때 까지
                     </span>
                     <img 
                       src="/assets/icons/hero_title_star_icon.svg" 
                       alt="Star Icon" 
-                      className="w-[28px] h-[28px] sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain flex-shrink-0 dark:invert" 
+                      className="w-7 h-7 sm:w-[clamp(36px,5vw,92px)] sm:h-[clamp(36px,5vw,92px)] object-contain shrink-0 dark:invert" 
                       onError={(e) => e.target.style.display = 'none'}
                     />
                   </div>
@@ -99,8 +99,8 @@ export default function HeroSection() {
           </div>
 
           {/* hero-title-row-2 (Center aligned) */}
-          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-[26px] w-full">
-            <span className="font-['Funnel_Display'] font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-[#161616] dark:text-white whitespace-nowrap">
+          <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 lg:gap-6.5 w-full">
+            <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-bg-dark dark:text-white whitespace-nowrap">
               Design and Coding
             </span>
           </div>
@@ -109,22 +109,22 @@ export default function HeroSection() {
       </div>
 
       {/* hero-bottom & hero-data */}
-      <div className="relative z-10 pb-[20px] w-full max-w-[1500px] 2xl:max-w-[1640px] mx-auto px-1 sm:px-6 xl:px-8">
+      <div className="relative z-10 pb-5 w-full max-w-375 2xl:max-w-410 mx-auto px-1 sm:px-6 xl:px-8">
         
         {/* 1) DESKTOP VERSION (Before Breakpoint): 100% Original Desktop Layout (Description -> Tools -> Photo Card) */}
-        <div className="hidden lg:flex items-center justify-between gap-[40px] xl:gap-[60px] w-full">
+        <div className="hidden lg:flex items-center justify-between gap-10 xl:gap-15 w-full">
           {/* Circular Badge + Description Text */}
-          <div className="flex items-center gap-[40px] flex-1">
-            <div className="w-[80px] h-[80px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
+          <div className="flex items-center gap-10 flex-1">
+            <div className="w-20 h-20 rounded-full bg-white dark:bg-bg-card flex items-center justify-center shrink-0">
               <img 
                 src="/assets/hero/figma_225ce678.png" 
                 alt="" 
-                className="w-[60px] h-[60px] object-contain animate-spin-slow" 
+                className="w-15 h-15 object-contain animate-spin-slow" 
                 onError={(e) => e.target.style.display = 'none'}
               />
             </div>
 
-            <p className="font-['Funnel_Display'] font-normal text-[22px] leading-[1.6em] text-[#161616] dark:text-white">
+            <p className="font-funnel font-normal text-[22px] leading-[1.6em] text-bg-dark dark:text-white">
               <span className="block whitespace-nowrap">디자인 하고, 코드로 만듭니다.</span>
               <span className="block whitespace-nowrap">가끔은 둘 다 하다가 새벽을 만납니다.</span>
               <span className="block whitespace-nowrap">결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.</span>
@@ -132,35 +132,35 @@ export default function HeroSection() {
           </div>
 
           {/* Desktop Tools Grid with Progressive Visibility */}
-          <div className="w-[624px] flex flex-nowrap items-start gap-[20px] font-['Funnel_Display'] text-[22px] leading-[1.6em] text-[#161616] dark:text-[#B2AEAD] whitespace-nowrap overflow-hidden flex-shrink-0">
-            <div className="space-y-1 flex-shrink-0">
+          <div className="w-156 flex flex-nowrap items-start gap-5 font-funnel text-[22px] leading-[1.6em] text-bg-dark dark:text-text-muted whitespace-nowrap overflow-hidden shrink-0">
+            <div className="space-y-1 shrink-0">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-4.75 h-4.75 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
             </div>
-            <div className="space-y-1 flex-shrink-0">
+            <div className="space-y-1 shrink-0">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-4.75 h-4.75 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
             </div>
-            <div className="space-y-1 hidden xl:block flex-shrink-0">
+            <div className="space-y-1 hidden xl:block shrink-0">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-4.75 h-4.75 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
             </div>
-            <div className="space-y-1 hidden 2xl:block flex-shrink-0">
+            <div className="space-y-1 hidden 2xl:block shrink-0">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[19px] h-[19px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-4.75 h-4.75 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -168,11 +168,11 @@ export default function HeroSection() {
           </div>
 
           {/* Photo Thumbnail Card in Original Desktop Position */}
-          <div className="w-[205px] h-[160px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
+          <div className="w-51.25 h-40 bg-accent-purple dark:bg-accent-lime rounded-[26px] flex items-center justify-center relative overflow-hidden shrink-0">
             <img 
               src="/assets/hero/figma_bb286482.png" 
               alt="Hero Photo Thumbnail" 
-              className="w-[171px] h-[228px] object-cover rounded-xl"
+              className="w-42.75 h-57 object-cover rounded-xl"
               onError={(e) => e.target.style.display = 'none'}
             />
           </div>
@@ -183,16 +183,16 @@ export default function HeroSection() {
           {/* Top Row: Description Text + Photo Card placed on Right Side */}
           <div className="flex flex-row items-center justify-between gap-3 sm:gap-6 w-full">
             <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
-              <div className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] rounded-full bg-white dark:bg-[#303030] flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 sm:w-15 sm:h-15 rounded-full bg-white dark:bg-bg-card flex items-center justify-center shrink-0">
                 <img 
                   src="/assets/hero/figma_225ce678.png" 
                   alt="" 
-                  className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] object-contain animate-spin-slow" 
+                  className="w-9 h-9 sm:w-11 sm:h-11 object-contain animate-spin-slow" 
                   onError={(e) => e.target.style.display = 'none'}
                 />
               </div>
 
-              <p className="font-['Funnel_Display'] font-normal text-[14px] sm:text-[18px] leading-[1.5em] sm:leading-[1.6em] text-[#161616] dark:text-white break-keep">
+              <p className="font-funnel font-normal text-[14px] sm:text-[18px] leading-[1.5em] sm:leading-[1.6em] text-bg-dark dark:text-white break-keep">
                 <span className="block sm:whitespace-nowrap">디자인 하고, 코드로 만듭니다.</span>
                 <span className="block sm:whitespace-nowrap">가끔은 둘 다 하다가 새벽을 만납니다.</span>
                 <span className="block sm:whitespace-nowrap">결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.</span>
@@ -200,22 +200,22 @@ export default function HeroSection() {
             </div>
 
             {/* Photo Thumbnail Card placed on Right Side of Description Text in Breakpoint Mode */}
-            <div className="w-[110px] sm:w-[160px] h-[95px] sm:h-[130px] bg-[#9F8BE7] dark:bg-[#DDF160] rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
+            <div className="w-27.5 sm:w-40 h-23.75 sm:h-32.5 bg-accent-purple dark:bg-accent-lime rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden shrink-0">
               <img 
                 src="/assets/hero/figma_bb286482.png" 
                 alt="Hero Photo Thumbnail" 
-                className="w-[90px] sm:w-[130px] h-[125px] sm:h-[175px] object-cover rounded-lg sm:rounded-xl"
+                className="w-22.5 sm:w-32.5 h-31.25 sm:h-43.75 object-cover rounded-lg sm:rounded-xl"
                 onError={(e) => e.target.style.display = 'none'}
               />
             </div>
           </div>
 
           {/* Bottom Row: Restored Full Tools Grid aligned to hero_study_icon.svg (Shifted Rightward for Optical Balance on Mobile) */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-2 sm:gap-4 font-['Funnel_Display'] text-[13px] sm:text-[18px] leading-[1.6em] text-[#161616] dark:text-[#B2AEAD] whitespace-nowrap w-full justify-items-start max-w-sm sm:max-w-none mx-auto sm:mx-0 pl-6 sm:pl-0"> {/* token-exempt: mobile tools grid layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-2 sm:gap-4 font-funnel text-[13px] sm:text-[18px] leading-[1.6em] text-bg-dark dark:text-text-muted whitespace-nowrap w-full justify-items-start max-w-sm sm:max-w-none mx-auto sm:mx-0 pl-6 sm:pl-0"> {/* token-exempt: mobile tools grid layout */}
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol1.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -223,7 +223,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol2.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -231,7 +231,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol3.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
@@ -239,7 +239,7 @@ export default function HeroSection() {
             <div className="space-y-1 flex flex-col items-start">
               {toolsCol4.map((t, idx) => (
                 <div key={idx} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain flex-shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
+                  <img src="/assets/icons/hero_study_icon.svg" alt="" className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain shrink-0 dark:invert" onError={(e) => e.target.style.display = 'none'} />
                   <span>{t}</span>
                 </div>
               ))}
