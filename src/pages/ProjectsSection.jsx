@@ -109,21 +109,21 @@ export default function ProjectsSection() {
                     muted
                     playsInline
                     poster={project.previewImage}
-                    className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px] block pointer-events-none"
+                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px] block pointer-events-none"
                   >
                     <source src={project.previewVideo} type="video/mp4" />
                     {/* Fallback image inside video element */}
                     <img
                       src={project.previewImage}
                       alt={project.title}
-                      className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]"
+                      className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px]"
                     />
                   </video>
                 ) : (
                   <img
                     src={project.previewImage}
                     alt={project.title}
-                    className="w-full h-full object-cover rounded-[24px] sm:rounded-[50px]" // token-exempt: preview image rounded corners
+                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px]" // token-exempt: preview image rounded corners
                     onError={(e) => {
                       e.target.src = project.fallbackImage;
                     }}
