@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Floating Images (Zero-gravity Float + Interactive Hover Outward Push) */}
       <div className="absolute top-10 left-5 sm:left-12.5 md:left-[3%] xl:left-[6%] 2xl:left-[8%] sm:top-10 md:top-8.75 xl:top-5 z-10 pointer-events-auto"> {/* token-exempt: floating image 1 absolute offsets */}
         <img 
-          src="/assets/hero/figma_a90ff28f.png" 
+          src="/assets/hero/hero_floating_3d_left.png" 
           alt="무중력 인터랙티브 3D 그래픽 1" 
           tabIndex={0}
           role="button"
@@ -22,7 +22,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-42.5 right-5 sm:right-5 md:right-[4%] sm:top-47.5 md:top-47.5 lg:top-60 xl:top-60 xl:right-[8%] 2xl:right-[10%] z-10 pointer-events-auto"> {/* token-exempt: floating image 2 absolute offsets */}
         <img 
-          src="/assets/hero/figma_40a26bbc.png" 
+          src="/assets/hero/hero_floating_3d_right_top.png" 
           alt="무중력 인터랙티브 3D 그래픽 2" 
           tabIndex={0}
           role="button"
@@ -33,7 +33,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute top-55 right-30 sm:top-70 sm:right-40 md:right-[24%] md:top-75 lg:top-90 xl:top-100 xl:right-[22%] 2xl:right-[30%] z-10 pointer-events-auto"> {/* token-exempt: floating image 3 absolute offsets */}
         <img 
-          src="/assets/hero/figma_40a26bb.png" 
+          src="/assets/hero/hero_floating_3d_right_bottom.png" 
           alt="무중력 인터랙티브 3D 그래픽 3" 
           tabIndex={0}
           role="button"
@@ -117,7 +117,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-10 flex-1">
             <div className="w-20 h-20 rounded-full bg-white dark:bg-bg-card flex items-center justify-center shrink-0">
               <img 
-                src="/assets/hero/figma_225ce678.png" 
+                src="/assets/hero/hero_badge_spinning_wheel.png" 
                 alt="" 
                 className="w-15 h-15 object-contain animate-spin-slow" 
                 onError={(e) => e.target.style.display = 'none'}
@@ -170,7 +170,7 @@ export default function HeroSection() {
           {/* Photo Thumbnail Card in Original Desktop Position */}
           <div className="w-51.25 h-40 bg-accent-purple dark:bg-accent-lime rounded-[26px] flex items-center justify-center relative overflow-hidden shrink-0">
             <img 
-              src="/assets/hero/figma_bb286482.png" 
+              src="/assets/hero/hero_profile_thumbnail_card.png" 
               alt="Hero Photo Thumbnail" 
               className="w-42.75 h-57 object-cover rounded-xl"
               onError={(e) => e.target.style.display = 'none'}
@@ -185,7 +185,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
               <div className="w-12 h-12 sm:w-15 sm:h-15 rounded-full bg-white dark:bg-bg-card flex items-center justify-center shrink-0">
                 <img 
-                  src="/assets/hero/figma_225ce678.png" 
+                  src="/assets/hero/hero_badge_spinning_wheel.png" 
                   alt="" 
                   className="w-9 h-9 sm:w-11 sm:h-11 object-contain animate-spin-slow" 
                   onError={(e) => e.target.style.display = 'none'}
@@ -202,7 +202,7 @@ export default function HeroSection() {
             {/* Photo Thumbnail Card placed on Right Side of Description Text in Breakpoint Mode */}
             <div className="w-27.5 sm:w-40 h-23.75 sm:h-32.5 bg-accent-purple dark:bg-accent-lime rounded-[18px] sm:rounded-[26px] flex items-center justify-center relative overflow-hidden shrink-0">
               <img 
-                src="/assets/hero/figma_bb286482.png" 
+                src="/assets/hero/hero_profile_thumbnail_card.png" 
                 alt="Hero Photo Thumbnail" 
                 className="w-22.5 sm:w-32.5 h-31.25 sm:h-43.75 object-cover rounded-lg sm:rounded-xl"
                 onError={(e) => e.target.style.display = 'none'}

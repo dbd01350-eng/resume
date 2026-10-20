@@ -68,7 +68,7 @@ export default function PlanModal({
 
   const handleImageError = (e) => {
     e.target.onerror = null;
-    e.target.src = '/assets/projects/figma_8bed76a4.png';
+    e.target.src = '/assets/projects/project_ikea_fallback.png';
   };
 
   return (

@@ -56,7 +56,7 @@ const portfolioData = {
       id: "ikea-redesign",
       title: "IKEA Website 리디자인",
       previewImage: "/assets/projects/project_ikea_full_preview.png",
-      fallbackImage: "/assets/projects/figma_8bed76a4.png",
+      fallbackImage: "/assets/projects/project_ikea_fallback.png",
       type: "WEBSITE",
       links: [
         { label: "리디자인 기획안", url: "#" },
@@ -68,7 +68,7 @@ const portfolioData = {
       id: "ikea-dev",
       title: "IKEA 반응형 웹사이트 UI/UX 개발",
       previewImage: "/assets/projects/project_ikea_full_preview2.png",
-      fallbackImage: "/assets/projects/figma_8bed76a4.png",
+      fallbackImage: "/assets/projects/project_ikea_fallback.png",
       type: "WEBSITE",
       links: [
         { label: "WEBSITE", url: "https://heebon00.github.io/Team_Synergos_esg/index.html" }, // token-exempt: external project link
@@ -81,7 +81,7 @@ const portfolioData = {
       id: "campaign",
       title: "보건복지부 금연캠페인 홍보영상",
       previewImage: "/assets/projects/project_campaign_full_preview.jpeg",
-      fallbackImage: "/assets/projects/figma_4b660c10.png",
+      fallbackImage: "/assets/projects/project_campaign_fallback.png",
       type: "VIDEO",
       links: [
         { label: "VIDEO", url: "/assets/videos/no_smoking_video.mp4" },
@@ -93,14 +93,51 @@ const portfolioData = {
     {
       id: "archive",
       title: "웹 개발 학습 아카이브",
-      previewImage: "/assets/projects/figma_bcd0c6b6.png",
-      fallbackImage: "/assets/projects/figma_bcd0c6b6.png",
+      previewImage: "/assets/projects/project_archive_preview.png",
+      fallbackImage: "/assets/projects/project_archive_preview.png",
       type: "WEBSITE",
       links: [
         { label: "WEBSITE", url: "https://dbd01350-eng.github.io/VScode_study/archive/" }, // token-exempt: external project link
         { label: "GITHUB", url: "https://github.com/dbd01350-eng/VScode_study.git" }, // token-exempt: external project link
       ],
       tags: ["React", "AGY", "Claude", "Vibe coding"],
+    },
+    {
+      id: "wedding-ver1",
+      title: "모바일 청첩장 Ver.1 (다이어리 & 스티커 감성 테마)",
+      previewImage: "/assets/projects/wedding_ver1_preview.svg",
+      fallbackImage: "/assets/projects/wedding_ver1_fallback.svg",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding1/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding1.git" }, // token-exempt: external project link
+        { label: "Figma", url: "https://www.figma.com/design/YH6L68jr8ytbaKZFjzvv86/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=3-611&t=KKmGV5xJ7mkwaTbI-4" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "Figma", "HTML5", "CSS3", "JavaScript", "Vibe coding"],
+    },
+    {
+      id: "wedding-ver2",
+      title: "모바일 청첩장 Ver.2 (내추럴 포레스트 그린 모던 테마)",
+      previewImage: "/assets/projects/wedding_ver2_preview.webp",
+      fallbackImage: "/assets/projects/wedding_ver2_fallback.webp",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding2/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding2.git" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "UI/UX", "JavaScript", "GAS", "Google Sheets", "Vibe coding"],
+    },
+    {
+      id: "wedding-ver3",
+      title: "모바일 청첩장 Ver.3 (메이플스토리 루디브리엄 테마)",
+      previewImage: "/assets/projects/wedding_ver3_preview.webp",
+      fallbackImage: "/assets/projects/wedding_ver3_fallback.webp",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding3/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding3.git" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "Interactive Map", "BGM & Sound", "GAS", "Vibe coding"],
     },
   ],
   values: [
