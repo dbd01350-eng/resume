@@ -1,55 +1,51 @@
 const portfolioData = {
   profile: {
-    name: '심다은',
-    nameEn: 'Daeun Sim',
-    birth: '1994년 12월 15일 ( 만 31세 )',
-    phone: '010-7272-6639',
-    address: '서울시 중구 동호로 173',
-    email: 'dbd01350@gmail.com',
+    name: "심다은",
+    nameEn: "Daeun Sim",
+    birth: "1994년 12월 15일 ( 만 31세 )",
+    phone: "010-7272-6639",
+    address: "서울시 중구 동호로 173",
+    email: "dbd01350@gmail.com",
   },
   hero: {
-    badge: '예쁘게, 될 때 까지',
-    title: 'Design and Coding',
-    subtext: '디자인 하고, 코드로 만듭니다.\n가끔은 둘 다 하다가 새벽을 만납니다.\n결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.',
-    tags: [
-      'Git', 'VS code', 'HTML', 'CSS', 'Javascript', 
-      'React', 'Python', 'Figma', 'illustrator', 
-      'after effect', 'primiere pro'
-    ],
+    badge: "예쁘게, 될 때 까지",
+    title: "Design and Coding",
+    subtext: "디자인 하고, 코드로 만듭니다.\n가끔은 둘 다 하다가 새벽을 만납니다.\n결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.",
+    tags: ["Git", "VS code", "HTML", "CSS", "Javascript", "React", "Python", "Figma", "illustrator", "after effect", "primiere pro"],
   },
   stats: [
     {
-      value: '3+',
-      label: 'Completed Project',
-      sublabel: 'Project list',
-      highlight: true
+      value: "3+",
+      label: "Completed Project",
+      sublabel: "Project list",
+      highlight: true,
     },
     {
-      value: '20+',
-      label: 'Pages built',
-      sublabel: 'Team Project / IKEA website redesigned',
-      highlight: false
+      value: "20+",
+      label: "Pages built",
+      sublabel: "Team Project / IKEA website redesigned",
+      highlight: false,
     },
     {
-      value: '12+',
-      label: 'Creative & Development Tools',
-      sublabel: 'GIT / VS code / HTML / CSS / Javascript / React / Python / Figma / Notion / illustrator / after effect / primiere pro',
-      highlight: false
+      value: "12+",
+      label: "Creative & Development Tools",
+      sublabel: "GIT / VS code / HTML / CSS / Javascript / React / Python / Figma / Notion / illustrator / after effect / primiere pro",
+      highlight: false,
     },
     {
-      value: '7+',
-      label: 'AI Tools',
-      sublabel: 'Claude / AGY / GPT / Figma agent / VS code chat / SUNO / FLOW',
-      highlight: false
+      value: "7+",
+      label: "AI Tools",
+      sublabel: "Claude / AGY / GPT / Figma agent / VS code chat / SUNO / FLOW",
+      highlight: false,
     },
   ],
   experience: [
-    { period: '2013.03 ~ 2021.02', title: '서울시립대학교 토목공학과 졸업' },
-    { period: '2020.10 ~ 2021.12', title: '온이앤지 (상하수도 설계회사) 근무' },
-    { period: '2021.10 ~ 2025.11', title: '브랜드 하루필름 이태원점 대표' },
-    { period: '2022.04 ~ 2025.06', title: '브랜드 그믐달스튜디오 이태원점 대표' },
-    { period: '2022.12 ~ 2023.04', title: '브랜드 하루필름 본사 근무' },
-    { period: '2023.06 ~ 2025.06', title: '자개장롱 대표' },
+    { period: "2013.03 ~ 2021.02", title: "서울시립대학교 토목공학과 졸업" },
+    { period: "2020.10 ~ 2021.12", title: "온이앤지 (상하수도 설계회사) 근무" },
+    { period: "2021.10 ~ 2025.11", title: "브랜드 하루필름 이태원점 대표" },
+    { period: "2022.04 ~ 2025.06", title: "브랜드 그믐달스튜디오 이태원점 대표" },
+    { period: "2022.12 ~ 2023.04", title: "브랜드 하루필름 본사 근무" },
+    { period: "2023.06 ~ 2025.06", title: "자개장롱 대표" },
   ],
   projects: [
     {
@@ -78,6 +74,44 @@ const portfolioData = {
       tags: ["UI/UX", "Frontend", "React", "Claude", "Vibe coding"],
     },
     {
+      id: "wedding-ver1",
+      title: "모바일 청첩장 Ver.1 (다이어리 & 스티커 감성 테마)",
+      previewImage: "/assets/projects/wedding_ver1_preview.png",
+      fallbackImage: "/assets/projects/wedding_ver1_fallback.svg",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding1/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding1.git" }, // token-exempt: external project link
+        { label: "Figma", url: "https://www.figma.com/design/YH6L68jr8ytbaKZFjzvv86/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=3-611&t=KKmGV5xJ7mkwaTbI-4" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "Figma", "HTML5", "CSS3", "JavaScript", "Vibe coding"],
+    },
+    {
+      id: "wedding-ver2",
+      title: "모바일 청첩장 Ver.2 (내추럴 포레스트 그린 모던 테마)",
+      previewImage: "/assets/projects/wedding_ver2_preview.png",
+      fallbackImage: "/assets/projects/wedding_ver2_fallback.png",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding2/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding2.git" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "UI/UX", "JavaScript", "GAS", "Google Sheets", "Vibe coding"],
+    },
+    {
+      id: "wedding-ver3",
+      title: "모바일 청첩장 Ver.3 (메이플스토리 루디브리엄 테마)",
+      previewVideo: "/assets/projects/wedding_ver3_preview.mp4",
+      previewImage: "/assets/projects/wedding_ver3_fallback.webp",
+      fallbackImage: "/assets/projects/wedding_ver3_fallback.webp",
+      type: "MOBILE WEB",
+      links: [
+        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding3/demo.html" }, // token-exempt: external project link
+        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding3.git" }, // token-exempt: external project link
+      ],
+      tags: ["Mobile Web", "Interactive Map", "BGM & Sound", "GAS", "Vibe coding"],
+    },
+    {
       id: "campaign",
       title: "보건복지부 금연캠페인 홍보영상",
       previewImage: "/assets/projects/project_campaign_full_preview.jpeg",
@@ -102,71 +136,34 @@ const portfolioData = {
       ],
       tags: ["React", "AGY", "Claude", "Vibe coding"],
     },
-    {
-      id: "wedding-ver1",
-      title: "모바일 청첩장 Ver.1 (다이어리 & 스티커 감성 테마)",
-      previewImage: "/assets/projects/wedding_ver1_preview.svg",
-      fallbackImage: "/assets/projects/wedding_ver1_fallback.svg",
-      type: "MOBILE WEB",
-      links: [
-        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding1/demo.html" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding1.git" }, // token-exempt: external project link
-        { label: "Figma", url: "https://www.figma.com/design/YH6L68jr8ytbaKZFjzvv86/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=3-611&t=KKmGV5xJ7mkwaTbI-4" }, // token-exempt: external project link
-      ],
-      tags: ["Mobile Web", "Figma", "HTML5", "CSS3", "JavaScript", "Vibe coding"],
-    },
-    {
-      id: "wedding-ver2",
-      title: "모바일 청첩장 Ver.2 (내추럴 포레스트 그린 모던 테마)",
-      previewImage: "/assets/projects/wedding_ver2_preview.webp",
-      fallbackImage: "/assets/projects/wedding_ver2_fallback.webp",
-      type: "MOBILE WEB",
-      links: [
-        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding2/demo.html" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding2.git" }, // token-exempt: external project link
-      ],
-      tags: ["Mobile Web", "UI/UX", "JavaScript", "GAS", "Google Sheets", "Vibe coding"],
-    },
-    {
-      id: "wedding-ver3",
-      title: "모바일 청첩장 Ver.3 (메이플스토리 루디브리엄 테마)",
-      previewImage: "/assets/projects/wedding_ver3_preview.webp",
-      fallbackImage: "/assets/projects/wedding_ver3_fallback.webp",
-      type: "MOBILE WEB",
-      links: [
-        { label: "WEBSITE (DEMO)", url: "https://dbd01350-eng.github.io/mobilewedding3/demo.html" }, // token-exempt: external project link
-        { label: "GITHUB", url: "https://github.com/dbd01350-eng/mobilewedding3.git" }, // token-exempt: external project link
-      ],
-      tags: ["Mobile Web", "Interactive Map", "BGM & Sound", "GAS", "Vibe coding"],
-    },
   ],
   values: [
     {
-      id: 'detail',
-      title: 'Detail-Oriented',
-      description: '디테일에 집착합니다.\n픽셀 하나, 코드 한 줄까지 타협 없이 완성도 높은 결과물을 만들어냅니다.',
-      icon: '/assets/icons/end_to_end_icon.png'
+      id: "detail",
+      title: "Detail-Oriented",
+      description: "디테일에 집착합니다.\n픽셀 하나, 코드 한 줄까지 타협 없이 완성도 높은 결과물을 만들어냅니다.",
+      icon: "/assets/icons/end_to_end_icon.png",
     },
     {
-      id: 'trend',
-      title: 'Trend-Driven',
-      description: '트렌드를 읽고, 새로운 시각적 언어를 프로젝트에 녹여냅니다.\n늘 한 발 앞선 디자인을 지향합니다.',
-      icon: '/assets/icons/trend_driven_icon.png'
+      id: "trend",
+      title: "Trend-Driven",
+      description: "트렌드를 읽고, 새로운 시각적 언어를 프로젝트에 녹여냅니다.\n늘 한 발 앞선 디자인을 지향합니다.",
+      icon: "/assets/icons/trend_driven_icon.png",
     },
     {
-      id: 'tech',
-      title: 'Tech-Savvy',
-      description: '인터랙션, 모션 디자인, 반응형 설계 등 기술적 깊이로 차별화된 사용자 경험을 설계합니다.',
-      icon: '/assets/icons/tech_savvy_icon.png'
+      id: "tech",
+      title: "Tech-Savvy",
+      description: "인터랙션, 모션 디자인, 반응형 설계 등 기술적 깊이로 차별화된 사용자 경험을 설계합니다.",
+      icon: "/assets/icons/tech_savvy_icon.png",
     },
     {
-      id: 'endtoend',
-      title: 'End-to-End',
-      description: '기획부터 UX/UI 디자인, 프론트엔드 개발, 브랜딩까지\n프로젝트를 처음부터 끝까지 책임집니다.',
-      icon: '/assets/icons/end_to_end_icon.png'
+      id: "endtoend",
+      title: "End-to-End",
+      description: "기획부터 UX/UI 디자인, 프론트엔드 개발, 브랜딩까지\n프로젝트를 처음부터 끝까지 책임집니다.",
+      icon: "/assets/icons/end_to_end_icon.png",
     },
   ],
-  marqueeTexts: ['Desktop', 'Mobile', 'Vibe coding', 'Design'],
+  marqueeTexts: ["Desktop", "Mobile", "Vibe coding", "Design"],
 };
 
 export default portfolioData;
