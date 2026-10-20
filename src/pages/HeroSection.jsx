@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default function HeroSection() {
-  const toolsCol1 = ['Git', 'VS code', 'HTML'];
-  const toolsCol2 = ['CSS', 'Javascript', 'React'];
+  const toolsCol1 = ['Git', 'VS Code', 'HTML'];
+  const toolsCol2 = ['CSS', 'JavaScript', 'React'];
   const toolsCol3 = ['Python', 'Figma', 'Notion'];
-  const toolsCol4 = ['illustrator', 'after effect', 'primiere pro'];
+  const toolsCol4 = ['Illustrator', 'After Effects', 'Premiere Pro'];
 
   return (
     <section id="home" className="pt-0 pb-10 sm:pb-15 lg:pb-20 px-4 md:px-12 xl:px-15 2xl:px-20 max-w-480 mx-auto relative min-h-175 sm:min-h-210 flex flex-col justify-between overflow-hidden"> {/* token-exempt: hero responsive section layout */}
@@ -56,7 +56,7 @@ export default function HeroSection() {
               {/* Invisible Sizing Placeholder (Ensures 100% exact original pill badge width & height) */}
               <div className="invisible flex items-center gap-2 sm:gap-3 lg:gap-5 shrink-0 whitespace-nowrap pointer-events-none">
                 <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
-                  될 때 까지
+                  될 때까지
                 </span>
                 <img 
                   src="/assets/icons/hero_title_star_icon.svg" 
@@ -71,7 +71,7 @@ export default function HeroSection() {
                   {/* Group 1 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
-                      될 때 까지
+                      될 때까지
                     </span>
                     <img 
                       src="/assets/icons/hero_title_star_icon.svg" 
@@ -84,7 +84,7 @@ export default function HeroSection() {
                   {/* Group 2 */}
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 pr-6 sm:pr-10 lg:pr-14">
                     <span className="font-funnel font-semibold text-[clamp(28px,5.8vw,120px)] leading-[clamp(34px,6.8vw,132px)] tracking-[-0.005em] text-white dark:text-bg-dark whitespace-nowrap">
-                      될 때 까지
+                      될 때까지
                     </span>
                     <img 
                       src="/assets/icons/hero_title_star_icon.svg" 

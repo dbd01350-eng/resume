@@ -1,10 +1,28 @@
 import React, { useState } from 'react';
 import portfolioData from '../data/portfolioData.js';
 import ModalWrapper from '../components/common/ModalWrapper.jsx';
+import PlanModal from '../components/PlanModal.jsx';
 
 export default function ResumePage({ onClose }) {
   const { profile, experience, projects } = portfolioData;
   const [activeGallery, setActiveGallery] = useState(null);
+  const [planModal, setPlanModal] = useState({
+    isOpen: false,
+    title: '',
+    images: [],
+    isVideo: false,
+    videoUrl: '',
+  });
+
+  const handleLinkClick = (e, link, projectTitle) => {
+    if (link.url === '#' || !link.url) {
+      e.preventDefault();
+      const config = PlanModal.getModalConfig(link, projectTitle);
+      if (config) {
+        setPlanModal(config);
+      }
+    }
+  };
 
   const handlePrint = () => {
     window.print();
@@ -175,7 +193,7 @@ export default function ResumePage({ onClose }) {
           
           <div className="p-4 bg-bg-secondary rounded-2xl border border-gray-100 space-y-2.5">
             <blockquote className="text-sm sm:text-base font-bold text-text-main border-l-4 border-accent-purple pl-3 py-0.5">
-              &quot;예쁘게, 될 때 까지 - 디자인 하고, 코드로 만듭니다. 결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.&quot;
+              &quot;예쁘게, 될 때까지 - 디자인 하고, 코드로 만듭니다. 결국 중요한 건, 잘 돌아가는 예쁜 웹사이트니까요.&quot;
             </blockquote>
             <p className="text-xs sm:text-sm text-text-sub leading-relaxed">
               공학적 데이터 기반 사고와 실제 비즈니스 브랜딩 운영 경험을 결합하여, 기획부터 UX/UI 디자인, 최신 AI 에이전트 기반 프론트엔드 개발까지 완성도 높게 이끄는 융합형 디자이너 겸 개발자입니다. 토목공학과 졸업 및 설계 회사 근무를 통해 다져진 세밀한 구조 설계 감각과, 하루필름·그믐달스튜디오·자개장롱 등 다수의 핫플 공간 브랜드를 운영하며 쌓은 실전 사용자 경험(UX) 분석력을 바탕으로 완성도 있는 디지털 웹 서비스를 구축합니다.
@@ -349,17 +367,21 @@ export default function ResumePage({ onClose }) {
                 </div>
 
                 <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap shrink-0">
-                  {proj.links.map((link, lIdx) => (
-                    <a
-                      key={lIdx}
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs font-semibold font-funnel text-text-main hover:text-accent-purple underline bg-bg-primary px-2.5 py-1 rounded-lg border border-gray-200"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
+                  {proj.links.map((link, lIdx) => {
+                    const isInternal = link.url === '#' || !link.url;
+                    return (
+                      <a
+                        key={lIdx}
+                        href={link.url || '#'}
+                        onClick={(e) => handleLinkClick(e, link, proj.title)}
+                        target={isInternal ? undefined : '_blank'}
+                        rel={isInternal ? undefined : 'noreferrer'}
+                        className="text-xs font-semibold font-funnel text-text-main hover:text-accent-purple underline bg-bg-primary px-2.5 py-1 rounded-lg border border-gray-200 cursor-pointer"
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -372,6 +394,16 @@ export default function ResumePage({ onClose }) {
         </div>
 
       </div>
+
+      {/* Plan Modal for Internal Proposals/Videos */}
+      <PlanModal
+        isOpen={planModal.isOpen}
+        onClose={() => setPlanModal((prev) => ({ ...prev, isOpen: false }))}
+        title={planModal.title}
+        images={planModal.images}
+        isVideo={planModal.isVideo}
+        videoUrl={planModal.videoUrl}
+      />
     </ModalWrapper>
   );
 }

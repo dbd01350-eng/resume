@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import PlanModal from "../components/PlanModal.jsx";
+import CaseStudyModal from "../components/CaseStudyModal.jsx";
 import portfolioData from "../data/portfolioData.js";
 
 export default function ProjectsSection() {
@@ -10,6 +11,7 @@ export default function ProjectsSection() {
     isVideo: false,
     videoUrl: "",
   });
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
 
   const projectRefs = useRef([]);
   const projects = portfolioData.projects;
@@ -101,7 +103,10 @@ export default function ProjectsSection() {
               className="space-y-4 sm:space-y-[24px]" // token-exempt: project card spacing
             >
               {/* Media Preview Frame */}
-              <div className="w-full h-[260px] sm:h-[480px] md:h-[600px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-lg bg-[#FAF7F6] dark:bg-[#303030]"> {/* token-exempt: figma layout frame */}
+              <div 
+                onClick={() => project.caseStudy && setSelectedCaseStudy(project)}
+                className={`w-full h-[260px] sm:h-[480px] md:h-[600px] rounded-[24px] sm:rounded-[50px] overflow-hidden relative shadow-lg bg-[#FAF7F6] dark:bg-[#303030] ${project.caseStudy ? 'cursor-pointer group' : ''}`}
+              > {/* token-exempt: figma layout frame */}
                 {project.previewVideo ? (
                   <video
                     autoPlay
@@ -109,7 +114,7 @@ export default function ProjectsSection() {
                     muted
                     playsInline
                     poster={project.previewImage}
-                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px] block pointer-events-none"
+                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px] block pointer-events-none group-hover:scale-[1.02] transition-transform duration-500"
                   >
                     <source src={project.previewVideo} type="video/mp4" />
                     {/* Fallback image inside video element */}
@@ -123,16 +128,31 @@ export default function ProjectsSection() {
                   <img
                     src={project.previewImage}
                     alt={project.title}
-                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px]" // token-exempt: preview image rounded corners
+                    className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[50px] group-hover:scale-[1.02] transition-transform duration-500" // token-exempt: preview image rounded corners
                     onError={(e) => {
                       e.target.src = project.fallbackImage;
                     }}
                   />
                 )}
+                {project.caseStudy && (
+                  <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-black/75 backdrop-blur-md text-white font-['Pretendard'] font-semibold text-xs sm:text-sm flex items-center shadow-lg group-hover:bg-[#161616] group-hover:scale-105 transition-all">
+                    <span>케이스 스터디 상세 보기</span>
+                  </div>
+                )}
               </div>
 
               {/* Tags Row */}
-              <div className="flex flex-wrap gap-2 sm:gap-[10px]"> {/* token-exempt: tags gap */}
+              <div className="flex flex-wrap gap-2 sm:gap-[10px] items-center"> {/* token-exempt: tags gap */}
+                {project.contribution?.rate && (
+                  <span className="px-3 py-1 sm:px-[16px] sm:py-[6px] rounded-[12px] sm:rounded-[16px] bg-[#DDF160] text-[#161616] border border-[#C5DC3C] font-['Pretendard'] font-bold text-[12px] sm:text-[14px]">
+                    기여도 {project.contribution.rate}
+                  </span>
+                )}
+                {project.contribution?.roleTag && (
+                  <span className="px-3 py-1 sm:px-[16px] sm:py-[6px] rounded-[12px] sm:rounded-[16px] bg-[#DDF160] text-[#161616] border border-[#C5DC3C] font-['Pretendard'] font-bold text-[12px] sm:text-[14px]">
+                    {project.contribution.roleTag}
+                  </span>
+                )}
                 {project.tags.map((tag, idx) => (
                   <span key={idx} className="px-3 py-1 sm:px-[16px] sm:py-[6px] rounded-[12px] sm:rounded-[16px] bg-white dark:bg-[#303030] border border-[#E5E5E5] dark:border-[#404040] font-['Pretendard'] text-[12px] sm:text-[14px] text-[#585858] dark:text-[#B2AEAD]"> {/* token-exempt: tag badge styling */}
                     {tag}
@@ -142,12 +162,24 @@ export default function ProjectsSection() {
 
               {/* Title & External Links Row */}
               <div className="space-y-3 sm:space-y-[16px] pt-1 sm:pt-[8px]"> {/* token-exempt: title spacing */}
-                <h3 className="font-['Pretendard'] font-semibold text-[20px] sm:text-[28px] md:text-[34px] leading-[1.3em] text-[#161616] dark:text-white"> {/* token-exempt: figma font typography */}
+                <h3 
+                  onClick={() => project.caseStudy && setSelectedCaseStudy(project)}
+                  className={`font-['Pretendard'] font-semibold text-[20px] sm:text-[28px] md:text-[34px] leading-[1.3em] text-[#161616] dark:text-white ${project.caseStudy ? 'cursor-pointer hover:underline' : ''}`}
+                > {/* token-exempt: figma font typography */}
                   {project.title}
                 </h3>
 
                 {/* External Link Badges */}
-                <div className="flex flex-wrap gap-3 sm:gap-[16px]"> {/* token-exempt: links gap */}
+                <div className="flex flex-wrap gap-3 sm:gap-[16px] items-center"> {/* token-exempt: links gap */}
+                  {project.caseStudy && (
+                    <button
+                      onClick={() => setSelectedCaseStudy(project)}
+                      className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full font-['Pretendard'] font-bold text-[13px] sm:text-[15px] bg-[#161616] dark:bg-white text-white dark:text-[#161616] hover:bg-[#333333] dark:hover:bg-[#EAEAEA] transition-colors cursor-pointer"
+                    >
+                      <span>Case Study</span>
+                      <span>→</span>
+                    </button>
+                  )}
                   {project.links.map((link, idx) => (
                     <a
                       key={idx}
@@ -176,6 +208,19 @@ export default function ProjectsSection() {
         images={modalData.images}
         isVideo={modalData.isVideo}
         videoUrl={modalData.videoUrl}
+      />
+
+      {/* Case Study Detailed Modal */}
+      <CaseStudyModal
+        isOpen={Boolean(selectedCaseStudy)}
+        onClose={() => setSelectedCaseStudy(null)}
+        project={selectedCaseStudy}
+        onOpenPlanModal={(link, title) => {
+          const config = PlanModal.getModalConfig(link, title);
+          if (config) {
+            setModalData(config);
+          }
+        }}
       />
     </section>
   );

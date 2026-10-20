@@ -19,9 +19,9 @@ function generatePortfolioResponse(userText) {
     return `💻 사용 가능한 주요 기술 & 툴:\n- 개발: ${portfolioData.hero.tags.slice(0, 6).join(', ')}\n- 디자인: Figma, Illustrator, Premiere Pro, After Effects\n- AI 툴: Claude, GPT, AGY, Flow, Suno 등\n\n디자인과 코딩을 모두 소화하며 완성도 높은 결과물을 만듭니다.`;
   }
 
-  if (text.includes('프로젝트') || text.includes('포트폴리오') || text.includes('작품') || text.includes('project') || text.includes('ikea') || text.includes('이케아') || text.includes('금연')) {
-    const list = portfolioData.projects.map((p, i) => `${i + 1}. [${p.type}] ${p.title}`).join('\n');
-    return `🚀 주요 프로젝트 목록:\n${list}\n\n사이트 내 Projects 섹션에서 상세 내용과 기획안/영상 링크를 확인하실 수 있습니다.`;
+  if (text.includes('프로젝트') || text.includes('포트폴리오') || text.includes('작품') || text.includes('project') || text.includes('ikea') || text.includes('이케아') || text.includes('금연') || text.includes('청첩장')) {
+    const list = portfolioData.projects.map((p, i) => `${i + 1}. [${p.type}] ${p.title} (기여도: ${p.contribution?.rate || '100%'})`).join('\n');
+    return `🚀 주요 프로젝트 목록:\n${list}\n\n사이트 내 Works 섹션에서 상세 케이스 스터디 모달을 확인하실 수 있습니다.`;
   }
 
   if (text.includes('경력') || text.includes('이력') || text.includes('학교') || text.includes('전공') || text.includes('학력') || text.includes('자기소개') || text.includes('회사')) {

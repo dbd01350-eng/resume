@@ -6,6 +6,35 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
   const [scrolled, setScrolled] = useState(false);
   const lottieContainerRef = useRef(null);
 
+  const handleScrollToAbout = (e) => {
+    e.preventDefault();
+    const aboutEl = document.getElementById('about');
+    if (aboutEl) {
+      aboutEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  const handleScrollToWorks = (e) => {
+    e.preventDefault();
+    const worksEl = document.getElementById('works');
+    if (!worksEl) return;
+
+    const firstCard = worksEl.querySelector('.flex-1 > div');
+    const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 640;
+    const headerOffset = isDesktop ? 100 : 80;
+
+    if (firstCard) {
+      const elementTop = firstCard.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = elementTop - headerOffset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+    } else {
+      worksEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -71,6 +100,30 @@ export default function Header({ onOpenContact, onOpenResume, isDarkMode, onTogg
             <div className="whitespace-nowrap text-[13px] sm:text-[20px]">Portfolio</div>
           </div>
         </a>
+
+        {/* Center Navigation Links (About, Works, Contact) */}
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10 font-['Funnel_Display'] font-semibold text-[16px]">
+          <a
+            href="#about"
+            onClick={handleScrollToAbout}
+            className="text-[#161616] dark:text-white hover:text-[#9F8BE7] transition-colors cursor-pointer"
+          >
+            About
+          </a>
+          <a
+            href="#works"
+            onClick={handleScrollToWorks}
+            className="text-[#161616] dark:text-white hover:text-[#9F8BE7] transition-colors cursor-pointer"
+          >
+            Works
+          </a>
+          <button
+            onClick={onOpenContact}
+            className="text-[#161616] dark:text-white hover:text-[#9F8BE7] transition-colors cursor-pointer"
+          >
+            Contact
+          </button>
+        </nav>
 
         {/* Nav Actions (ThemeToggle, GitHub, Resume) */}
         <div className="flex items-center gap-3 sm:gap-[16px] h-[44px] sm:h-[48px]">
