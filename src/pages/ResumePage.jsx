@@ -101,7 +101,7 @@ export default function ResumePage({ onClose }) {
         <div className="border-b border-gray-200 pb-6 print:pb-4 flex flex-col sm:flex-row gap-6 items-start justify-between">
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             {/* Profile Photo */}
-            <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex-shrink-0 bg-bg-input">
+            <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl border border-gray-200 shadow-sm overflow-hidden shrink-0 bg-bg-input">
               <img
                 src="/assets/projects/profile_photo_daeun.jpeg"
                 alt="심다은 프로필 사진"
@@ -261,7 +261,7 @@ export default function ResumePage({ onClose }) {
                               </div>
 
                               {/* Real Google Images Search iFrame Container */}
-                              <div className="w-full h-[450px] rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-white relative"> {/* token-exempt: custom iframe height */}
+                              <div className="w-full h-112.5 rounded-2xl overflow-hidden border border-gray-200 shadow-inner bg-white relative"> {/* token-exempt: custom iframe height */}
                                 <iframe
                                   src={storeInfo.iframeUrl}
                                   title={`${storeInfo.queryTitle} 구글 이미지 검색 결과`}
@@ -348,7 +348,7 @@ export default function ResumePage({ onClose }) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap flex-shrink-0">
+                <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap shrink-0">
                   {proj.links.map((link, lIdx) => (
                     <a
                       key={lIdx}
